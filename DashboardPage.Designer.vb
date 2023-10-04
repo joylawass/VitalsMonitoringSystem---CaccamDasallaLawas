@@ -57,10 +57,9 @@ Partial Class DashboardPage
         Me.Welcome.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Welcome.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Welcome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Welcome.Location = New System.Drawing.Point(58, 46)
-        Me.Welcome.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Welcome.Location = New System.Drawing.Point(29, 24)
         Me.Welcome.Name = "Welcome"
-        Me.Welcome.Size = New System.Drawing.Size(267, 51)
+        Me.Welcome.Size = New System.Drawing.Size(134, 25)
         Me.Welcome.TabIndex = 23
         Me.Welcome.Text = "Welcome Back"
         Me.Welcome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -71,10 +70,9 @@ Partial Class DashboardPage
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label3.Location = New System.Drawing.Point(50, 56)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label3.Location = New System.Drawing.Point(25, 29)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(306, 217)
+        Me.Label3.Size = New System.Drawing.Size(151, 108)
         Me.Label3.TabIndex = 24
         Me.Label3.Text = "##"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -83,10 +81,9 @@ Partial Class DashboardPage
         '
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Location = New System.Drawing.Point(36, 167)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.Panel1.Location = New System.Drawing.Point(18, 87)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(400, 263)
+        Me.Panel1.Size = New System.Drawing.Size(200, 137)
         Me.Panel1.TabIndex = 26
         '
         'Label2
@@ -95,10 +92,9 @@ Partial Class DashboardPage
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label2.Location = New System.Drawing.Point(68, 17)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Location = New System.Drawing.Point(34, 9)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(268, 44)
+        Me.Label2.Size = New System.Drawing.Size(133, 24)
         Me.Label2.TabIndex = 25
         Me.Label2.Text = "Active Devices"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -109,10 +105,9 @@ Partial Class DashboardPage
         Me.lblUsername.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUsername.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lblUsername.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblUsername.Location = New System.Drawing.Point(316, 46)
-        Me.lblUsername.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.lblUsername.Location = New System.Drawing.Point(158, 24)
         Me.lblUsername.Name = "lblUsername"
-        Me.lblUsername.Size = New System.Drawing.Size(191, 51)
+        Me.lblUsername.Size = New System.Drawing.Size(97, 25)
         Me.lblUsername.TabIndex = 27
         Me.lblUsername.Text = "Username"
         Me.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -124,10 +119,9 @@ Partial Class DashboardPage
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.DarkGray
         Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label1.Location = New System.Drawing.Point(24, 977)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label1.Location = New System.Drawing.Point(12, 508)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(139, 30)
+        Me.Label1.Size = New System.Drawing.Size(73, 16)
         Me.Label1.TabIndex = 35
         Me.Label1.Text = "Username:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -139,10 +133,9 @@ Partial Class DashboardPage
         Me.lblUsername1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUsername1.ForeColor = System.Drawing.Color.DarkGray
         Me.lblUsername1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblUsername1.Location = New System.Drawing.Point(164, 977)
-        Me.lblUsername1.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.lblUsername1.Location = New System.Drawing.Point(82, 508)
         Me.lblUsername1.Name = "lblUsername1"
-        Me.lblUsername1.Size = New System.Drawing.Size(132, 30)
+        Me.lblUsername1.Size = New System.Drawing.Size(70, 16)
         Me.lblUsername1.TabIndex = 34
         Me.lblUsername1.Text = "Username"
         Me.lblUsername1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -151,10 +144,9 @@ Partial Class DashboardPage
         '
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Location = New System.Drawing.Point(488, 169)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.Panel2.Location = New System.Drawing.Point(248, 88)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(400, 263)
+        Me.Panel2.Size = New System.Drawing.Size(200, 137)
         Me.Panel2.TabIndex = 27
         '
         'Label4
@@ -163,10 +155,9 @@ Partial Class DashboardPage
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label4.Location = New System.Drawing.Point(36, 17)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label4.Location = New System.Drawing.Point(18, 9)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(331, 44)
+        Me.Label4.Size = New System.Drawing.Size(164, 24)
         Me.Label4.TabIndex = 25
         Me.Label4.Text = "Recorded Patients"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -177,10 +168,9 @@ Partial Class DashboardPage
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
         Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label5.Location = New System.Drawing.Point(50, 50)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label5.Location = New System.Drawing.Point(25, 26)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(306, 217)
+        Me.Label5.Size = New System.Drawing.Size(151, 108)
         Me.Label5.TabIndex = 24
         Me.Label5.Text = "##"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -189,10 +179,9 @@ Partial Class DashboardPage
         '
         Me.Panel3.Controls.Add(Me.Label6)
         Me.Panel3.Controls.Add(Me.Label7)
-        Me.Panel3.Location = New System.Drawing.Point(958, 171)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.Panel3.Location = New System.Drawing.Point(478, 89)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(400, 263)
+        Me.Panel3.Size = New System.Drawing.Size(200, 137)
         Me.Panel3.TabIndex = 27
         '
         'Label6
@@ -201,10 +190,9 @@ Partial Class DashboardPage
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
         Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label6.Location = New System.Drawing.Point(34, 13)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label6.Location = New System.Drawing.Point(17, 7)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(293, 44)
+        Me.Label6.Size = New System.Drawing.Size(147, 24)
         Me.Label6.TabIndex = 25
         Me.Label6.Text = "Number of Beds"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -215,10 +203,9 @@ Partial Class DashboardPage
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
         Me.Label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label7.Location = New System.Drawing.Point(50, 52)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label7.Location = New System.Drawing.Point(25, 27)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(306, 217)
+        Me.Label7.Size = New System.Drawing.Size(151, 108)
         Me.Label7.TabIndex = 24
         Me.Label7.Text = "##"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -229,23 +216,23 @@ Partial Class DashboardPage
         Me.Chart1.ChartAreas.Add(ChartArea2)
         Legend2.Name = "Legend1"
         Me.Chart1.Legends.Add(Legend2)
-        Me.Chart1.Location = New System.Drawing.Point(36, 498)
-        Me.Chart1.Margin = New System.Windows.Forms.Padding(8, 8, 8, 8)
+        Me.Chart1.Location = New System.Drawing.Point(18, 259)
+        Me.Chart1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Chart1.Name = "Chart1"
         Series2.ChartArea = "ChartArea1"
         Series2.Legend = "Legend1"
         Series2.Name = "Temperature"
         Me.Chart1.Series.Add(Series2)
-        Me.Chart1.Size = New System.Drawing.Size(1322, 421)
+        Me.Chart1.Size = New System.Drawing.Size(661, 219)
         Me.Chart1.TabIndex = 26
         Me.Chart1.Text = "Chart1"
         '
         'DashboardPage
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1394, 1025)
+        Me.ClientSize = New System.Drawing.Size(697, 533)
         Me.Controls.Add(Me.Chart1)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
@@ -255,7 +242,6 @@ Partial Class DashboardPage
         Me.Controls.Add(Me.Welcome)
         Me.Controls.Add(Me.lblUsername)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Name = "DashboardPage"
         Me.Text = "DashboardPage"
         Me.Panel1.ResumeLayout(False)

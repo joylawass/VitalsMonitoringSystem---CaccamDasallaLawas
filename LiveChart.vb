@@ -1,8 +1,4 @@
-﻿Imports System.ComponentModel
-Imports System.Web.UI.WebControls
-Imports System.Windows.Forms.DataVisualization.Charting
-
-Public Class LiveChart
+﻿Public Class LiveChart
 
 
     Private Sub LiveChart_Load(sender As Object, e As EventArgs) Handles MyBase.Load
