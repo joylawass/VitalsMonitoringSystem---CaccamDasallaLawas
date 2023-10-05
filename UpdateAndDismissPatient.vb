@@ -92,7 +92,7 @@ Public Class UpdateAndDismissPatient
         healthHistory.TextAlign = HorizontalAlignment.Left
     End Sub
 
-    Private Sub btnUpdate_Click(sender As Object, e As EventArgs)
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         If String.IsNullOrEmpty(txbxFamilyName.Text) OrElse
          String.IsNullOrEmpty(txbxfirstname.Text) OrElse
          String.IsNullOrEmpty(txbxmidname.Text) OrElse
@@ -148,7 +148,7 @@ Public Class UpdateAndDismissPatient
         healthHistory.Clear()
     End Sub
 
-    Private Sub txtboxheight_TextChanged(sender As Object, e As EventArgs) Handles btnUpdate.Click
+    Private Sub txtboxheight_TextChanged(sender As Object, e As EventArgs)
         Dim heightText As String = txtboxheight.Text.Trim()
         Dim numericValue As Double
 

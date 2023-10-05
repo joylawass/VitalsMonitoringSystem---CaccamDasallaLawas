@@ -23,23 +23,25 @@ Partial Class PatientPage
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DTGList = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.AddPatientBtn = New Guna.UI2.WinForms.Guna2Button()
+        Me.ReloadBtn = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.UpdatePatientButton = New Guna.UI2.WinForms.Guna2Button()
+        Me.ActivePatientBtn = New Guna.UI2.WinForms.Guna2Button()
+        Me.DismissedPatientBtn = New Guna.UI2.WinForms.Guna2Button()
         Me.PatientID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LastName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FirstName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.WardNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PhysiciansName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MacAddress = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AddPatientBtn = New Guna.UI2.WinForms.Guna2Button()
-        Me.ReloadBtn = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.UpdatePatientButton = New Guna.UI2.WinForms.Guna2Button()
+        Me.Dev_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DTGList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -81,35 +83,35 @@ Partial Class PatientPage
         Me.DTGList.AllowUserToDeleteRows = False
         Me.DTGList.AllowUserToResizeColumns = False
         Me.DTGList.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.DTGList.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        Me.DTGList.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DTGList.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DTGList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DTGList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DTGList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DTGList.ColumnHeadersHeight = 28
-        Me.DTGList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PatientID, Me.LastName, Me.FirstName, Me.WardNumber, Me.PhysiciansName, Me.MacAddress})
+        Me.DTGList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PatientID, Me.LastName, Me.FirstName, Me.WardNumber, Me.PhysiciansName, Me.Dev_ID})
         Me.DTGList.Cursor = System.Windows.Forms.Cursors.Arrow
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DTGList.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DTGList.DefaultCellStyle = DataGridViewCellStyle6
         Me.DTGList.GridColor = System.Drawing.Color.White
         Me.DTGList.Location = New System.Drawing.Point(29, 66)
         Me.DTGList.Name = "DTGList"
         Me.DTGList.ReadOnly = True
         Me.DTGList.RowHeadersVisible = False
-        Me.DTGList.Size = New System.Drawing.Size(639, 426)
+        Me.DTGList.Size = New System.Drawing.Size(639, 391)
         Me.DTGList.TabIndex = 34
         Me.DTGList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.DTGList.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -132,6 +134,86 @@ Partial Class PatientPage
         Me.DTGList.ThemeStyle.RowsStyle.Height = 22
         Me.DTGList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DTGList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        '
+        'AddPatientBtn
+        '
+        Me.AddPatientBtn.BorderRadius = 5
+        Me.AddPatientBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.AddPatientBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.AddPatientBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.AddPatientBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.AddPatientBtn.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.AddPatientBtn.ForeColor = System.Drawing.Color.White
+        Me.AddPatientBtn.Location = New System.Drawing.Point(562, 32)
+        Me.AddPatientBtn.Name = "AddPatientBtn"
+        Me.AddPatientBtn.Size = New System.Drawing.Size(106, 28)
+        Me.AddPatientBtn.TabIndex = 35
+        Me.AddPatientBtn.Text = "Add Patient"
+        '
+        'ReloadBtn
+        '
+        Me.ReloadBtn.BorderRadius = 5
+        Me.ReloadBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.ReloadBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.ReloadBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.ReloadBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.ReloadBtn.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.ReloadBtn.ForeColor = System.Drawing.Color.White
+        Me.ReloadBtn.Location = New System.Drawing.Point(29, 32)
+        Me.ReloadBtn.Name = "ReloadBtn"
+        Me.ReloadBtn.Size = New System.Drawing.Size(84, 28)
+        Me.ReloadBtn.TabIndex = 38
+        Me.ReloadBtn.Text = "Reload"
+        '
+        'Guna2Elipse1
+        '
+        Me.Guna2Elipse1.TargetControl = Me.DTGList
+        '
+        'UpdatePatientButton
+        '
+        Me.UpdatePatientButton.BorderRadius = 5
+        Me.UpdatePatientButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.UpdatePatientButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.UpdatePatientButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.UpdatePatientButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.UpdatePatientButton.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.UpdatePatientButton.ForeColor = System.Drawing.Color.White
+        Me.UpdatePatientButton.Location = New System.Drawing.Point(540, 463)
+        Me.UpdatePatientButton.Name = "UpdatePatientButton"
+        Me.UpdatePatientButton.Size = New System.Drawing.Size(128, 28)
+        Me.UpdatePatientButton.TabIndex = 39
+        Me.UpdatePatientButton.Text = "Update Patient"
+        '
+        'ActivePatientBtn
+        '
+        Me.ActivePatientBtn.BorderRadius = 5
+        Me.ActivePatientBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.ActivePatientBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.ActivePatientBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.ActivePatientBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.ActivePatientBtn.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.ActivePatientBtn.ForeColor = System.Drawing.Color.White
+        Me.ActivePatientBtn.Location = New System.Drawing.Point(186, 463)
+        Me.ActivePatientBtn.Name = "ActivePatientBtn"
+        Me.ActivePatientBtn.Size = New System.Drawing.Size(128, 28)
+        Me.ActivePatientBtn.TabIndex = 40
+        Me.ActivePatientBtn.Text = "Active Patients"
+        '
+        'DismissedPatientBtn
+        '
+        Me.DismissedPatientBtn.BorderRadius = 5
+        Me.DismissedPatientBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.DismissedPatientBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.DismissedPatientBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.DismissedPatientBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.DismissedPatientBtn.FillColor = System.Drawing.Color.Red
+        Me.DismissedPatientBtn.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.DismissedPatientBtn.ForeColor = System.Drawing.Color.White
+        Me.DismissedPatientBtn.Location = New System.Drawing.Point(29, 463)
+        Me.DismissedPatientBtn.Name = "DismissedPatientBtn"
+        Me.DismissedPatientBtn.Size = New System.Drawing.Size(151, 28)
+        Me.DismissedPatientBtn.TabIndex = 41
+        Me.DismissedPatientBtn.Text = "Dismissed Patients"
         '
         'PatientID
         '
@@ -172,62 +254,13 @@ Partial Class PatientPage
         Me.PhysiciansName.Name = "PhysiciansName"
         Me.PhysiciansName.ReadOnly = True
         '
-        'MacAddress
+        'Dev_ID
         '
-        Me.MacAddress.DataPropertyName = "Dev_ID"
-        Me.MacAddress.FillWeight = 100.4967!
-        Me.MacAddress.HeaderText = "Mac Address"
-        Me.MacAddress.Name = "MacAddress"
-        Me.MacAddress.ReadOnly = True
-        '
-        'AddPatientBtn
-        '
-        Me.AddPatientBtn.BorderRadius = 5
-        Me.AddPatientBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.AddPatientBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.AddPatientBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.AddPatientBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.AddPatientBtn.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.AddPatientBtn.ForeColor = System.Drawing.Color.White
-        Me.AddPatientBtn.Location = New System.Drawing.Point(540, 32)
-        Me.AddPatientBtn.Name = "AddPatientBtn"
-        Me.AddPatientBtn.Size = New System.Drawing.Size(128, 28)
-        Me.AddPatientBtn.TabIndex = 35
-        Me.AddPatientBtn.Text = "Add Patient"
-        '
-        'ReloadBtn
-        '
-        Me.ReloadBtn.BorderRadius = 5
-        Me.ReloadBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.ReloadBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.ReloadBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.ReloadBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.ReloadBtn.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.ReloadBtn.ForeColor = System.Drawing.Color.White
-        Me.ReloadBtn.Location = New System.Drawing.Point(29, 32)
-        Me.ReloadBtn.Name = "ReloadBtn"
-        Me.ReloadBtn.Size = New System.Drawing.Size(77, 28)
-        Me.ReloadBtn.TabIndex = 38
-        Me.ReloadBtn.Text = "Reload"
-        '
-        'Guna2Elipse1
-        '
-        Me.Guna2Elipse1.TargetControl = Me.DTGList
-        '
-        'UpdatePatientButton
-        '
-        Me.UpdatePatientButton.BorderRadius = 5
-        Me.UpdatePatientButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.UpdatePatientButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.UpdatePatientButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.UpdatePatientButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.UpdatePatientButton.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.UpdatePatientButton.ForeColor = System.Drawing.Color.White
-        Me.UpdatePatientButton.Location = New System.Drawing.Point(406, 32)
-        Me.UpdatePatientButton.Name = "UpdatePatientButton"
-        Me.UpdatePatientButton.Size = New System.Drawing.Size(128, 28)
-        Me.UpdatePatientButton.TabIndex = 39
-        Me.UpdatePatientButton.Text = "Update Patient"
+        Me.Dev_ID.DataPropertyName = "Device ID"
+        Me.Dev_ID.FillWeight = 100.4967!
+        Me.Dev_ID.HeaderText = "Device_ID"
+        Me.Dev_ID.Name = "Dev_ID"
+        Me.Dev_ID.ReadOnly = True
         '
         'PatientPage
         '
@@ -235,6 +268,8 @@ Partial Class PatientPage
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(697, 533)
+        Me.Controls.Add(Me.DismissedPatientBtn)
+        Me.Controls.Add(Me.ActivePatientBtn)
         Me.Controls.Add(Me.UpdatePatientButton)
         Me.Controls.Add(Me.ReloadBtn)
         Me.Controls.Add(Me.AddPatientBtn)
@@ -255,12 +290,14 @@ Partial Class PatientPage
     Friend WithEvents DTGList As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents AddPatientBtn As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents ReloadBtn As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents UpdatePatientButton As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents ActivePatientBtn As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents DismissedPatientBtn As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents PatientID As DataGridViewTextBoxColumn
     Friend WithEvents LastName As DataGridViewTextBoxColumn
     Friend WithEvents FirstName As DataGridViewTextBoxColumn
     Friend WithEvents WardNumber As DataGridViewTextBoxColumn
     Friend WithEvents PhysiciansName As DataGridViewTextBoxColumn
-    Friend WithEvents MacAddress As DataGridViewTextBoxColumn
-    Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
-    Friend WithEvents UpdatePatientButton As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Dev_ID As DataGridViewTextBoxColumn
 End Class

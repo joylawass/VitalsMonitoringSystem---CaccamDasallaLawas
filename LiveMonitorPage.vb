@@ -1,4 +1,6 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Windows.Media.Media3D
+Imports MySql.Data.MySqlClient
+Imports Org.BouncyCastle.Asn1
 
 Public Class LiveMonitorPage
 
@@ -10,9 +12,9 @@ Public Class LiveMonitorPage
     Dim Worn As Boolean
     Dim RFID As Boolean
     Dim tableName As String
-
-
     Dim currentDateTime As DateTime = DateTime.Now
+
+    Private dismissedPatientIDs As New List(Of String)
 
     Public Sub UpdateUsernameText()
         lblUsername.Text = LoggedInUser
@@ -125,7 +127,7 @@ Public Class LiveMonitorPage
         Connect()
         Try
             ' Select patientID, lastname, firstname, middlename, and extname columns from the patient_info table
-            query = "SELECT patientID, lastname, firstname, middlename, extname FROM `patient_info`"
+            query = "SELECT patientID, lastname, firstname, middlename, extname FROM `patient_info` WHERE status = 'Active'"
             Using command As New MySqlCommand(query, connection)
                 reader = command.ExecuteReader
                 While reader.Read
@@ -149,11 +151,14 @@ Public Class LiveMonitorPage
     End Sub
 
     Private Sub ReloadBtn_Click(sender As Object, e As EventArgs) Handles ReloadBtn.Click
+        ' Clear the DataGridView
         liveMonitoringDTG.Rows.Clear()
+
+        ' Re-fetch and load patient information, excluding dismissed patients
         Connect()
         Try
             ' Select patientID, lastname, firstname, middlename, and extname columns from the patient_info table
-            query = "SELECT patientID, lastname, firstname, middlename, extname FROM `patient_info`"
+            query = "SELECT patientID, lastname, firstname, middlename, extname FROM `patient_info` WHERE status = 'Active'"
             Using command As New MySqlCommand(query, connection)
                 reader = command.ExecuteReader
                 While reader.Read
@@ -172,7 +177,7 @@ Public Class LiveMonitorPage
                 End While
             End Using
         Catch ex As Exception
-            MsgBox(ex.Message)
+            ' Handle any potential errors silently, without displaying a message
         End Try
     End Sub
 
@@ -256,4 +261,34 @@ Public Class LiveMonitorPage
 
         Return age
     End Function
+
+    Private Sub DismissBtn_Click(sender As Object, e As EventArgs) Handles DismissBtn.Click
+        If liveMonitoringDTG.SelectedRows.Count > 0 Then
+            Dim selectedRowIndex As Integer = liveMonitoringDTG.SelectedRows(0).Index
+            Dim selectedPatientID As String = liveMonitoringDTG.SelectedRows(0).Cells("patientID").Value.ToString()
+
+            ' Remove the selected row from the DataGridView
+            liveMonitoringDTG.Rows.RemoveAt(selectedRowIndex)
+
+            ' Update the status in the database (similar to your existing code)
+            Connect()
+            query = "UPDATE patient_info SET status = 'Inactive' WHERE patientID = @patientID;"
+            Try
+                With command
+                    .Connection = connection
+                    .CommandText = query
+                    With .Parameters
+                        .Clear()
+                        .Add("@patientID", MySqlDbType.VarChar).Value = selectedPatientID
+                    End With
+                    .ExecuteNonQuery()
+                    AdminLogs("Updated patient Status with id = " + selectedPatientID + " using credential : " & LoggedInUser)
+                End With
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        Else
+            MsgBox("No row selected.")
+        End If
+    End Sub
 End Class

@@ -1,4 +1,6 @@
-﻿Public Class PatientPage
+﻿Imports System.ComponentModel
+
+Public Class PatientPage
 
     Dim TableView As String
 
@@ -94,5 +96,56 @@
             ' Show the LiveChart form
             liveChartForm.Show()
         End If
+    End Sub
+
+    Private Sub DismissedPatientBtn_Click(sender As Object, e As EventArgs) Handles DismissedPatientBtn.Click
+        DTGList.Rows.Clear()
+        Connect()
+        Try
+            query = "SELECT * FROM `patient_info` WHERE status = 'Inactive'"
+            With command
+                .Connection = connection
+                .CommandText = query
+                reader = .ExecuteReader
+                While reader.Read
+                    DTGList.Rows.Add(
+                                            reader.GetString("patientID"),
+                                            reader.GetString("lastname"),
+                                            reader.GetString("firstname") + " " + reader.GetString("extname"),
+                                            reader.GetString("ward"),
+                                            reader.GetString("physician"),
+                                            reader.GetString("Dev_ID")
+                    )
+                End While
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub ActivePatientBtn_Click(sender As Object, e As EventArgs) Handles ActivePatientBtn.Click
+        DTGList.Rows.Clear()
+        Connect()
+        Try
+            query = "SELECT * FROM `patient_info` WHERE status = 'Active'"
+            With command
+                .Connection = connection
+                .CommandText = query
+                .Parameters.Clear()
+                reader = .ExecuteReader
+                While reader.Read
+                    DTGList.Rows.Add(
+                                            reader.GetString("patientID"),
+                                            reader.GetString("lastname"),
+                                            reader.GetString("firstname") + " " + reader.GetString("extname"),
+                                            reader.GetString("ward"),
+                                            reader.GetString("physician"),
+                                            reader.GetString("Dev_ID")
+                    )
+                End While
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 End Class

@@ -23,9 +23,9 @@ Partial Class LiveMonitorPage
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LiveMonitorPage))
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
@@ -65,29 +65,29 @@ Partial Class LiveMonitorPage
         Me.vitalsPanel = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Guna2Elipse9 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.othersPanel = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.Guna2PictureBox4 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Guna2PictureBox5 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel7 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Guna2PictureBox6 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Guna2Elipse10 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.ReloadBtn = New Guna.UI2.WinForms.Guna2Button()
         Me.DismissBtn = New Guna.UI2.WinForms.Guna2Button()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
         CType(Me.liveMonitoringDTG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PatientInfoPanel.SuspendLayout()
         Me.weightPanel.SuspendLayout()
@@ -154,30 +154,30 @@ Partial Class LiveMonitorPage
         Me.liveMonitoringDTG.AllowUserToDeleteRows = False
         Me.liveMonitoringDTG.AllowUserToResizeColumns = False
         Me.liveMonitoringDTG.AllowUserToResizeRows = False
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
-        Me.liveMonitoringDTG.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.liveMonitoringDTG.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.liveMonitoringDTG.BackgroundColor = System.Drawing.SystemColors.Control
         Me.liveMonitoringDTG.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.liveMonitoringDTG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.liveMonitoringDTG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.liveMonitoringDTG.ColumnHeadersHeight = 28
         Me.liveMonitoringDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         Me.liveMonitoringDTG.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.patientID, Me.DataGridViewTextBoxColumn2})
         Me.liveMonitoringDTG.Cursor = System.Windows.Forms.Cursors.Arrow
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.liveMonitoringDTG.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.liveMonitoringDTG.DefaultCellStyle = DataGridViewCellStyle3
         Me.liveMonitoringDTG.GridColor = System.Drawing.Color.White
         Me.liveMonitoringDTG.Location = New System.Drawing.Point(12, 12)
         Me.liveMonitoringDTG.Name = "liveMonitoringDTG"
@@ -551,6 +551,19 @@ Partial Class LiveMonitorPage
         Me.Guna2PictureBox3.TabIndex = 1
         Me.Guna2PictureBox3.TabStop = False
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label5.Location = New System.Drawing.Point(51, 15)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(91, 28)
+        Me.Label5.TabIndex = 46
+        Me.Label5.Text = "100 bpm"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'Guna2Panel2
         '
         Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
@@ -561,6 +574,19 @@ Partial Class LiveMonitorPage
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.Size = New System.Drawing.Size(142, 58)
         Me.Guna2Panel2.TabIndex = 47
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label8.Location = New System.Drawing.Point(64, 15)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(59, 28)
+        Me.Label8.TabIndex = 47
+        Me.Label8.Text = "37 °C"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Guna2PictureBox2
         '
@@ -583,6 +609,19 @@ Partial Class LiveMonitorPage
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(142, 58)
         Me.Guna2Panel1.TabIndex = 46
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label9.Location = New System.Drawing.Point(64, 15)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(61, 28)
+        Me.Label9.TabIndex = 48
+        Me.Label9.Text = "100%"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Guna2PictureBox1
         '
@@ -636,6 +675,19 @@ Partial Class LiveMonitorPage
         Me.Guna2Panel5.Size = New System.Drawing.Size(142, 58)
         Me.Guna2Panel5.TabIndex = 48
         '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label12.Location = New System.Drawing.Point(69, 15)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(61, 28)
+        Me.Label12.TabIndex = 51
+        Me.Label12.Text = "100%"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'Guna2PictureBox4
         '
         Me.Guna2PictureBox4.Image = CType(resources.GetObject("Guna2PictureBox4.Image"), System.Drawing.Image)
@@ -658,6 +710,19 @@ Partial Class LiveMonitorPage
         Me.Guna2Panel6.Size = New System.Drawing.Size(142, 58)
         Me.Guna2Panel6.TabIndex = 47
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label10.Location = New System.Drawing.Point(69, 15)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(61, 28)
+        Me.Label10.TabIndex = 49
+        Me.Label10.Text = "100%"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'Guna2PictureBox5
         '
         Me.Guna2PictureBox5.Image = CType(resources.GetObject("Guna2PictureBox5.Image"), System.Drawing.Image)
@@ -679,6 +744,19 @@ Partial Class LiveMonitorPage
         Me.Guna2Panel7.Name = "Guna2Panel7"
         Me.Guna2Panel7.Size = New System.Drawing.Size(142, 58)
         Me.Guna2Panel7.TabIndex = 46
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label11.Location = New System.Drawing.Point(60, 15)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(79, 28)
+        Me.Label11.TabIndex = 50
+        Me.Label11.Text = "Inactive"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Guna2PictureBox6
         '
@@ -738,84 +816,6 @@ Partial Class LiveMonitorPage
         Me.DismissBtn.Size = New System.Drawing.Size(87, 28)
         Me.DismissBtn.TabIndex = 52
         Me.DismissBtn.Text = "Dismiss"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label5.Location = New System.Drawing.Point(51, 15)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(91, 28)
-        Me.Label5.TabIndex = 46
-        Me.Label5.Text = "100 bpm"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label8.Location = New System.Drawing.Point(64, 15)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(59, 28)
-        Me.Label8.TabIndex = 47
-        Me.Label8.Text = "37 °C"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label9.Location = New System.Drawing.Point(64, 15)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(61, 28)
-        Me.Label9.TabIndex = 48
-        Me.Label9.Text = "100%"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label10.Location = New System.Drawing.Point(69, 15)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(61, 28)
-        Me.Label10.TabIndex = 49
-        Me.Label10.Text = "100%"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label11.Location = New System.Drawing.Point(60, 15)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(79, 28)
-        Me.Label11.TabIndex = 50
-        Me.Label11.Text = "Inactive"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label12.Location = New System.Drawing.Point(69, 15)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(61, 28)
-        Me.Label12.TabIndex = 51
-        Me.Label12.Text = "100%"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LiveMonitorPage
         '

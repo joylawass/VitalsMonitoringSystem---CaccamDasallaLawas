@@ -190,7 +190,7 @@ Module DatabaseQueries
                 Else
                     Try
                         Connect()
-                        query = "INSERT INTO `patient_info` (lastname, firstname, middlename, extname, current_address, nationality, birthdate, birthplace, sex, blood_type, blood_oxygen, physician, ward, emergency_name, emergency_relation, emergency_address, emergency_contact, height, weight, bmi, Dev_ID, health_history) VALUES (@lastname, @firstname, @middlename, @extname, @current_address, @nationality, @birthdate, @birthplace, @sex, @blood_type, @blood_oxygen, @physician, @ward, @emergency_name, @emergency_relation, @emergency_address, @emergency_contact, @height, @weight, @bmi, @Dev_ID, @health_history);"
+                        query = "INSERT INTO `patient_info` (lastname, firstname, middlename, extname, current_address, nationality, birthdate, birthplace, sex, blood_type, blood_oxygen, physician, ward, emergency_name, emergency_relation, emergency_address, emergency_contact, height, weight, bmi, Dev_ID, health_history, status) VALUES (@lastname, @firstname, @middlename, @extname, @current_address, @nationality, @birthdate, @birthplace, @sex, @blood_type, @blood_oxygen, @physician, @ward, @emergency_name, @emergency_relation, @emergency_address, @emergency_contact, @height, @weight, @bmi, @Dev_ID, @health_history, 'Active');"
                         With command
                             .Connection = connection
                             .CommandText = query
