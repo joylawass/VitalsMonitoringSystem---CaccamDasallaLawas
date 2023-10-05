@@ -267,28 +267,34 @@ Public Class LiveMonitorPage
             Dim selectedRowIndex As Integer = liveMonitoringDTG.SelectedRows(0).Index
             Dim selectedPatientID As String = liveMonitoringDTG.SelectedRows(0).Cells("patientID").Value.ToString()
 
-            ' Remove the selected row from the DataGridView
-            liveMonitoringDTG.Rows.RemoveAt(selectedRowIndex)
+            ' Display a confirmation prompt
+            Dim result As DialogResult = MessageBox.Show("Are you sure you want to dismiss this patient?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
-            ' Update the status in the database (similar to your existing code)
-            Connect()
-            query = "UPDATE patient_info SET status = 'Inactive' WHERE patientID = @patientID;"
-            Try
-                With command
-                    .Connection = connection
-                    .CommandText = query
-                    With .Parameters
-                        .Clear()
-                        .Add("@patientID", MySqlDbType.VarChar).Value = selectedPatientID
+            If result = DialogResult.Yes Then
+                ' Remove the selected row from the DataGridView
+                liveMonitoringDTG.Rows.RemoveAt(selectedRowIndex)
+
+                ' Update the status in the database (similar to your existing code)
+                Connect()
+                query = "UPDATE patient_info SET status = 'Inactive' WHERE patientID = @patientID;"
+                Try
+                    With command
+                        .Connection = connection
+                        .CommandText = query
+                        With .Parameters
+                            .Clear()
+                            .Add("@patientID", MySqlDbType.VarChar).Value = selectedPatientID
+                        End With
+                        .ExecuteNonQuery()
+                        AdminLogs("Updated patient Status with id = " + selectedPatientID + " using credential : " & LoggedInUser)
+                        MessageBox.Show("Patient dismissed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     End With
-                    .ExecuteNonQuery()
-                    AdminLogs("Updated patient Status with id = " + selectedPatientID + " using credential : " & LoggedInUser)
-                End With
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            End Try
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+            End If
         Else
-            MsgBox("No row selected.")
+            MessageBox.Show("Please select a patient from the list before dismissing.", "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
 End Class

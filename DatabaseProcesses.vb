@@ -242,10 +242,10 @@ Module DatabaseQueries
                             If reader.Read Then
                                 Identifier = reader.GetString("patientID")
                                 CreatePatientRecord(surname, Identifier, Temperature, bpm)
-                                MsgBox("Success")
+                                MessageBox.Show("Success", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
                             Else
-                                MsgBox("Fail")
+                                MessageBox.Show("Fail", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error)
                             End If
                         Catch ex As Exception
                             MsgBox(ex.Message)
