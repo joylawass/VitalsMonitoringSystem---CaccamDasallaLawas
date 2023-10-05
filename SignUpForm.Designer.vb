@@ -23,21 +23,21 @@ Partial Class SignUpForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SignUpForm))
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.btnSignUp = New Guna.UI2.WinForms.Guna2Button()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.TopPanel = New Guna.UI2.WinForms.Guna2Panel()
         Me.MinimizeButton = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.CloseButton = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.btnReset = New Guna.UI2.WinForms.Guna2Button()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.txtbxConfirmPass = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtbxPassword = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtbxUsername = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.showPassword = New System.Windows.Forms.CheckBox()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.TopPanel.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -45,18 +45,6 @@ Partial Class SignUpForm
         'Guna2Elipse1
         '
         Me.Guna2Elipse1.TargetControl = Me
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(26, 168)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(267, 37)
-        Me.Label2.TabIndex = 16
-        Me.Label2.Text = "Admin Registration"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnSignUp
         '
@@ -68,23 +56,11 @@ Partial Class SignUpForm
         Me.btnSignUp.FillColor = System.Drawing.SystemColors.HotTrack
         Me.btnSignUp.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.btnSignUp.ForeColor = System.Drawing.Color.White
-        Me.btnSignUp.Location = New System.Drawing.Point(163, 372)
+        Me.btnSignUp.Location = New System.Drawing.Point(147, 401)
         Me.btnSignUp.Name = "btnSignUp"
         Me.btnSignUp.Size = New System.Drawing.Size(96, 36)
         Me.btnSignUp.TabIndex = 4
         Me.btnSignUp.Text = "Sign Up"
-        '
-        'LinkLabel1
-        '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel1.LinkColor = System.Drawing.Color.Black
-        Me.LinkLabel1.Location = New System.Drawing.Point(132, 439)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(54, 20)
-        Me.LinkLabel1.TabIndex = 20
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Sign In"
         '
         'Guna2DragControl1
         '
@@ -95,12 +71,13 @@ Partial Class SignUpForm
         'TopPanel
         '
         Me.TopPanel.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.TopPanel.Controls.Add(Me.Guna2Button1)
         Me.TopPanel.Controls.Add(Me.MinimizeButton)
         Me.TopPanel.Controls.Add(Me.CloseButton)
         Me.TopPanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.TopPanel.Location = New System.Drawing.Point(0, 0)
         Me.TopPanel.Name = "TopPanel"
-        Me.TopPanel.Size = New System.Drawing.Size(318, 29)
+        Me.TopPanel.Size = New System.Drawing.Size(290, 29)
         Me.TopPanel.TabIndex = 14
         '
         'MinimizeButton
@@ -109,7 +86,7 @@ Partial Class SignUpForm
         Me.MinimizeButton.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
         Me.MinimizeButton.FillColor = System.Drawing.SystemColors.HotTrack
         Me.MinimizeButton.IconColor = System.Drawing.Color.White
-        Me.MinimizeButton.Location = New System.Drawing.Point(248, 0)
+        Me.MinimizeButton.Location = New System.Drawing.Point(220, 0)
         Me.MinimizeButton.Name = "MinimizeButton"
         Me.MinimizeButton.Size = New System.Drawing.Size(32, 29)
         Me.MinimizeButton.TabIndex = 3
@@ -120,7 +97,7 @@ Partial Class SignUpForm
         Me.CloseButton.CustomClick = True
         Me.CloseButton.FillColor = System.Drawing.SystemColors.HotTrack
         Me.CloseButton.IconColor = System.Drawing.Color.White
-        Me.CloseButton.Location = New System.Drawing.Point(286, 0)
+        Me.CloseButton.Location = New System.Drawing.Point(258, 0)
         Me.CloseButton.Name = "CloseButton"
         Me.CloseButton.Size = New System.Drawing.Size(32, 29)
         Me.CloseButton.TabIndex = 1
@@ -135,22 +112,11 @@ Partial Class SignUpForm
         Me.btnReset.FillColor = System.Drawing.SystemColors.HotTrack
         Me.btnReset.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.btnReset.ForeColor = System.Drawing.Color.White
-        Me.btnReset.Location = New System.Drawing.Point(59, 372)
+        Me.btnReset.Location = New System.Drawing.Point(43, 401)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(96, 36)
         Me.btnReset.TabIndex = 22
         Me.btnReset.Text = "Reset"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(70, 419)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(178, 20)
-        Me.Label3.TabIndex = 23
-        Me.Label3.Text = "Already have an account?"
         '
         'txtbxConfirmPass
         '
@@ -170,7 +136,7 @@ Partial Class SignUpForm
         Me.txtbxConfirmPass.IconLeft = Global.VitalsMonitoringSystem.My.Resources.Resources.icons8_confirm_30
         Me.txtbxConfirmPass.IconLeftOffset = New System.Drawing.Point(3, 0)
         Me.txtbxConfirmPass.IconLeftSize = New System.Drawing.Size(25, 25)
-        Me.txtbxConfirmPass.Location = New System.Drawing.Point(59, 300)
+        Me.txtbxConfirmPass.Location = New System.Drawing.Point(45, 329)
         Me.txtbxConfirmPass.Name = "txtbxConfirmPass"
         Me.txtbxConfirmPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtbxConfirmPass.PlaceholderForeColor = System.Drawing.Color.Gray
@@ -197,7 +163,7 @@ Partial Class SignUpForm
         Me.txtbxPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtbxPassword.IconLeft = Global.VitalsMonitoringSystem.My.Resources.Resources.icons8_password_64
         Me.txtbxPassword.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.txtbxPassword.Location = New System.Drawing.Point(59, 258)
+        Me.txtbxPassword.Location = New System.Drawing.Point(45, 287)
         Me.txtbxPassword.Name = "txtbxPassword"
         Me.txtbxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtbxPassword.PlaceholderForeColor = System.Drawing.Color.Gray
@@ -225,7 +191,7 @@ Partial Class SignUpForm
         Me.txtbxUsername.IconLeft = Global.VitalsMonitoringSystem.My.Resources.Resources.icons8_username_64__3_
         Me.txtbxUsername.IconLeftOffset = New System.Drawing.Point(0, -4)
         Me.txtbxUsername.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.txtbxUsername.Location = New System.Drawing.Point(59, 216)
+        Me.txtbxUsername.Location = New System.Drawing.Point(45, 245)
         Me.txtbxUsername.Name = "txtbxUsername"
         Me.txtbxUsername.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtbxUsername.PlaceholderForeColor = System.Drawing.Color.DarkGray
@@ -235,48 +201,74 @@ Partial Class SignUpForm
         Me.txtbxUsername.TabIndex = 1
         Me.txtbxUsername.TextOffset = New System.Drawing.Point(4, 0)
         '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox1.Image = Global.VitalsMonitoringSystem.My.Resources.Resources.vms_logo3
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(69, 58)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(181, 97)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2PictureBox1.TabIndex = 24
-        Me.Guna2PictureBox1.TabStop = False
-        '
         'showPassword
         '
         Me.showPassword.AutoSize = True
         Me.showPassword.BackColor = System.Drawing.Color.Transparent
         Me.showPassword.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.showPassword.ForeColor = System.Drawing.Color.White
-        Me.showPassword.Location = New System.Drawing.Point(59, 342)
+        Me.showPassword.Location = New System.Drawing.Point(45, 371)
         Me.showPassword.Name = "showPassword"
         Me.showPassword.Size = New System.Drawing.Size(129, 24)
         Me.showPassword.TabIndex = 26
         Me.showPassword.Text = "Show Password"
         Me.showPassword.UseVisualStyleBackColor = False
         '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-140, -67)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(570, 339)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox1.TabIndex = 27
+        Me.Guna2PictureBox1.TabStop = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(47, 205)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(196, 28)
+        Me.Label2.TabIndex = 28
+        Me.Label2.Text = "Admin Registration"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Guna2Button1
+        '
+        Me.Guna2Button1.BorderRadius = 5
+        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button1.FillColor = System.Drawing.SystemColors.HotTrack
+        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button1.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2Button1.Name = "Guna2Button1"
+        Me.Guna2Button1.Size = New System.Drawing.Size(33, 29)
+        Me.Guna2Button1.TabIndex = 29
+        Me.Guna2Button1.Text = "<"
+        '
         'SignUpForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(318, 480)
+        Me.ClientSize = New System.Drawing.Size(290, 464)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.showPassword)
-        Me.Controls.Add(Me.Guna2PictureBox1)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.txtbxConfirmPass)
         Me.Controls.Add(Me.TopPanel)
         Me.Controls.Add(Me.btnSignUp)
         Me.Controls.Add(Me.txtbxPassword)
         Me.Controls.Add(Me.txtbxUsername)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.LinkLabel1)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Guna2PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "SignUpForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -292,15 +284,14 @@ Partial Class SignUpForm
     Friend WithEvents TopPanel As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents MinimizeButton As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents CloseButton As Guna.UI2.WinForms.Guna2ControlBox
-    Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents btnSignUp As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtbxPassword As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtbxUsername As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
     Friend WithEvents txtbxConfirmPass As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnReset As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents showPassword As CheckBox
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
 End Class

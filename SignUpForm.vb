@@ -1,5 +1,5 @@
 ﻿Public Class SignUpForm
-    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs)
         txtbxUsername.Clear()
         txtbxPassword.Clear()
         txtbxConfirmPass.Clear()
@@ -99,4 +99,11 @@
         txtbxConfirmPass.UseSystemPasswordChar = True
     End Sub
 
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+        txtbxUsername.Clear()
+        txtbxPassword.Clear()
+        txtbxConfirmPass.Clear()
+        Me.Close()
+        LoginForm.Show()
+    End Sub
 End Class
