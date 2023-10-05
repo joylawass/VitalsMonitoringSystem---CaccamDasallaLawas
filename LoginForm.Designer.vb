@@ -53,8 +53,9 @@ Partial Class LoginForm
         Me.TopPanel.Controls.Add(Me.CloseButton)
         Me.TopPanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.TopPanel.Location = New System.Drawing.Point(0, 0)
+        Me.TopPanel.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.TopPanel.Name = "TopPanel"
-        Me.TopPanel.Size = New System.Drawing.Size(290, 29)
+        Me.TopPanel.Size = New System.Drawing.Size(532, 54)
         Me.TopPanel.TabIndex = 0
         '
         'MinimizeButton
@@ -63,9 +64,10 @@ Partial Class LoginForm
         Me.MinimizeButton.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
         Me.MinimizeButton.FillColor = System.Drawing.SystemColors.HotTrack
         Me.MinimizeButton.IconColor = System.Drawing.Color.White
-        Me.MinimizeButton.Location = New System.Drawing.Point(220, 0)
+        Me.MinimizeButton.Location = New System.Drawing.Point(403, 0)
+        Me.MinimizeButton.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.MinimizeButton.Name = "MinimizeButton"
-        Me.MinimizeButton.Size = New System.Drawing.Size(32, 29)
+        Me.MinimizeButton.Size = New System.Drawing.Size(59, 54)
         Me.MinimizeButton.TabIndex = 3
         '
         'CloseButton
@@ -74,9 +76,10 @@ Partial Class LoginForm
         Me.CloseButton.CustomClick = True
         Me.CloseButton.FillColor = System.Drawing.SystemColors.HotTrack
         Me.CloseButton.IconColor = System.Drawing.Color.White
-        Me.CloseButton.Location = New System.Drawing.Point(258, 0)
+        Me.CloseButton.Location = New System.Drawing.Point(473, 0)
+        Me.CloseButton.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.CloseButton.Name = "CloseButton"
-        Me.CloseButton.Size = New System.Drawing.Size(32, 29)
+        Me.CloseButton.Size = New System.Drawing.Size(59, 54)
         Me.CloseButton.TabIndex = 1
         '
         'Guna2DragControl1
@@ -90,54 +93,63 @@ Partial Class LoginForm
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(79, 205)
+        Me.Label2.Location = New System.Drawing.Point(145, 363)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(132, 28)
+        Me.Label2.Size = New System.Drawing.Size(232, 47)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Admin Login"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnLogin
         '
+        Me.btnLogin.Animated = True
         Me.btnLogin.BorderRadius = 5
         Me.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnLogin.FillColor = System.Drawing.SystemColors.HotTrack
-        Me.btnLogin.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.btnLogin.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnLogin.ForeColor = System.Drawing.Color.White
-        Me.btnLogin.Location = New System.Drawing.Point(149, 359)
+        Me.btnLogin.Location = New System.Drawing.Point(273, 622)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(96, 36)
+        Me.btnLogin.Size = New System.Drawing.Size(176, 66)
         Me.btnLogin.TabIndex = 3
         Me.btnLogin.Text = "Log In"
         '
         'linkLabelCreateAccount
         '
+        Me.linkLabelCreateAccount.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.linkLabelCreateAccount.AutoSize = True
-        Me.linkLabelCreateAccount.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.linkLabelCreateAccount.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.linkLabelCreateAccount.LinkColor = System.Drawing.Color.Black
-        Me.linkLabelCreateAccount.Location = New System.Drawing.Point(90, 427)
+        Me.linkLabelCreateAccount.Location = New System.Drawing.Point(190, 732)
+        Me.linkLabelCreateAccount.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.linkLabelCreateAccount.Name = "linkLabelCreateAccount"
-        Me.linkLabelCreateAccount.Size = New System.Drawing.Size(110, 20)
+        Me.linkLabelCreateAccount.Size = New System.Drawing.Size(156, 30)
         Me.linkLabelCreateAccount.TabIndex = 13
         Me.linkLabelCreateAccount.TabStop = True
         Me.linkLabelCreateAccount.Text = "Create Account"
         '
         'btnReset
         '
+        Me.btnReset.Animated = True
         Me.btnReset.BorderRadius = 5
         Me.btnReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.btnReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnReset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnReset.FillColor = System.Drawing.SystemColors.HotTrack
-        Me.btnReset.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.btnReset.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnReset.ForeColor = System.Drawing.Color.White
-        Me.btnReset.Location = New System.Drawing.Point(45, 359)
+        Me.btnReset.Location = New System.Drawing.Point(82, 622)
+        Me.btnReset.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(96, 36)
+        Me.btnReset.Size = New System.Drawing.Size(176, 66)
         Me.btnReset.TabIndex = 23
         Me.btnReset.Text = "Reset"
         '
@@ -145,23 +157,28 @@ Partial Class LoginForm
         '
         Me.showPassword.AutoSize = True
         Me.showPassword.BackColor = System.Drawing.Color.Transparent
-        Me.showPassword.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.showPassword.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.showPassword.ForeColor = System.Drawing.Color.White
-        Me.showPassword.Location = New System.Drawing.Point(45, 329)
+        Me.showPassword.Location = New System.Drawing.Point(93, 574)
+        Me.showPassword.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.showPassword.Name = "showPassword"
-        Me.showPassword.Size = New System.Drawing.Size(129, 24)
+        Me.showPassword.Size = New System.Drawing.Size(181, 34)
         Me.showPassword.TabIndex = 10
         Me.showPassword.Text = "Show Password"
         Me.showPassword.UseVisualStyleBackColor = False
         '
         'Label3
         '
+        Me.Label3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(64, 407)
+        Me.Label3.Location = New System.Drawing.Point(142, 704)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(163, 20)
+        Me.Label3.Size = New System.Drawing.Size(232, 30)
         Me.Label3.TabIndex = 26
         Me.Label3.Text = "Don't have an account?"
         '
@@ -170,15 +187,17 @@ Partial Class LoginForm
         Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
         Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-140, -67)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-165, -43)
+        Me.Guna2PictureBox1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(570, 339)
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(846, 511)
         Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.Guna2PictureBox1.TabIndex = 15
         Me.Guna2PictureBox1.TabStop = False
         '
         'txtbxPassword
         '
+        Me.txtbxPassword.Animated = True
         Me.txtbxPassword.BorderColor = System.Drawing.Color.Black
         Me.txtbxPassword.BorderRadius = 5
         Me.txtbxPassword.BorderThickness = 0
@@ -194,18 +213,20 @@ Partial Class LoginForm
         Me.txtbxPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtbxPassword.IconLeft = Global.VitalsMonitoringSystem.My.Resources.Resources.icons8_password_64
         Me.txtbxPassword.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.txtbxPassword.Location = New System.Drawing.Point(45, 287)
+        Me.txtbxPassword.Location = New System.Drawing.Point(82, 496)
+        Me.txtbxPassword.Margin = New System.Windows.Forms.Padding(11, 11, 9, 11)
         Me.txtbxPassword.Name = "txtbxPassword"
         Me.txtbxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtbxPassword.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txtbxPassword.PlaceholderText = "Password"
         Me.txtbxPassword.SelectedText = ""
-        Me.txtbxPassword.Size = New System.Drawing.Size(200, 36)
+        Me.txtbxPassword.Size = New System.Drawing.Size(367, 66)
         Me.txtbxPassword.TabIndex = 2
         Me.txtbxPassword.TextOffset = New System.Drawing.Point(4, 0)
         '
         'txtbxUsername
         '
+        Me.txtbxUsername.Animated = True
         Me.txtbxUsername.BorderColor = System.Drawing.Color.Transparent
         Me.txtbxUsername.BorderRadius = 5
         Me.txtbxUsername.BorderThickness = 0
@@ -222,22 +243,23 @@ Partial Class LoginForm
         Me.txtbxUsername.IconLeft = Global.VitalsMonitoringSystem.My.Resources.Resources.icons8_username_64__3_
         Me.txtbxUsername.IconLeftOffset = New System.Drawing.Point(0, -4)
         Me.txtbxUsername.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.txtbxUsername.Location = New System.Drawing.Point(45, 245)
+        Me.txtbxUsername.Location = New System.Drawing.Point(82, 418)
+        Me.txtbxUsername.Margin = New System.Windows.Forms.Padding(11, 11, 9, 11)
         Me.txtbxUsername.Name = "txtbxUsername"
         Me.txtbxUsername.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtbxUsername.PlaceholderForeColor = System.Drawing.Color.DarkGray
+        Me.txtbxUsername.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txtbxUsername.PlaceholderText = "Username"
         Me.txtbxUsername.SelectedText = ""
-        Me.txtbxUsername.Size = New System.Drawing.Size(200, 36)
+        Me.txtbxUsername.Size = New System.Drawing.Size(367, 66)
         Me.txtbxUsername.TabIndex = 1
         Me.txtbxUsername.TextOffset = New System.Drawing.Point(4, 0)
         '
         'LoginForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(290, 464)
+        Me.ClientSize = New System.Drawing.Size(532, 857)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.showPassword)
         Me.Controls.Add(Me.btnReset)
@@ -249,6 +271,7 @@ Partial Class LoginForm
         Me.Controls.Add(Me.TopPanel)
         Me.Controls.Add(Me.Guna2PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Name = "LoginForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "LoginForm"
