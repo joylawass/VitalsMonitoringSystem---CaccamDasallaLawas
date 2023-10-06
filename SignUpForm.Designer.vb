@@ -28,6 +28,7 @@ Partial Class SignUpForm
         Me.btnSignUp = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.TopPanel = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.MinimizeButton = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.CloseButton = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.btnReset = New Guna.UI2.WinForms.Guna2Button()
@@ -37,7 +38,6 @@ Partial Class SignUpForm
         Me.showPassword = New System.Windows.Forms.CheckBox()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.TopPanel.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -56,7 +56,7 @@ Partial Class SignUpForm
         Me.btnSignUp.FillColor = System.Drawing.SystemColors.HotTrack
         Me.btnSignUp.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.btnSignUp.ForeColor = System.Drawing.Color.White
-        Me.btnSignUp.Location = New System.Drawing.Point(147, 401)
+        Me.btnSignUp.Location = New System.Drawing.Point(149, 405)
         Me.btnSignUp.Name = "btnSignUp"
         Me.btnSignUp.Size = New System.Drawing.Size(96, 36)
         Me.btnSignUp.TabIndex = 4
@@ -79,6 +79,22 @@ Partial Class SignUpForm
         Me.TopPanel.Name = "TopPanel"
         Me.TopPanel.Size = New System.Drawing.Size(290, 29)
         Me.TopPanel.TabIndex = 14
+        '
+        'Guna2Button1
+        '
+        Me.Guna2Button1.BorderRadius = 5
+        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button1.FillColor = System.Drawing.SystemColors.HotTrack
+        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button1.Location = New System.Drawing.Point(0, 0)
+        Me.Guna2Button1.Name = "Guna2Button1"
+        Me.Guna2Button1.Size = New System.Drawing.Size(33, 29)
+        Me.Guna2Button1.TabIndex = 29
+        Me.Guna2Button1.Text = "<"
         '
         'MinimizeButton
         '
@@ -112,7 +128,7 @@ Partial Class SignUpForm
         Me.btnReset.FillColor = System.Drawing.SystemColors.HotTrack
         Me.btnReset.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.btnReset.ForeColor = System.Drawing.Color.White
-        Me.btnReset.Location = New System.Drawing.Point(43, 401)
+        Me.btnReset.Location = New System.Drawing.Point(45, 405)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(96, 36)
         Me.btnReset.TabIndex = 22
@@ -237,22 +253,6 @@ Partial Class SignUpForm
         Me.Label2.TabIndex = 28
         Me.Label2.Text = "Admin Registration"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Guna2Button1
-        '
-        Me.Guna2Button1.BorderRadius = 5
-        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button1.FillColor = System.Drawing.SystemColors.HotTrack
-        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.Size = New System.Drawing.Size(33, 29)
-        Me.Guna2Button1.TabIndex = 29
-        Me.Guna2Button1.Text = "<"
         '
         'SignUpForm
         '
