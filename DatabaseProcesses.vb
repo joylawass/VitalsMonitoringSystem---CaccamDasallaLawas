@@ -40,7 +40,7 @@ Module DatabaseQueries
     Public Sub Connect()
         Try
             connection.Close()
-            connection = New MySqlConnection("server=localhost;database=monitoring system;username=root;password=''")
+            connection = New MySqlConnection("server=localhost;database=monitoring system;username=root;password=")
             connection.Open()
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -94,7 +94,7 @@ Module DatabaseQueries
     Public Sub LogInQuery(user As String, pass As String)
         Connect()
         Try
-            query = "SELECT * FROM `adminlist` WHERE username = @username"
+            query = "SELECT * FROM adminlist WHERE username = @username"
             With command
                 .Connection = connection
                 .CommandText = query

@@ -10,7 +10,7 @@ Public Class PatientPage
         DTGList.Rows.Clear()
         Connect()
         Try
-            query = "SELECT * FROM `patient_info` where " & TableView
+            query = "SELECT * FROM patient_info where '" & TableView & "'"
             With command
                 .Connection = connection
                 .CommandText = query
