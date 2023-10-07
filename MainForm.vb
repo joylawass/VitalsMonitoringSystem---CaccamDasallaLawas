@@ -186,4 +186,7 @@ Public Class MainForm
         lblTime.Text = Date.Now.ToString("hh:mm:ss")
     End Sub
 
+    Private Sub MainBox_Paint(sender As Object, e As PaintEventArgs) Handles MainBox.Paint
+
+    End Sub
 End Class

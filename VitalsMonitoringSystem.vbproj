@@ -442,6 +442,12 @@
   <ItemGroup>
     <None Include="Resources\icons8-eye-48.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vms logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.5.1.0\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.5.1.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

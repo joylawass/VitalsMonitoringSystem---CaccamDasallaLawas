@@ -17,7 +17,7 @@ Public Class LiveMonitorPage
     Private dismissedPatientIDs As New List(Of String)
 
     Public Sub UpdateUsernameText()
-        lblUsername.Text = LoggedInUser
+        'lblUsername.Text = LoggedInUser
     End Sub
 
     Private Sub TableUpdate()
@@ -121,7 +121,7 @@ Public Class LiveMonitorPage
     '    Next
     'End Sub
     Private Sub LiveMonitorPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lblUsername.Text = LoggedInUser
+        'lblUsername.Text = LoggedInUser
 
         liveMonitoringDTG.Rows.Clear()
         Connect()
@@ -296,5 +296,34 @@ Public Class LiveMonitorPage
         Else
             MessageBox.Show("Please select a patient from the list before dismissing.", "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
+    End Sub
+
+    Private Sub bmiPanel_Paint(sender As Object, e As PaintEventArgs) Handles bmiPanel.Paint
+
+    End Sub
+
+    Private Sub vitalsPanel_Paint(sender As Object, e As PaintEventArgs) Handles vitalsPanel.Paint
+
+    End Sub
+
+    Private Sub lblUsername_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub iconEdit_Click(sender As Object, e As EventArgs) Handles iconEdit.Click
+        txtbxNotes.ReadOnly = False
+        txtbxNotes.BorderStyle = BorderStyle.FixedSingle
+
+        txtbxNotes.Focus()
+
+    End Sub
+
+    Private Sub txtbxNotes_TextChanged(sender As Object, e As EventArgs) Handles txtbxNotes.TextChanged
+
+    End Sub
+
+    Private Sub txtbxNotes_LostFocus(sender As Object, e As EventArgs) Handles txtbxNotes.LostFocus
+        txtbxNotes.ReadOnly = True
+        txtbxNotes.BorderStyle = BorderStyle.None
     End Sub
 End Class

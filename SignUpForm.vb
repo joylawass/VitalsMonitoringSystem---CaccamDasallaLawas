@@ -7,7 +7,7 @@
         LoginForm.Show()
     End Sub
 
-    Private Sub CloseButton_Click(sender As Object, e As EventArgs) Handles CloseButton.Click
+    Private Sub CloseButton_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Dim response As Integer
 
         response = MessageBox.Show("Are you sure you want to exit?", "Log Out Prompt",
@@ -97,13 +97,20 @@
 
     Private Sub txtbxConfirmPass_TextChanged(sender As Object, e As EventArgs) Handles txtbxConfirmPass.TextChanged
         txtbxConfirmPass.UseSystemPasswordChar = True
+
+        If txtbxPassword.Text = txtbxConfirmPass.Text Then
+            lblPasswordsDoNotMatch.Visible = False
+        Else
+            lblPasswordsDoNotMatch.Visible = True
+        End If
     End Sub
 
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btnBackToLogIn.Click
         txtbxUsername.Clear()
         txtbxPassword.Clear()
         txtbxConfirmPass.Clear()
         Me.Close()
         LoginForm.Show()
     End Sub
+
 End Class

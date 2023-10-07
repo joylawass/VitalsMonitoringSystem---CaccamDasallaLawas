@@ -28,16 +28,17 @@ Partial Class SignUpForm
         Me.btnSignUp = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.TopPanel = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.MinimizeButton = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.CloseButton = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.btnBackToLogIn = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnMinimize = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.btnClose = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.btnReset = New Guna.UI2.WinForms.Guna2Button()
         Me.txtbxConfirmPass = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtbxPassword = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtbxUsername = New Guna.UI2.WinForms.Guna2TextBox()
         Me.showPassword = New System.Windows.Forms.CheckBox()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Me.lblPasswordsDoNotMatch = New System.Windows.Forms.Label()
         Me.TopPanel.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -54,11 +55,12 @@ Partial Class SignUpForm
         Me.btnSignUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnSignUp.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnSignUp.FillColor = System.Drawing.SystemColors.HotTrack
-        Me.btnSignUp.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.btnSignUp.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSignUp.ForeColor = System.Drawing.Color.White
-        Me.btnSignUp.Location = New System.Drawing.Point(149, 405)
+        Me.btnSignUp.Location = New System.Drawing.Point(273, 669)
+        Me.btnSignUp.Margin = New System.Windows.Forms.Padding(6)
         Me.btnSignUp.Name = "btnSignUp"
-        Me.btnSignUp.Size = New System.Drawing.Size(96, 36)
+        Me.btnSignUp.Size = New System.Drawing.Size(176, 60)
         Me.btnSignUp.TabIndex = 4
         Me.btnSignUp.Text = "Sign Up"
         '
@@ -71,52 +73,56 @@ Partial Class SignUpForm
         'TopPanel
         '
         Me.TopPanel.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.TopPanel.Controls.Add(Me.Guna2Button1)
-        Me.TopPanel.Controls.Add(Me.MinimizeButton)
-        Me.TopPanel.Controls.Add(Me.CloseButton)
+        Me.TopPanel.Controls.Add(Me.btnBackToLogIn)
+        Me.TopPanel.Controls.Add(Me.btnMinimize)
+        Me.TopPanel.Controls.Add(Me.btnClose)
         Me.TopPanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.TopPanel.Location = New System.Drawing.Point(0, 0)
+        Me.TopPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.TopPanel.Name = "TopPanel"
-        Me.TopPanel.Size = New System.Drawing.Size(290, 29)
+        Me.TopPanel.Size = New System.Drawing.Size(532, 54)
         Me.TopPanel.TabIndex = 14
         '
-        'Guna2Button1
+        'btnBackToLogIn
         '
-        Me.Guna2Button1.BorderRadius = 5
-        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button1.FillColor = System.Drawing.SystemColors.HotTrack
-        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.Size = New System.Drawing.Size(33, 29)
-        Me.Guna2Button1.TabIndex = 29
-        Me.Guna2Button1.Text = "<"
+        Me.btnBackToLogIn.BorderRadius = 5
+        Me.btnBackToLogIn.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnBackToLogIn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnBackToLogIn.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnBackToLogIn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnBackToLogIn.FillColor = System.Drawing.SystemColors.HotTrack
+        Me.btnBackToLogIn.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.btnBackToLogIn.ForeColor = System.Drawing.Color.White
+        Me.btnBackToLogIn.Location = New System.Drawing.Point(0, 0)
+        Me.btnBackToLogIn.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnBackToLogIn.Name = "btnBackToLogIn"
+        Me.btnBackToLogIn.Size = New System.Drawing.Size(60, 54)
+        Me.btnBackToLogIn.TabIndex = 29
+        Me.btnBackToLogIn.Text = "<"
         '
-        'MinimizeButton
+        'btnMinimize
         '
-        Me.MinimizeButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MinimizeButton.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
-        Me.MinimizeButton.FillColor = System.Drawing.SystemColors.HotTrack
-        Me.MinimizeButton.IconColor = System.Drawing.Color.White
-        Me.MinimizeButton.Location = New System.Drawing.Point(220, 0)
-        Me.MinimizeButton.Name = "MinimizeButton"
-        Me.MinimizeButton.Size = New System.Drawing.Size(32, 29)
-        Me.MinimizeButton.TabIndex = 3
+        Me.btnMinimize.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
+        Me.btnMinimize.FillColor = System.Drawing.SystemColors.HotTrack
+        Me.btnMinimize.IconColor = System.Drawing.Color.White
+        Me.btnMinimize.Location = New System.Drawing.Point(403, 0)
+        Me.btnMinimize.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnMinimize.Name = "btnMinimize"
+        Me.btnMinimize.Size = New System.Drawing.Size(59, 54)
+        Me.btnMinimize.TabIndex = 3
         '
-        'CloseButton
+        'btnClose
         '
-        Me.CloseButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.CloseButton.CustomClick = True
-        Me.CloseButton.FillColor = System.Drawing.SystemColors.HotTrack
-        Me.CloseButton.IconColor = System.Drawing.Color.White
-        Me.CloseButton.Location = New System.Drawing.Point(258, 0)
-        Me.CloseButton.Name = "CloseButton"
-        Me.CloseButton.Size = New System.Drawing.Size(32, 29)
-        Me.CloseButton.TabIndex = 1
+        Me.btnClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnClose.CustomClick = True
+        Me.btnClose.FillColor = System.Drawing.SystemColors.HotTrack
+        Me.btnClose.IconColor = System.Drawing.Color.White
+        Me.btnClose.Location = New System.Drawing.Point(473, 0)
+        Me.btnClose.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(59, 54)
+        Me.btnClose.TabIndex = 1
         '
         'btnReset
         '
@@ -126,16 +132,18 @@ Partial Class SignUpForm
         Me.btnReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnReset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnReset.FillColor = System.Drawing.SystemColors.HotTrack
-        Me.btnReset.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.btnReset.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReset.ForeColor = System.Drawing.Color.White
-        Me.btnReset.Location = New System.Drawing.Point(45, 405)
+        Me.btnReset.Location = New System.Drawing.Point(82, 669)
+        Me.btnReset.Margin = New System.Windows.Forms.Padding(6)
         Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(96, 36)
+        Me.btnReset.Size = New System.Drawing.Size(176, 60)
         Me.btnReset.TabIndex = 22
         Me.btnReset.Text = "Reset"
         '
         'txtbxConfirmPass
         '
+        Me.txtbxConfirmPass.Animated = True
         Me.txtbxConfirmPass.BorderColor = System.Drawing.Color.Black
         Me.txtbxConfirmPass.BorderRadius = 5
         Me.txtbxConfirmPass.BorderThickness = 0
@@ -152,18 +160,20 @@ Partial Class SignUpForm
         Me.txtbxConfirmPass.IconLeft = Global.VitalsMonitoringSystem.My.Resources.Resources.icons8_confirm_30
         Me.txtbxConfirmPass.IconLeftOffset = New System.Drawing.Point(3, 0)
         Me.txtbxConfirmPass.IconLeftSize = New System.Drawing.Size(25, 25)
-        Me.txtbxConfirmPass.Location = New System.Drawing.Point(45, 329)
+        Me.txtbxConfirmPass.Location = New System.Drawing.Point(82, 553)
+        Me.txtbxConfirmPass.Margin = New System.Windows.Forms.Padding(9, 11, 9, 11)
         Me.txtbxConfirmPass.Name = "txtbxConfirmPass"
         Me.txtbxConfirmPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtbxConfirmPass.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txtbxConfirmPass.PlaceholderText = "Confirm Password"
         Me.txtbxConfirmPass.SelectedText = ""
-        Me.txtbxConfirmPass.Size = New System.Drawing.Size(200, 36)
+        Me.txtbxConfirmPass.Size = New System.Drawing.Size(367, 60)
         Me.txtbxConfirmPass.TabIndex = 3
         Me.txtbxConfirmPass.TextOffset = New System.Drawing.Point(6, 0)
         '
         'txtbxPassword
         '
+        Me.txtbxPassword.Animated = True
         Me.txtbxPassword.BorderColor = System.Drawing.Color.Black
         Me.txtbxPassword.BorderRadius = 5
         Me.txtbxPassword.BorderThickness = 0
@@ -179,18 +189,20 @@ Partial Class SignUpForm
         Me.txtbxPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtbxPassword.IconLeft = Global.VitalsMonitoringSystem.My.Resources.Resources.icons8_password_64
         Me.txtbxPassword.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.txtbxPassword.Location = New System.Drawing.Point(45, 287)
+        Me.txtbxPassword.Location = New System.Drawing.Point(82, 486)
+        Me.txtbxPassword.Margin = New System.Windows.Forms.Padding(9, 11, 9, 11)
         Me.txtbxPassword.Name = "txtbxPassword"
         Me.txtbxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtbxPassword.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txtbxPassword.PlaceholderText = "Password"
         Me.txtbxPassword.SelectedText = ""
-        Me.txtbxPassword.Size = New System.Drawing.Size(200, 36)
+        Me.txtbxPassword.Size = New System.Drawing.Size(367, 60)
         Me.txtbxPassword.TabIndex = 2
         Me.txtbxPassword.TextOffset = New System.Drawing.Point(4, 0)
         '
         'txtbxUsername
         '
+        Me.txtbxUsername.Animated = True
         Me.txtbxUsername.BorderColor = System.Drawing.Color.Transparent
         Me.txtbxUsername.BorderRadius = 5
         Me.txtbxUsername.BorderThickness = 0
@@ -207,13 +219,14 @@ Partial Class SignUpForm
         Me.txtbxUsername.IconLeft = Global.VitalsMonitoringSystem.My.Resources.Resources.icons8_username_64__3_
         Me.txtbxUsername.IconLeftOffset = New System.Drawing.Point(0, -4)
         Me.txtbxUsername.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.txtbxUsername.Location = New System.Drawing.Point(45, 245)
+        Me.txtbxUsername.Location = New System.Drawing.Point(82, 419)
+        Me.txtbxUsername.Margin = New System.Windows.Forms.Padding(9, 11, 9, 11)
         Me.txtbxUsername.Name = "txtbxUsername"
         Me.txtbxUsername.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.txtbxUsername.PlaceholderForeColor = System.Drawing.Color.DarkGray
+        Me.txtbxUsername.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txtbxUsername.PlaceholderText = "Username"
         Me.txtbxUsername.SelectedText = ""
-        Me.txtbxUsername.Size = New System.Drawing.Size(200, 36)
+        Me.txtbxUsername.Size = New System.Drawing.Size(367, 60)
         Me.txtbxUsername.TabIndex = 1
         Me.txtbxUsername.TextOffset = New System.Drawing.Point(4, 0)
         '
@@ -221,45 +234,60 @@ Partial Class SignUpForm
         '
         Me.showPassword.AutoSize = True
         Me.showPassword.BackColor = System.Drawing.Color.Transparent
-        Me.showPassword.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.showPassword.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.showPassword.ForeColor = System.Drawing.Color.White
-        Me.showPassword.Location = New System.Drawing.Point(45, 371)
+        Me.showPassword.Location = New System.Drawing.Point(82, 628)
+        Me.showPassword.Margin = New System.Windows.Forms.Padding(6)
         Me.showPassword.Name = "showPassword"
-        Me.showPassword.Size = New System.Drawing.Size(129, 24)
+        Me.showPassword.Size = New System.Drawing.Size(181, 34)
         Me.showPassword.TabIndex = 26
         Me.showPassword.Text = "Show Password"
         Me.showPassword.UseVisualStyleBackColor = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(128, 374)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(272, 38)
+        Me.Label2.TabIndex = 28
+        Me.Label2.Text = "Admin Registration"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Guna2PictureBox1
         '
         Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
         Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-140, -67)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-225, -74)
+        Me.Guna2PictureBox1.Margin = New System.Windows.Forms.Padding(6)
         Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(570, 339)
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(964, 558)
         Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2PictureBox1.TabIndex = 27
+        Me.Guna2PictureBox1.TabIndex = 29
         Me.Guna2PictureBox1.TabStop = False
         '
-        'Label2
+        'lblPasswordsDoNotMatch
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold)
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(47, 205)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(196, 28)
-        Me.Label2.TabIndex = 28
-        Me.Label2.Text = "Admin Registration"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblPasswordsDoNotMatch.AutoSize = True
+        Me.lblPasswordsDoNotMatch.Font = New System.Drawing.Font("Segoe UI", 7.0!, System.Drawing.FontStyle.Italic)
+        Me.lblPasswordsDoNotMatch.ForeColor = System.Drawing.Color.MistyRose
+        Me.lblPasswordsDoNotMatch.Location = New System.Drawing.Point(78, 735)
+        Me.lblPasswordsDoNotMatch.Name = "lblPasswordsDoNotMatch"
+        Me.lblPasswordsDoNotMatch.Size = New System.Drawing.Size(201, 23)
+        Me.lblPasswordsDoNotMatch.TabIndex = 30
+        Me.lblPasswordsDoNotMatch.Text = "*Passwords do not match."
         '
         'SignUpForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(290, 464)
+        Me.ClientSize = New System.Drawing.Size(532, 857)
+        Me.Controls.Add(Me.lblPasswordsDoNotMatch)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.showPassword)
         Me.Controls.Add(Me.btnReset)
@@ -270,6 +298,7 @@ Partial Class SignUpForm
         Me.Controls.Add(Me.txtbxUsername)
         Me.Controls.Add(Me.Guna2PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "SignUpForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "SignUpForm"
@@ -282,8 +311,8 @@ Partial Class SignUpForm
 
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents TopPanel As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents MinimizeButton As Guna.UI2.WinForms.Guna2ControlBox
-    Friend WithEvents CloseButton As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents btnMinimize As Guna.UI2.WinForms.Guna2ControlBox
+    Friend WithEvents btnClose As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents btnSignUp As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents txtbxPassword As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtbxUsername As Guna.UI2.WinForms.Guna2TextBox
@@ -291,7 +320,8 @@ Partial Class SignUpForm
     Friend WithEvents txtbxConfirmPass As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnReset As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents showPassword As CheckBox
-    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnBackToLogIn As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents lblPasswordsDoNotMatch As Label
 End Class
