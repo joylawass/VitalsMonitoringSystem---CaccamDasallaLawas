@@ -34,10 +34,10 @@ Partial Class LoginForm
         Me.linkLabelCreateAccount = New System.Windows.Forms.LinkLabel()
         Me.btnReset = New Guna.UI2.WinForms.Guna2Button()
         Me.showPassword = New System.Windows.Forms.CheckBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.txtbxUsername = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.txtbxPassword = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.TopPanel.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -53,9 +53,8 @@ Partial Class LoginForm
         Me.TopPanel.Controls.Add(Me.CloseButton)
         Me.TopPanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.TopPanel.Location = New System.Drawing.Point(0, 0)
-        Me.TopPanel.Margin = New System.Windows.Forms.Padding(6)
         Me.TopPanel.Name = "TopPanel"
-        Me.TopPanel.Size = New System.Drawing.Size(532, 54)
+        Me.TopPanel.Size = New System.Drawing.Size(277, 29)
         Me.TopPanel.TabIndex = 0
         '
         'MinimizeButton
@@ -64,10 +63,9 @@ Partial Class LoginForm
         Me.MinimizeButton.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
         Me.MinimizeButton.FillColor = System.Drawing.SystemColors.HotTrack
         Me.MinimizeButton.IconColor = System.Drawing.Color.White
-        Me.MinimizeButton.Location = New System.Drawing.Point(403, 0)
-        Me.MinimizeButton.Margin = New System.Windows.Forms.Padding(6)
+        Me.MinimizeButton.Location = New System.Drawing.Point(207, 0)
         Me.MinimizeButton.Name = "MinimizeButton"
-        Me.MinimizeButton.Size = New System.Drawing.Size(59, 54)
+        Me.MinimizeButton.Size = New System.Drawing.Size(32, 29)
         Me.MinimizeButton.TabIndex = 3
         '
         'CloseButton
@@ -76,10 +74,9 @@ Partial Class LoginForm
         Me.CloseButton.CustomClick = True
         Me.CloseButton.FillColor = System.Drawing.SystemColors.HotTrack
         Me.CloseButton.IconColor = System.Drawing.Color.White
-        Me.CloseButton.Location = New System.Drawing.Point(473, 0)
-        Me.CloseButton.Margin = New System.Windows.Forms.Padding(6)
+        Me.CloseButton.Location = New System.Drawing.Point(245, 0)
         Me.CloseButton.Name = "CloseButton"
-        Me.CloseButton.Size = New System.Drawing.Size(59, 54)
+        Me.CloseButton.Size = New System.Drawing.Size(32, 29)
         Me.CloseButton.TabIndex = 1
         '
         'Guna2DragControl1
@@ -93,10 +90,9 @@ Partial Class LoginForm
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(162, 373)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.Label2.Location = New System.Drawing.Point(84, 200)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(186, 38)
+        Me.Label2.Size = New System.Drawing.Size(108, 21)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Admin Login"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -112,10 +108,9 @@ Partial Class LoginForm
         Me.btnLogin.FillColor = System.Drawing.SystemColors.HotTrack
         Me.btnLogin.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnLogin.ForeColor = System.Drawing.Color.White
-        Me.btnLogin.Location = New System.Drawing.Point(273, 592)
-        Me.btnLogin.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnLogin.Location = New System.Drawing.Point(142, 324)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(176, 60)
+        Me.btnLogin.Size = New System.Drawing.Size(96, 32)
         Me.btnLogin.TabIndex = 3
         Me.btnLogin.Text = "Log In"
         '
@@ -127,10 +122,9 @@ Partial Class LoginForm
         Me.linkLabelCreateAccount.AutoSize = True
         Me.linkLabelCreateAccount.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.linkLabelCreateAccount.LinkColor = System.Drawing.Color.Black
-        Me.linkLabelCreateAccount.Location = New System.Drawing.Point(192, 704)
-        Me.linkLabelCreateAccount.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.linkLabelCreateAccount.Location = New System.Drawing.Point(94, 384)
         Me.linkLabelCreateAccount.Name = "linkLabelCreateAccount"
-        Me.linkLabelCreateAccount.Size = New System.Drawing.Size(156, 30)
+        Me.linkLabelCreateAccount.Size = New System.Drawing.Size(89, 15)
         Me.linkLabelCreateAccount.TabIndex = 13
         Me.linkLabelCreateAccount.TabStop = True
         Me.linkLabelCreateAccount.Text = "Create Account"
@@ -146,10 +140,9 @@ Partial Class LoginForm
         Me.btnReset.FillColor = System.Drawing.SystemColors.HotTrack
         Me.btnReset.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.btnReset.ForeColor = System.Drawing.Color.White
-        Me.btnReset.Location = New System.Drawing.Point(82, 592)
-        Me.btnReset.Margin = New System.Windows.Forms.Padding(6)
+        Me.btnReset.Location = New System.Drawing.Point(38, 324)
         Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(176, 60)
+        Me.btnReset.Size = New System.Drawing.Size(96, 32)
         Me.btnReset.TabIndex = 23
         Me.btnReset.Text = "Reset"
         '
@@ -159,28 +152,12 @@ Partial Class LoginForm
         Me.showPassword.BackColor = System.Drawing.Color.Transparent
         Me.showPassword.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.showPassword.ForeColor = System.Drawing.Color.White
-        Me.showPassword.Location = New System.Drawing.Point(82, 552)
-        Me.showPassword.Margin = New System.Windows.Forms.Padding(6)
+        Me.showPassword.Location = New System.Drawing.Point(39, 299)
         Me.showPassword.Name = "showPassword"
-        Me.showPassword.Size = New System.Drawing.Size(181, 34)
+        Me.showPassword.Size = New System.Drawing.Size(108, 19)
         Me.showPassword.TabIndex = 10
         Me.showPassword.Text = "Show Password"
         Me.showPassword.UseVisualStyleBackColor = False
-        '
-        'Label3
-        '
-        Me.Label3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(144, 674)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(232, 30)
-        Me.Label3.TabIndex = 26
-        Me.Label3.Text = "Don't have an account?"
         '
         'txtbxUsername
         '
@@ -201,14 +178,14 @@ Partial Class LoginForm
         Me.txtbxUsername.IconLeft = Global.VitalsMonitoringSystem.My.Resources.Resources.icons8_username_64__3_
         Me.txtbxUsername.IconLeftOffset = New System.Drawing.Point(0, -4)
         Me.txtbxUsername.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.txtbxUsername.Location = New System.Drawing.Point(82, 419)
-        Me.txtbxUsername.Margin = New System.Windows.Forms.Padding(11, 11, 9, 11)
+        Me.txtbxUsername.Location = New System.Drawing.Point(38, 227)
+        Me.txtbxUsername.Margin = New System.Windows.Forms.Padding(6, 6, 5, 6)
         Me.txtbxUsername.Name = "txtbxUsername"
         Me.txtbxUsername.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtbxUsername.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txtbxUsername.PlaceholderText = "Username"
         Me.txtbxUsername.SelectedText = ""
-        Me.txtbxUsername.Size = New System.Drawing.Size(367, 60)
+        Me.txtbxUsername.Size = New System.Drawing.Size(200, 32)
         Me.txtbxUsername.TabIndex = 1
         Me.txtbxUsername.TextOffset = New System.Drawing.Point(4, 0)
         '
@@ -217,10 +194,9 @@ Partial Class LoginForm
         Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
         Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-225, -74)
-        Me.Guna2PictureBox1.Margin = New System.Windows.Forms.Padding(6)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-125, -40)
         Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(964, 558)
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(526, 302)
         Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.Guna2PictureBox1.TabIndex = 28
         Me.Guna2PictureBox1.TabStop = False
@@ -243,23 +219,37 @@ Partial Class LoginForm
         Me.txtbxPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtbxPassword.IconLeft = Global.VitalsMonitoringSystem.My.Resources.Resources.icons8_password_64
         Me.txtbxPassword.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.txtbxPassword.Location = New System.Drawing.Point(82, 486)
-        Me.txtbxPassword.Margin = New System.Windows.Forms.Padding(11, 11, 9, 11)
+        Me.txtbxPassword.Location = New System.Drawing.Point(38, 261)
+        Me.txtbxPassword.Margin = New System.Windows.Forms.Padding(6, 6, 5, 6)
         Me.txtbxPassword.Name = "txtbxPassword"
         Me.txtbxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtbxPassword.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txtbxPassword.PlaceholderText = "Password"
         Me.txtbxPassword.SelectedText = ""
-        Me.txtbxPassword.Size = New System.Drawing.Size(367, 60)
+        Me.txtbxPassword.Size = New System.Drawing.Size(200, 32)
         Me.txtbxPassword.TabIndex = 2
         Me.txtbxPassword.TextOffset = New System.Drawing.Point(4, 0)
         '
+        'Label3
+        '
+        Me.Label3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(73, 368)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(131, 15)
+        Me.Label3.TabIndex = 26
+        Me.Label3.Text = "Don't have an account?"
+        '
         'LoginForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(532, 857)
+        Me.ClientSize = New System.Drawing.Size(277, 427)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.showPassword)
         Me.Controls.Add(Me.btnReset)
@@ -271,7 +261,6 @@ Partial Class LoginForm
         Me.Controls.Add(Me.TopPanel)
         Me.Controls.Add(Me.Guna2PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "LoginForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "LoginForm"
@@ -293,7 +282,7 @@ Partial Class LoginForm
     Friend WithEvents linkLabelCreateAccount As LinkLabel
     Friend WithEvents btnReset As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents showPassword As CheckBox
-    Friend WithEvents Label3 As Label
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents txtbxPassword As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label3 As Label
 End Class

@@ -16,7 +16,7 @@ Public Class MainForm
 
         ' Add any initialization after the InitializeComponent() call.
         leftBorderBtn = New Panel()
-        leftBorderBtn.Size = New Size(7, 49)
+        leftBorderBtn.Size = New Size(7, 61)
         MenuPanelMainForm.Controls.Add(leftBorderBtn)
     End Sub
 
@@ -121,18 +121,6 @@ Public Class MainForm
         switchPanel(LiveMonitorPage)
     End Sub
 
-    Private Sub LogoutButton_Click(sender As Object, e As EventArgs) Handles LogoutButton.Click
-        ActivateButton(sender, Color.White)
-        Dim response As Integer
-
-        response = MessageBox.Show("Are you sure you want to log out?", "Log Out Prompt",
-                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-        If response = vbYes Then
-            Me.Hide()
-            LoginForm.Show()
-        End If
-    End Sub
-
     Private Sub DashboardButton_MouseEnter(sender As Object, e As EventArgs) Handles DashboardButton.MouseEnter
         If currentBtn IsNot DashboardButton Then
             DashboardButton.Font = New Font(DashboardButton.Font, FontStyle.Bold)
@@ -148,12 +136,6 @@ Public Class MainForm
     Private Sub LiveMonitorButton_MouseEnter(sender As Object, e As EventArgs) Handles LiveMonitorButton.MouseEnter
         If currentBtn IsNot LiveMonitorButton Then
             LiveMonitorButton.Font = New Font(LiveMonitorButton.Font, FontStyle.Bold)
-        End If
-    End Sub
-
-    Private Sub LogoutButton_MouseEnter(sender As Object, e As EventArgs) Handles LogoutButton.MouseEnter
-        If currentBtn IsNot LogoutButton Then
-            LogoutButton.Font = New Font(LogoutButton.Font, FontStyle.Bold)
         End If
     End Sub
 
@@ -175,18 +157,33 @@ Public Class MainForm
         End If
     End Sub
 
-    Private Sub LogoutButton_MouseLeave(sender As Object, e As EventArgs) Handles LogoutButton.MouseLeave
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        lblDate.Text = Date.Now.ToString("MMM dd, yyyy")
+        lblTimee.Text = Date.Now.ToString("hh:mm:ss")
+    End Sub
+
+    Private Sub LogoutBtn_Click(sender As Object, e As EventArgs) Handles LogoutBtn.Click
+        ActivateButton(sender, Color.White)
+        Dim response As Integer
+
+        response = MessageBox.Show("Are you sure you want to log out?", "Log Out Prompt",
+                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If response = vbYes Then
+            Me.Hide()
+            LoginForm.Show()
+        End If
+    End Sub
+
+    Private Sub LogoutBtn_MouseEnter(sender As Object, e As EventArgs) Handles LogoutBtn.MouseEnter
+        If currentBtn IsNot LogoutButton Then
+            LogoutButton.Font = New Font(LogoutButton.Font, FontStyle.Bold)
+        End If
+    End Sub
+
+    Private Sub LogoutBtn_MouseLeave(sender As Object, e As EventArgs) Handles LogoutBtn.MouseLeave
         If currentBtn IsNot LogoutButton Then
             LogoutButton.Font = New Font(LogoutButton.Font, FontStyle.Regular)
         End If
     End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        lblDate.Text = Date.Now.ToString("MMM dd, yyyy")
-        lblTime.Text = Date.Now.ToString("hh:mm:ss")
-    End Sub
-
-    Private Sub MainBox_Paint(sender As Object, e As PaintEventArgs) Handles MainBox.Paint
-
-    End Sub
 End Class
