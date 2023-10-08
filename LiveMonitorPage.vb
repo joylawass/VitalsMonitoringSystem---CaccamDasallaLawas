@@ -194,11 +194,12 @@ Public Class LiveMonitorPage
             Dim weightChange As String = ""
             Dim bmiChange As String = ""
             Dim wardChange As String = ""
+            Dim history As String = ""
             Dim patientBirthdate As Date
 
             ' Fetch patient information from the database using the selectedPatientID
             Connect()
-            query = "SELECT lastname, firstname, middlename, extname, birthdate, sex, blood_type, ward, height, weight, bmi FROM patient_info WHERE patientID = @patientID"
+            query = "SELECT lastname, firstname, middlename, extname, birthdate, sex, blood_type, ward, height, weight, bmi, health_history FROM patient_info WHERE patientID = @patientID"
             Try
                 Using command As New MySqlCommand(query, connection)
                     command.Parameters.AddWithValue("@patientID", selectedPatientID)
@@ -218,6 +219,7 @@ Public Class LiveMonitorPage
                         weightChange = reader.GetString("weight")
                         bmiChange = reader.GetString("bmi")
                         wardChange = reader.GetString("ward")
+                        history = reader.GetString("health_history")
 
                         ' Attempt to parse the birthdate string into a Date
                         If Date.TryParse(birthdateString, patientBirthdate) Then
@@ -245,6 +247,7 @@ Public Class LiveMonitorPage
             weightLive.Text = weightChange
             bmiLive.Text = bmiChange
             wardNumberLive.Text = wardChange
+            historyLive.Text = history
         End If
     End Sub '
 
@@ -298,32 +301,15 @@ Public Class LiveMonitorPage
         End If
     End Sub
 
-    Private Sub bmiPanel_Paint(sender As Object, e As PaintEventArgs) Handles bmiPanel.Paint
-
-    End Sub
-
-    Private Sub vitalsPanel_Paint(sender As Object, e As PaintEventArgs) Handles vitalsPanel.Paint
-
-    End Sub
-
-    Private Sub lblUsername_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub iconEdit_Click(sender As Object, e As EventArgs) Handles iconEdit.Click
+    Private Sub IconEdit_Click(sender As Object, e As EventArgs) Handles IconEdit.Click
         txtbxNotes.ReadOnly = False
         txtbxNotes.BorderStyle = BorderStyle.FixedSingle
-
         txtbxNotes.Focus()
-
-    End Sub
-
-    Private Sub txtbxNotes_TextChanged(sender As Object, e As EventArgs) Handles txtbxNotes.TextChanged
-
     End Sub
 
     Private Sub txtbxNotes_LostFocus(sender As Object, e As EventArgs) Handles txtbxNotes.LostFocus
         txtbxNotes.ReadOnly = True
         txtbxNotes.BorderStyle = BorderStyle.None
     End Sub
+
 End Class

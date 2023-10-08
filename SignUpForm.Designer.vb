@@ -265,7 +265,7 @@ Partial Class SignUpForm
         '
         Me.lblPasswordsDoNotMatch.AutoSize = True
         Me.lblPasswordsDoNotMatch.Font = New System.Drawing.Font("Segoe UI", 7.0!, System.Drawing.FontStyle.Italic)
-        Me.lblPasswordsDoNotMatch.ForeColor = System.Drawing.Color.MistyRose
+        Me.lblPasswordsDoNotMatch.ForeColor = System.Drawing.Color.DarkRed
         Me.lblPasswordsDoNotMatch.Location = New System.Drawing.Point(36, 397)
         Me.lblPasswordsDoNotMatch.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblPasswordsDoNotMatch.Name = "lblPasswordsDoNotMatch"

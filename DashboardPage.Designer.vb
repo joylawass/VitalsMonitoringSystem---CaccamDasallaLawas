@@ -41,13 +41,14 @@ Partial Class DashboardPage
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.liveNotifPanel = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        Me.Panel5.SuspendLayout()
+        Me.liveNotifPanel.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -109,7 +110,7 @@ Partial Class DashboardPage
         Me.lblUsername.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUsername.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lblUsername.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblUsername.Location = New System.Drawing.Point(160, 24)
+        Me.lblUsername.Location = New System.Drawing.Point(163, 25)
         Me.lblUsername.Name = "lblUsername"
         Me.lblUsername.Size = New System.Drawing.Size(97, 25)
         Me.lblUsername.TabIndex = 27
@@ -123,7 +124,7 @@ Partial Class DashboardPage
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.DarkGray
         Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label1.Location = New System.Drawing.Point(12, 495)
+        Me.Label1.Location = New System.Drawing.Point(12, 508)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(73, 16)
         Me.Label1.TabIndex = 35
@@ -137,7 +138,7 @@ Partial Class DashboardPage
         Me.lblUsername1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUsername1.ForeColor = System.Drawing.Color.DarkGray
         Me.lblUsername1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblUsername1.Location = New System.Drawing.Point(82, 495)
+        Me.lblUsername1.Location = New System.Drawing.Point(82, 508)
         Me.lblUsername1.Name = "lblUsername1"
         Me.lblUsername1.Size = New System.Drawing.Size(70, 16)
         Me.lblUsername1.TabIndex = 34
@@ -255,34 +256,38 @@ Partial Class DashboardPage
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
         Me.Label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label10.Location = New System.Drawing.Point(43, 10)
+        Me.Label10.Location = New System.Drawing.Point(33, 10)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(162, 25)
         Me.Label10.TabIndex = 36
         Me.Label10.Text = "Live Notifications"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Panel5
+        'liveNotifPanel
         '
-        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Panel5.Controls.Add(Me.PictureBox1)
-        Me.Panel5.Controls.Add(Me.Label10)
-        Me.Panel5.Location = New System.Drawing.Point(472, 15)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(208, 470)
-        Me.Panel5.TabIndex = 37
+        Me.liveNotifPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.liveNotifPanel.Controls.Add(Me.PictureBox1)
+        Me.liveNotifPanel.Controls.Add(Me.Label10)
+        Me.liveNotifPanel.Location = New System.Drawing.Point(472, 15)
+        Me.liveNotifPanel.Margin = New System.Windows.Forms.Padding(2)
+        Me.liveNotifPanel.Name = "liveNotifPanel"
+        Me.liveNotifPanel.Size = New System.Drawing.Size(208, 470)
+        Me.liveNotifPanel.TabIndex = 37
         '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.PictureBox1.Image = Global.VitalsMonitoringSystem.My.Resources.Resources.icons8_notification_24
         Me.PictureBox1.Location = New System.Drawing.Point(12, 9)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(26, 26)
         Me.PictureBox1.TabIndex = 37
         Me.PictureBox1.TabStop = False
+        '
+        'Guna2Elipse1
+        '
+        Me.Guna2Elipse1.TargetControl = Me.liveNotifPanel
         '
         'DashboardPage
         '
@@ -290,7 +295,8 @@ Partial Class DashboardPage
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(697, 533)
-        Me.Controls.Add(Me.Panel5)
+        Me.Controls.Add(Me.lblUsername)
+        Me.Controls.Add(Me.liveNotifPanel)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
@@ -298,7 +304,6 @@ Partial Class DashboardPage
         Me.Controls.Add(Me.lblUsername1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Welcome)
-        Me.Controls.Add(Me.lblUsername)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "DashboardPage"
         Me.Text = "DashboardPage"
@@ -310,8 +315,8 @@ Partial Class DashboardPage
         Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
+        Me.liveNotifPanel.ResumeLayout(False)
+        Me.liveNotifPanel.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -335,6 +340,7 @@ Partial Class DashboardPage
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents Panel5 As Panel
+    Friend WithEvents liveNotifPanel As Panel
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
 End Class
