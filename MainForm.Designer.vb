@@ -113,7 +113,7 @@ Partial Class MainForm
         Me.LogoutBtn.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.LogoutBtn.IconSize = 36
         Me.LogoutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LogoutBtn.Location = New System.Drawing.Point(8, 505)
+        Me.LogoutBtn.Location = New System.Drawing.Point(8, 490)
         Me.LogoutBtn.Name = "LogoutBtn"
         Me.LogoutBtn.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.LogoutBtn.Rotation = 180.0R
@@ -134,7 +134,7 @@ Partial Class MainForm
         Me.LiveMonitorButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.LiveMonitorButton.IconSize = 36
         Me.LiveMonitorButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LiveMonitorButton.Location = New System.Drawing.Point(8, 409)
+        Me.LiveMonitorButton.Location = New System.Drawing.Point(8, 390)
         Me.LiveMonitorButton.Name = "LiveMonitorButton"
         Me.LiveMonitorButton.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.LiveMonitorButton.Size = New System.Drawing.Size(240, 61)
@@ -154,7 +154,7 @@ Partial Class MainForm
         Me.PatientButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.PatientButton.IconSize = 36
         Me.PatientButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.PatientButton.Location = New System.Drawing.Point(8, 331)
+        Me.PatientButton.Location = New System.Drawing.Point(8, 323)
         Me.PatientButton.Name = "PatientButton"
         Me.PatientButton.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.PatientButton.Size = New System.Drawing.Size(240, 61)
@@ -267,7 +267,7 @@ Partial Class MainForm
         Me.lblDate.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDate.ForeColor = System.Drawing.Color.White
         Me.lblDate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblDate.Location = New System.Drawing.Point(465, 11)
+        Me.lblDate.Location = New System.Drawing.Point(471, 11)
         Me.lblDate.Name = "lblDate"
         Me.lblDate.Size = New System.Drawing.Size(145, 25)
         Me.lblDate.TabIndex = 41
