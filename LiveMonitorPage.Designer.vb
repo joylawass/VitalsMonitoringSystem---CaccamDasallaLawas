@@ -23,9 +23,9 @@ Partial Class LiveMonitorPage
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LiveMonitorPage))
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
@@ -34,8 +34,8 @@ Partial Class LiveMonitorPage
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.PatientInfoPanel = New Guna.UI2.WinForms.Guna2Panel()
-        Me.DiagnosisPanel = New Guna.UI2.WinForms.Guna2Panel()
-        Me.lblDiagnonsisHealthHistory = New System.Windows.Forms.Label()
+        Me.historyLivePanel = New Guna.UI2.WinForms.Guna2Panel()
+        Me.historyLive = New System.Windows.Forms.Label()
         Me.txtbxNotes = New System.Windows.Forms.TextBox()
         Me.weightPanel = New Guna.UI2.WinForms.Guna2Panel()
         Me.weightLive = New System.Windows.Forms.Label()
@@ -58,6 +58,8 @@ Partial Class LiveMonitorPage
         Me.NotesPanel = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.IconEdit = New FontAwesome.Sharp.IconPictureBox()
+        Me.DiagnosisPanel = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblDiagnonsisHealthHistory = New System.Windows.Forms.Label()
         Me.Guna2Elipse4 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse5 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse7 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
@@ -95,13 +97,11 @@ Partial Class LiveMonitorPage
         Me.patientName = New System.Windows.Forms.Label()
         Me.Guna2Elipse11 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse12 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.historyLivePanel = New Guna.UI2.WinForms.Guna2Panel()
-        Me.historyLive = New System.Windows.Forms.Label()
         Me.Guna2Elipse13 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse14 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         CType(Me.liveMonitoringDTG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PatientInfoPanel.SuspendLayout()
-        Me.DiagnosisPanel.SuspendLayout()
+        Me.historyLivePanel.SuspendLayout()
         Me.weightPanel.SuspendLayout()
         Me.bmiPanel.SuspendLayout()
         Me.heightPanell.SuspendLayout()
@@ -110,6 +110,7 @@ Partial Class LiveMonitorPage
         Me.bloodTypePanel.SuspendLayout()
         Me.NotesPanel.SuspendLayout()
         CType(Me.IconEdit, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DiagnosisPanel.SuspendLayout()
         Me.othersPanel.SuspendLayout()
         Me.Guna2Panel5.SuspendLayout()
         CType(Me.Guna2PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -124,7 +125,6 @@ Partial Class LiveMonitorPage
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.historyLivePanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'Timer1
@@ -142,30 +142,30 @@ Partial Class LiveMonitorPage
         Me.liveMonitoringDTG.AllowUserToOrderColumns = True
         Me.liveMonitoringDTG.AllowUserToResizeColumns = False
         Me.liveMonitoringDTG.AllowUserToResizeRows = False
-        DataGridViewCellStyle19.BackColor = System.Drawing.Color.White
-        Me.liveMonitoringDTG.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.liveMonitoringDTG.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.liveMonitoringDTG.BackgroundColor = System.Drawing.SystemColors.Control
         Me.liveMonitoringDTG.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle20.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.liveMonitoringDTG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.liveMonitoringDTG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.liveMonitoringDTG.ColumnHeadersHeight = 28
         Me.liveMonitoringDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         Me.liveMonitoringDTG.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.patientID, Me.DataGridViewTextBoxColumn2})
         Me.liveMonitoringDTG.Cursor = System.Windows.Forms.Cursors.Arrow
-        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle21.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.liveMonitoringDTG.DefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.liveMonitoringDTG.DefaultCellStyle = DataGridViewCellStyle3
         Me.liveMonitoringDTG.GridColor = System.Drawing.Color.White
         Me.liveMonitoringDTG.Location = New System.Drawing.Point(17, 12)
         Me.liveMonitoringDTG.Name = "liveMonitoringDTG"
@@ -173,7 +173,7 @@ Partial Class LiveMonitorPage
         Me.liveMonitoringDTG.RowHeadersVisible = False
         Me.liveMonitoringDTG.RowHeadersWidth = 72
         Me.liveMonitoringDTG.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.liveMonitoringDTG.Size = New System.Drawing.Size(340, 470)
+        Me.liveMonitoringDTG.Size = New System.Drawing.Size(340, 483)
         Me.liveMonitoringDTG.TabIndex = 50
         Me.liveMonitoringDTG.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.liveMonitoringDTG.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -233,32 +233,31 @@ Partial Class LiveMonitorPage
         Me.PatientInfoPanel.Controls.Add(Me.DiagnosisPanel)
         Me.PatientInfoPanel.Location = New System.Drawing.Point(366, 195)
         Me.PatientInfoPanel.Name = "PatientInfoPanel"
-        Me.PatientInfoPanel.Size = New System.Drawing.Size(315, 320)
+        Me.PatientInfoPanel.Size = New System.Drawing.Size(315, 334)
         Me.PatientInfoPanel.TabIndex = 37
         '
-        'DiagnosisPanel
+        'historyLivePanel
         '
-        Me.DiagnosisPanel.BackColor = System.Drawing.Color.White
-        Me.DiagnosisPanel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
-        Me.DiagnosisPanel.Controls.Add(Me.lblDiagnonsisHealthHistory)
-        Me.DiagnosisPanel.Location = New System.Drawing.Point(15, 106)
-        Me.DiagnosisPanel.Name = "DiagnosisPanel"
-        Me.DiagnosisPanel.Size = New System.Drawing.Size(139, 202)
-        Me.DiagnosisPanel.TabIndex = 46
+        Me.historyLivePanel.BackColor = System.Drawing.Color.White
+        Me.historyLivePanel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
+        Me.historyLivePanel.Controls.Add(Me.historyLive)
+        Me.historyLivePanel.Location = New System.Drawing.Point(15, 133)
+        Me.historyLivePanel.Name = "historyLivePanel"
+        Me.historyLivePanel.Size = New System.Drawing.Size(136, 183)
+        Me.historyLivePanel.TabIndex = 52
         '
-        'lblDiagnonsisHealthHistory
+        'historyLive
         '
-        Me.lblDiagnonsisHealthHistory.AutoSize = True
-        Me.lblDiagnonsisHealthHistory.BackColor = System.Drawing.Color.Transparent
-        Me.lblDiagnonsisHealthHistory.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.lblDiagnonsisHealthHistory.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.lblDiagnonsisHealthHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblDiagnonsisHealthHistory.Location = New System.Drawing.Point(5, 4)
-        Me.lblDiagnonsisHealthHistory.Name = "lblDiagnonsisHealthHistory"
-        Me.lblDiagnonsisHealthHistory.Size = New System.Drawing.Size(74, 20)
-        Me.lblDiagnonsisHealthHistory.TabIndex = 51
-        Me.lblDiagnonsisHealthHistory.Text = "Diagnosis"
-        Me.lblDiagnonsisHealthHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.historyLive.AutoSize = True
+        Me.historyLive.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.historyLive.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.historyLive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.historyLive.Location = New System.Drawing.Point(6, 14)
+        Me.historyLive.Name = "historyLive"
+        Me.historyLive.Size = New System.Drawing.Size(13, 20)
+        Me.historyLive.TabIndex = 46
+        Me.historyLive.Text = " "
+        Me.historyLive.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txtbxNotes
         '
@@ -271,7 +270,7 @@ Partial Class LiveMonitorPage
         Me.txtbxNotes.Name = "txtbxNotes"
         Me.txtbxNotes.ReadOnly = True
         Me.txtbxNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtbxNotes.Size = New System.Drawing.Size(137, 173)
+        Me.txtbxNotes.Size = New System.Drawing.Size(137, 185)
         Me.txtbxNotes.TabIndex = 54
         '
         'weightPanel
@@ -504,7 +503,7 @@ Partial Class LiveMonitorPage
         Me.NotesPanel.Controls.Add(Me.IconEdit)
         Me.NotesPanel.Location = New System.Drawing.Point(162, 106)
         Me.NotesPanel.Name = "NotesPanel"
-        Me.NotesPanel.Size = New System.Drawing.Size(139, 202)
+        Me.NotesPanel.Size = New System.Drawing.Size(139, 213)
         Me.NotesPanel.TabIndex = 52
         '
         'Label1
@@ -534,6 +533,30 @@ Partial Class LiveMonitorPage
         Me.IconEdit.Size = New System.Drawing.Size(25, 25)
         Me.IconEdit.TabIndex = 57
         Me.IconEdit.TabStop = False
+        '
+        'DiagnosisPanel
+        '
+        Me.DiagnosisPanel.BackColor = System.Drawing.Color.White
+        Me.DiagnosisPanel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
+        Me.DiagnosisPanel.Controls.Add(Me.lblDiagnonsisHealthHistory)
+        Me.DiagnosisPanel.Location = New System.Drawing.Point(15, 106)
+        Me.DiagnosisPanel.Name = "DiagnosisPanel"
+        Me.DiagnosisPanel.Size = New System.Drawing.Size(139, 213)
+        Me.DiagnosisPanel.TabIndex = 46
+        '
+        'lblDiagnonsisHealthHistory
+        '
+        Me.lblDiagnonsisHealthHistory.AutoSize = True
+        Me.lblDiagnonsisHealthHistory.BackColor = System.Drawing.Color.Transparent
+        Me.lblDiagnonsisHealthHistory.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.lblDiagnonsisHealthHistory.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.lblDiagnonsisHealthHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblDiagnonsisHealthHistory.Location = New System.Drawing.Point(5, 4)
+        Me.lblDiagnonsisHealthHistory.Name = "lblDiagnonsisHealthHistory"
+        Me.lblDiagnonsisHealthHistory.Size = New System.Drawing.Size(74, 20)
+        Me.lblDiagnonsisHealthHistory.TabIndex = 51
+        Me.lblDiagnonsisHealthHistory.Text = "Diagnosis"
+        Me.lblDiagnonsisHealthHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Guna2Elipse4
         '
@@ -568,7 +591,7 @@ Partial Class LiveMonitorPage
         Me.ReloadBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.ReloadBtn.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.ReloadBtn.ForeColor = System.Drawing.Color.White
-        Me.ReloadBtn.Location = New System.Drawing.Point(178, 487)
+        Me.ReloadBtn.Location = New System.Drawing.Point(179, 501)
         Me.ReloadBtn.Name = "ReloadBtn"
         Me.ReloadBtn.Size = New System.Drawing.Size(87, 28)
         Me.ReloadBtn.TabIndex = 51
@@ -584,7 +607,7 @@ Partial Class LiveMonitorPage
         Me.DismissBtn.FillColor = System.Drawing.Color.Red
         Me.DismissBtn.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.DismissBtn.ForeColor = System.Drawing.Color.White
-        Me.DismissBtn.Location = New System.Drawing.Point(269, 487)
+        Me.DismissBtn.Location = New System.Drawing.Point(270, 501)
         Me.DismissBtn.Name = "DismissBtn"
         Me.DismissBtn.Size = New System.Drawing.Size(87, 28)
         Me.DismissBtn.TabIndex = 52
@@ -902,29 +925,6 @@ Partial Class LiveMonitorPage
         '
         Me.Guna2Elipse12.TargetControl = Me.othersPanel
         '
-        'historyLivePanel
-        '
-        Me.historyLivePanel.BackColor = System.Drawing.Color.White
-        Me.historyLivePanel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
-        Me.historyLivePanel.Controls.Add(Me.historyLive)
-        Me.historyLivePanel.Location = New System.Drawing.Point(15, 133)
-        Me.historyLivePanel.Name = "historyLivePanel"
-        Me.historyLivePanel.Size = New System.Drawing.Size(136, 172)
-        Me.historyLivePanel.TabIndex = 52
-        '
-        'historyLive
-        '
-        Me.historyLive.AutoSize = True
-        Me.historyLive.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.historyLive.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.historyLive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.historyLive.Location = New System.Drawing.Point(6, 14)
-        Me.historyLive.Name = "historyLive"
-        Me.historyLive.Size = New System.Drawing.Size(13, 20)
-        Me.historyLive.TabIndex = 46
-        Me.historyLive.Text = " "
-        Me.historyLive.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
         'Guna2Elipse13
         '
         Me.Guna2Elipse13.TargetControl = Me.DiagnosisPanel
@@ -938,7 +938,7 @@ Partial Class LiveMonitorPage
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(697, 533)
+        Me.ClientSize = New System.Drawing.Size(697, 541)
         Me.Controls.Add(Me.wardNumberLive)
         Me.Controls.Add(Me.patientName)
         Me.Controls.Add(Me.othersPanel)
@@ -953,8 +953,8 @@ Partial Class LiveMonitorPage
         CType(Me.liveMonitoringDTG, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PatientInfoPanel.ResumeLayout(False)
         Me.PatientInfoPanel.PerformLayout()
-        Me.DiagnosisPanel.ResumeLayout(False)
-        Me.DiagnosisPanel.PerformLayout()
+        Me.historyLivePanel.ResumeLayout(False)
+        Me.historyLivePanel.PerformLayout()
         Me.weightPanel.ResumeLayout(False)
         Me.weightPanel.PerformLayout()
         Me.bmiPanel.ResumeLayout(False)
@@ -970,6 +970,8 @@ Partial Class LiveMonitorPage
         Me.NotesPanel.ResumeLayout(False)
         Me.NotesPanel.PerformLayout()
         CType(Me.IconEdit, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.DiagnosisPanel.ResumeLayout(False)
+        Me.DiagnosisPanel.PerformLayout()
         Me.othersPanel.ResumeLayout(False)
         Me.othersPanel.PerformLayout()
         Me.Guna2Panel5.ResumeLayout(False)
@@ -992,8 +994,6 @@ Partial Class LiveMonitorPage
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.historyLivePanel.ResumeLayout(False)
-        Me.historyLivePanel.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

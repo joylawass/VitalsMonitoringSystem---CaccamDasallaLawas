@@ -33,22 +33,22 @@ Partial Class MainForm
         Me.LiveMonitorButton = New FontAwesome.Sharp.IconButton()
         Me.PatientButton = New FontAwesome.Sharp.IconButton()
         Me.DashboardButton = New FontAwesome.Sharp.IconButton()
+        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.LogoutButton = New FontAwesome.Sharp.IconButton()
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.MainBox = New Guna.UI2.WinForms.Guna2Panel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblTimee = New System.Windows.Forms.Label()
         Me.IconCurrentForm = New FontAwesome.Sharp.IconPictureBox()
         Me.PageTitle = New System.Windows.Forms.Label()
         Me.lblDate = New System.Windows.Forms.Label()
         Me.lblTime = New System.Windows.Forms.Label()
-        Me.lblTimee = New System.Windows.Forms.Label()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.TopPanelMainForm.SuspendLayout()
         Me.MenuPanelMainForm.SuspendLayout()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.IconCurrentForm, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -184,6 +184,18 @@ Partial Class MainForm
         Me.DashboardButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.DashboardButton.UseVisualStyleBackColor = True
         '
+        'Guna2PictureBox1
+        '
+        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
+        Me.Guna2PictureBox1.ImageRotate = 0!
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-51, -102)
+        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(429, 428)
+        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Guna2PictureBox1.TabIndex = 14
+        Me.Guna2PictureBox1.TabStop = False
+        '
         'LogoutButton
         '
         Me.LogoutButton.FlatAppearance.BorderSize = 0
@@ -213,9 +225,9 @@ Partial Class MainForm
         '
         'MainBox
         '
-        Me.MainBox.Location = New System.Drawing.Point(264, 88)
+        Me.MainBox.Location = New System.Drawing.Point(264, 80)
         Me.MainBox.Name = "MainBox"
-        Me.MainBox.Size = New System.Drawing.Size(697, 533)
+        Me.MainBox.Size = New System.Drawing.Size(697, 541)
         Me.MainBox.TabIndex = 21
         '
         'Timer1
@@ -235,6 +247,19 @@ Partial Class MainForm
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(697, 47)
         Me.Guna2Panel1.TabIndex = 22
+        '
+        'lblTimee
+        '
+        Me.lblTimee.AutoSize = True
+        Me.lblTimee.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTimee.ForeColor = System.Drawing.Color.White
+        Me.lblTimee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblTimee.Location = New System.Drawing.Point(603, 11)
+        Me.lblTimee.Name = "lblTimee"
+        Me.lblTimee.Size = New System.Drawing.Size(94, 25)
+        Me.lblTimee.TabIndex = 44
+        Me.lblTimee.Text = "hh:mm:ss"
+        Me.lblTimee.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'IconCurrentForm
         '
@@ -287,31 +312,6 @@ Partial Class MainForm
         Me.lblTime.Text = "HH:MM:SS"
         Me.lblTime.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'lblTimee
-        '
-        Me.lblTimee.AutoSize = True
-        Me.lblTimee.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTimee.ForeColor = System.Drawing.Color.White
-        Me.lblTimee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblTimee.Location = New System.Drawing.Point(603, 11)
-        Me.lblTimee.Name = "lblTimee"
-        Me.lblTimee.Size = New System.Drawing.Size(94, 25)
-        Me.lblTimee.TabIndex = 44
-        Me.lblTimee.Text = "hh:mm:ss"
-        Me.lblTimee.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-51, -102)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(429, 428)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2PictureBox1.TabIndex = 14
-        Me.Guna2PictureBox1.TabStop = False
-        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -330,10 +330,10 @@ Partial Class MainForm
         Me.Text = resources.GetString("$this.Text")
         Me.TopPanelMainForm.ResumeLayout(False)
         Me.MenuPanelMainForm.ResumeLayout(False)
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
         CType(Me.IconCurrentForm, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

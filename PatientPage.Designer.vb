@@ -56,7 +56,7 @@ Partial Class PatientPage
         Me.lblUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUsername.ForeColor = System.Drawing.Color.DarkGray
         Me.lblUsername.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblUsername.Location = New System.Drawing.Point(82, 508)
+        Me.lblUsername.Location = New System.Drawing.Point(82, 516)
         Me.lblUsername.Name = "lblUsername"
         Me.lblUsername.Size = New System.Drawing.Size(70, 16)
         Me.lblUsername.TabIndex = 32
@@ -70,7 +70,7 @@ Partial Class PatientPage
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.DarkGray
         Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label1.Location = New System.Drawing.Point(12, 508)
+        Me.Label1.Location = New System.Drawing.Point(12, 516)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(73, 16)
         Me.Label1.TabIndex = 33
@@ -111,7 +111,7 @@ Partial Class PatientPage
         Me.DTGList.Name = "DTGList"
         Me.DTGList.ReadOnly = True
         Me.DTGList.RowHeadersVisible = False
-        Me.DTGList.Size = New System.Drawing.Size(639, 391)
+        Me.DTGList.Size = New System.Drawing.Size(639, 404)
         Me.DTGList.TabIndex = 34
         Me.DTGList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.DTGList.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -225,7 +225,7 @@ Partial Class PatientPage
         Me.UpdatePatientButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.UpdatePatientButton.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.UpdatePatientButton.ForeColor = System.Drawing.Color.White
-        Me.UpdatePatientButton.Location = New System.Drawing.Point(540, 463)
+        Me.UpdatePatientButton.Location = New System.Drawing.Point(540, 476)
         Me.UpdatePatientButton.Name = "UpdatePatientButton"
         Me.UpdatePatientButton.Size = New System.Drawing.Size(128, 28)
         Me.UpdatePatientButton.TabIndex = 39
@@ -240,7 +240,7 @@ Partial Class PatientPage
         Me.ActivePatientBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.ActivePatientBtn.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.ActivePatientBtn.ForeColor = System.Drawing.Color.White
-        Me.ActivePatientBtn.Location = New System.Drawing.Point(186, 463)
+        Me.ActivePatientBtn.Location = New System.Drawing.Point(186, 476)
         Me.ActivePatientBtn.Name = "ActivePatientBtn"
         Me.ActivePatientBtn.Size = New System.Drawing.Size(128, 28)
         Me.ActivePatientBtn.TabIndex = 40
@@ -256,7 +256,7 @@ Partial Class PatientPage
         Me.DismissedPatientBtn.FillColor = System.Drawing.Color.Red
         Me.DismissedPatientBtn.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.DismissedPatientBtn.ForeColor = System.Drawing.Color.White
-        Me.DismissedPatientBtn.Location = New System.Drawing.Point(29, 463)
+        Me.DismissedPatientBtn.Location = New System.Drawing.Point(29, 476)
         Me.DismissedPatientBtn.Name = "DismissedPatientBtn"
         Me.DismissedPatientBtn.Size = New System.Drawing.Size(151, 28)
         Me.DismissedPatientBtn.TabIndex = 41
@@ -267,7 +267,7 @@ Partial Class PatientPage
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(697, 533)
+        Me.ClientSize = New System.Drawing.Size(697, 541)
         Me.Controls.Add(Me.DismissedPatientBtn)
         Me.Controls.Add(Me.ActivePatientBtn)
         Me.Controls.Add(Me.UpdatePatientButton)

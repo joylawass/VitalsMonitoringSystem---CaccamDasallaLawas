@@ -124,7 +124,7 @@ Partial Class DashboardPage
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.DarkGray
         Me.Label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label1.Location = New System.Drawing.Point(12, 508)
+        Me.Label1.Location = New System.Drawing.Point(12, 516)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(73, 16)
         Me.Label1.TabIndex = 35
@@ -138,7 +138,7 @@ Partial Class DashboardPage
         Me.lblUsername1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUsername1.ForeColor = System.Drawing.Color.DarkGray
         Me.lblUsername1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblUsername1.Location = New System.Drawing.Point(82, 508)
+        Me.lblUsername1.Location = New System.Drawing.Point(82, 516)
         Me.lblUsername1.Name = "lblUsername1"
         Me.lblUsername1.Size = New System.Drawing.Size(70, 16)
         Me.lblUsername1.TabIndex = 34
@@ -294,7 +294,7 @@ Partial Class DashboardPage
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(697, 533)
+        Me.ClientSize = New System.Drawing.Size(697, 541)
         Me.Controls.Add(Me.lblUsername)
         Me.Controls.Add(Me.liveNotifPanel)
         Me.Controls.Add(Me.Panel4)
