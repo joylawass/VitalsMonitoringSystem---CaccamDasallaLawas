@@ -90,12 +90,11 @@ Partial Class UpdateAndDismissPatient
         Me.txbxBirthdate.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txbxBirthdate.ForeColor = System.Drawing.Color.Black
         Me.txbxBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.txbxBirthdate.Location = New System.Drawing.Point(395, 231)
-        Me.txbxBirthdate.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txbxBirthdate.Location = New System.Drawing.Point(283, 188)
         Me.txbxBirthdate.MaxDate = New Date(2023, 9, 29, 0, 0, 0, 0)
         Me.txbxBirthdate.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.txbxBirthdate.Name = "txbxBirthdate"
-        Me.txbxBirthdate.Size = New System.Drawing.Size(201, 44)
+        Me.txbxBirthdate.Size = New System.Drawing.Size(151, 36)
         Me.txbxBirthdate.TabIndex = 193
         Me.txbxBirthdate.Value = New Date(2023, 9, 29, 0, 0, 0, 0)
         '
@@ -108,10 +107,9 @@ Partial Class UpdateAndDismissPatient
         Me.btnClear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnClear.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
         Me.btnClear.ForeColor = System.Drawing.Color.White
-        Me.btnClear.Location = New System.Drawing.Point(685, 680)
-        Me.btnClear.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnClear.Location = New System.Drawing.Point(514, 560)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(143, 44)
+        Me.btnClear.Size = New System.Drawing.Size(107, 36)
         Me.btnClear.TabIndex = 192
         Me.btnClear.Text = "Clear"
         '
@@ -129,14 +127,14 @@ Partial Class UpdateAndDismissPatient
         Me.txtboxBmi.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtboxBmi.ForeColor = System.Drawing.Color.Black
         Me.txtboxBmi.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtboxBmi.Location = New System.Drawing.Point(856, 342)
-        Me.txtboxBmi.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.txtboxBmi.Location = New System.Drawing.Point(642, 268)
+        Me.txtboxBmi.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txtboxBmi.Name = "txtboxBmi"
         Me.txtboxBmi.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtboxBmi.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txtboxBmi.PlaceholderText = "BMI"
         Me.txtboxBmi.SelectedText = ""
-        Me.txtboxBmi.Size = New System.Drawing.Size(123, 44)
+        Me.txtboxBmi.Size = New System.Drawing.Size(92, 36)
         Me.txtboxBmi.TabIndex = 191
         '
         'txtboxweight
@@ -153,14 +151,14 @@ Partial Class UpdateAndDismissPatient
         Me.txtboxweight.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtboxweight.ForeColor = System.Drawing.Color.Black
         Me.txtboxweight.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtboxweight.Location = New System.Drawing.Point(721, 342)
-        Me.txtboxweight.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.txtboxweight.Location = New System.Drawing.Point(544, 268)
+        Me.txtboxweight.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txtboxweight.Name = "txtboxweight"
         Me.txtboxweight.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtboxweight.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txtboxweight.PlaceholderText = "Weight (kg)"
         Me.txtboxweight.SelectedText = ""
-        Me.txtboxweight.Size = New System.Drawing.Size(123, 44)
+        Me.txtboxweight.Size = New System.Drawing.Size(92, 36)
         Me.txtboxweight.TabIndex = 190
         '
         'txtboxheight
@@ -177,14 +175,14 @@ Partial Class UpdateAndDismissPatient
         Me.txtboxheight.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtboxheight.ForeColor = System.Drawing.Color.Black
         Me.txtboxheight.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtboxheight.Location = New System.Drawing.Point(591, 342)
-        Me.txtboxheight.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.txtboxheight.Location = New System.Drawing.Point(446, 269)
+        Me.txtboxheight.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txtboxheight.Name = "txtboxheight"
         Me.txtboxheight.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtboxheight.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txtboxheight.PlaceholderText = "Height (m)"
         Me.txtboxheight.SelectedText = ""
-        Me.txtboxheight.Size = New System.Drawing.Size(123, 44)
+        Me.txtboxheight.Size = New System.Drawing.Size(92, 36)
         Me.txtboxheight.TabIndex = 188
         '
         'Label9
@@ -192,10 +190,9 @@ Partial Class UpdateAndDismissPatient
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(585, 302)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Location = New System.Drawing.Point(440, 244)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(144, 23)
+        Me.Label9.Size = New System.Drawing.Size(122, 19)
         Me.Label9.TabIndex = 189
         Me.Label9.Text = "Body Mass Index"
         '
@@ -210,10 +207,9 @@ Partial Class UpdateAndDismissPatient
         Me.cbxMac.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cbxMac.ForeColor = System.Drawing.Color.Black
         Me.cbxMac.ItemHeight = 30
-        Me.cbxMac.Location = New System.Drawing.Point(588, 434)
-        Me.cbxMac.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbxMac.Location = New System.Drawing.Point(446, 352)
         Me.cbxMac.Name = "cbxMac"
-        Me.cbxMac.Size = New System.Drawing.Size(389, 36)
+        Me.cbxMac.Size = New System.Drawing.Size(288, 36)
         Me.cbxMac.TabIndex = 174
         '
         'txbxemergencyaddress
@@ -230,14 +226,14 @@ Partial Class UpdateAndDismissPatient
         Me.txbxemergencyaddress.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txbxemergencyaddress.ForeColor = System.Drawing.Color.Black
         Me.txbxemergencyaddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txbxemergencyaddress.Location = New System.Drawing.Point(41, 564)
-        Me.txbxemergencyaddress.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.txbxemergencyaddress.Location = New System.Drawing.Point(32, 449)
+        Me.txbxemergencyaddress.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txbxemergencyaddress.Name = "txbxemergencyaddress"
         Me.txbxemergencyaddress.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txbxemergencyaddress.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txbxemergencyaddress.PlaceholderText = "Current Address"
         Me.txbxemergencyaddress.SelectedText = ""
-        Me.txbxemergencyaddress.Size = New System.Drawing.Size(508, 44)
+        Me.txbxemergencyaddress.Size = New System.Drawing.Size(381, 36)
         Me.txbxemergencyaddress.TabIndex = 171
         '
         'txbxRelationship
@@ -254,14 +250,14 @@ Partial Class UpdateAndDismissPatient
         Me.txbxRelationship.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txbxRelationship.ForeColor = System.Drawing.Color.Black
         Me.txbxRelationship.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txbxRelationship.Location = New System.Drawing.Point(41, 617)
-        Me.txbxRelationship.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.txbxRelationship.Location = New System.Drawing.Point(32, 491)
+        Me.txbxRelationship.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txbxRelationship.Name = "txbxRelationship"
         Me.txbxRelationship.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txbxRelationship.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txbxRelationship.PlaceholderText = "Relationship"
         Me.txbxRelationship.SelectedText = ""
-        Me.txbxRelationship.Size = New System.Drawing.Size(253, 44)
+        Me.txbxRelationship.Size = New System.Drawing.Size(190, 36)
         Me.txbxRelationship.TabIndex = 172
         '
         'txbxemergencycontactname
@@ -278,14 +274,14 @@ Partial Class UpdateAndDismissPatient
         Me.txbxemergencycontactname.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txbxemergencycontactname.ForeColor = System.Drawing.Color.Black
         Me.txbxemergencycontactname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txbxemergencycontactname.Location = New System.Drawing.Point(41, 512)
-        Me.txbxemergencycontactname.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.txbxemergencycontactname.Location = New System.Drawing.Point(32, 407)
+        Me.txbxemergencycontactname.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txbxemergencycontactname.Name = "txbxemergencycontactname"
         Me.txbxemergencycontactname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txbxemergencycontactname.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txbxemergencycontactname.PlaceholderText = "Full Name"
         Me.txbxemergencycontactname.SelectedText = ""
-        Me.txbxemergencycontactname.Size = New System.Drawing.Size(508, 44)
+        Me.txbxemergencycontactname.Size = New System.Drawing.Size(381, 36)
         Me.txbxemergencycontactname.TabIndex = 170
         '
         'txbxward
@@ -302,14 +298,14 @@ Partial Class UpdateAndDismissPatient
         Me.txbxward.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txbxward.ForeColor = System.Drawing.Color.Black
         Me.txbxward.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txbxward.Location = New System.Drawing.Point(385, 394)
-        Me.txbxward.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.txbxward.Location = New System.Drawing.Point(290, 310)
+        Me.txbxward.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txbxward.Name = "txbxward"
         Me.txbxward.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txbxward.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txbxward.PlaceholderText = "Ward Number"
         Me.txbxward.SelectedText = ""
-        Me.txbxward.Size = New System.Drawing.Size(164, 44)
+        Me.txbxward.Size = New System.Drawing.Size(123, 36)
         Me.txbxward.TabIndex = 169
         '
         'txbxPhysician
@@ -326,14 +322,14 @@ Partial Class UpdateAndDismissPatient
         Me.txbxPhysician.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txbxPhysician.ForeColor = System.Drawing.Color.Black
         Me.txbxPhysician.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txbxPhysician.Location = New System.Drawing.Point(41, 394)
-        Me.txbxPhysician.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.txbxPhysician.Location = New System.Drawing.Point(31, 310)
+        Me.txbxPhysician.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txbxPhysician.Name = "txbxPhysician"
         Me.txbxPhysician.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txbxPhysician.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txbxPhysician.PlaceholderText = "Physician's Name"
         Me.txbxPhysician.SelectedText = ""
-        Me.txbxPhysician.Size = New System.Drawing.Size(336, 44)
+        Me.txbxPhysician.Size = New System.Drawing.Size(252, 36)
         Me.txbxPhysician.TabIndex = 168
         '
         'txbxbloodoxygen
@@ -350,14 +346,14 @@ Partial Class UpdateAndDismissPatient
         Me.txbxbloodoxygen.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txbxbloodoxygen.ForeColor = System.Drawing.Color.Black
         Me.txbxbloodoxygen.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txbxbloodoxygen.Location = New System.Drawing.Point(385, 342)
-        Me.txbxbloodoxygen.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.txbxbloodoxygen.Location = New System.Drawing.Point(290, 269)
+        Me.txbxbloodoxygen.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txbxbloodoxygen.Name = "txbxbloodoxygen"
         Me.txbxbloodoxygen.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txbxbloodoxygen.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txbxbloodoxygen.PlaceholderText = "Blood Oxygen"
         Me.txbxbloodoxygen.SelectedText = ""
-        Me.txbxbloodoxygen.Size = New System.Drawing.Size(164, 44)
+        Me.txbxbloodoxygen.Size = New System.Drawing.Size(123, 36)
         Me.txbxbloodoxygen.TabIndex = 167
         '
         'txbxtemperature
@@ -374,14 +370,14 @@ Partial Class UpdateAndDismissPatient
         Me.txbxtemperature.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txbxtemperature.ForeColor = System.Drawing.Color.Black
         Me.txbxtemperature.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txbxtemperature.Location = New System.Drawing.Point(213, 342)
-        Me.txbxtemperature.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.txbxtemperature.Location = New System.Drawing.Point(161, 269)
+        Me.txbxtemperature.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txbxtemperature.Name = "txbxtemperature"
         Me.txbxtemperature.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txbxtemperature.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txbxtemperature.PlaceholderText = "Body Temperature"
         Me.txbxtemperature.SelectedText = ""
-        Me.txbxtemperature.Size = New System.Drawing.Size(164, 44)
+        Me.txbxtemperature.Size = New System.Drawing.Size(123, 36)
         Me.txbxtemperature.TabIndex = 166
         '
         'txbxpulse
@@ -398,25 +394,24 @@ Partial Class UpdateAndDismissPatient
         Me.txbxpulse.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txbxpulse.ForeColor = System.Drawing.Color.Black
         Me.txbxpulse.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txbxpulse.Location = New System.Drawing.Point(41, 342)
-        Me.txbxpulse.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.txbxpulse.Location = New System.Drawing.Point(32, 269)
+        Me.txbxpulse.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txbxpulse.Name = "txbxpulse"
         Me.txbxpulse.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txbxpulse.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txbxpulse.PlaceholderText = "Pulse Rate"
         Me.txbxpulse.SelectedText = ""
-        Me.txbxpulse.Size = New System.Drawing.Size(164, 44)
+        Me.txbxpulse.Size = New System.Drawing.Size(123, 36)
         Me.txbxpulse.TabIndex = 165
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(587, 489)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(440, 403)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(222, 23)
+        Me.Label8.Size = New System.Drawing.Size(185, 19)
         Me.Label8.TabIndex = 186
         Me.Label8.Text = "Diagnosis / Health History"
         '
@@ -425,10 +420,9 @@ Partial Class UpdateAndDismissPatient
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label7.ForeColor = System.Drawing.Color.Gray
-        Me.Label7.Location = New System.Drawing.Point(788, 244)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(579, 199)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(87, 20)
+        Me.Label7.Size = New System.Drawing.Size(68, 15)
         Me.Label7.TabIndex = 185
         Me.Label7.Text = "Blood Type:"
         '
@@ -444,10 +438,9 @@ Partial Class UpdateAndDismissPatient
         Me.cbxBloodType.ForeColor = System.Drawing.Color.Black
         Me.cbxBloodType.ItemHeight = 30
         Me.cbxBloodType.Items.AddRange(New Object() {"A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"})
-        Me.cbxBloodType.Location = New System.Drawing.Point(883, 231)
-        Me.cbxBloodType.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbxBloodType.Location = New System.Drawing.Point(652, 188)
         Me.cbxBloodType.Name = "cbxBloodType"
-        Me.cbxBloodType.Size = New System.Drawing.Size(95, 36)
+        Me.cbxBloodType.Size = New System.Drawing.Size(82, 36)
         Me.cbxBloodType.TabIndex = 164
         '
         'Label3
@@ -455,10 +448,9 @@ Partial Class UpdateAndDismissPatient
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label3.ForeColor = System.Drawing.Color.Gray
-        Me.Label3.Location = New System.Drawing.Point(604, 244)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(442, 199)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(35, 20)
+        Me.Label3.Size = New System.Drawing.Size(28, 15)
         Me.Label3.TabIndex = 184
         Me.Label3.Text = "Sex:"
         '
@@ -467,10 +459,9 @@ Partial Class UpdateAndDismissPatient
         Me.lblNote.AutoSize = True
         Me.lblNote.Font = New System.Drawing.Font("Microsoft YaHei", 7.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNote.ForeColor = System.Drawing.Color.Red
-        Me.lblNote.Location = New System.Drawing.Point(37, 704)
-        Me.lblNote.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblNote.Location = New System.Drawing.Point(29, 580)
         Me.lblNote.Name = "lblNote"
-        Me.lblNote.Size = New System.Drawing.Size(168, 17)
+        Me.lblNote.Size = New System.Drawing.Size(142, 16)
         Me.lblNote.TabIndex = 180
         Me.lblNote.Text = "*This form is case-sensitive."
         '
@@ -483,22 +474,20 @@ Partial Class UpdateAndDismissPatient
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(583, 401)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(441, 328)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(237, 23)
+        Me.Label4.Size = New System.Drawing.Size(197, 19)
         Me.Label4.TabIndex = 179
         Me.Label4.Text = "Patient's Device Information"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(37, 473)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(28, 385)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(165, 23)
+        Me.Label5.Size = New System.Drawing.Size(138, 19)
         Me.Label5.TabIndex = 177
         Me.Label5.Text = "Emergency Contact"
         '
@@ -507,10 +496,9 @@ Partial Class UpdateAndDismissPatient
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label2.ForeColor = System.Drawing.Color.Gray
-        Me.Label2.Location = New System.Drawing.Point(305, 244)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(215, 199)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(79, 20)
+        Me.Label2.Size = New System.Drawing.Size(62, 15)
         Me.Label2.TabIndex = 176
         Me.Label2.Text = "Birth Date:"
         '
@@ -519,10 +507,9 @@ Partial Class UpdateAndDismissPatient
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(36, 59)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(27, 48)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(193, 28)
+        Me.Label1.Size = New System.Drawing.Size(154, 21)
         Me.Label1.TabIndex = 175
         Me.Label1.Text = "PATIENT'S PROFILE"
         '
@@ -540,14 +527,14 @@ Partial Class UpdateAndDismissPatient
         Me.healthHistory.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.healthHistory.ForeColor = System.Drawing.Color.Black
         Me.healthHistory.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.healthHistory.Location = New System.Drawing.Point(592, 512)
-        Me.healthHistory.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.healthHistory.Location = New System.Drawing.Point(446, 425)
+        Me.healthHistory.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.healthHistory.Name = "healthHistory"
         Me.healthHistory.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.healthHistory.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.healthHistory.PlaceholderText = "Put N/A if none."
         Me.healthHistory.SelectedText = ""
-        Me.healthHistory.Size = New System.Drawing.Size(387, 148)
+        Me.healthHistory.Size = New System.Drawing.Size(288, 102)
         Me.healthHistory.TabIndex = 187
         '
         'Guna2Elipse1
@@ -561,10 +548,9 @@ Partial Class UpdateAndDismissPatient
         Me.CloseButton.CustomClick = True
         Me.CloseButton.FillColor = System.Drawing.Color.Transparent
         Me.CloseButton.IconColor = System.Drawing.Color.White
-        Me.CloseButton.Location = New System.Drawing.Point(976, 0)
-        Me.CloseButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CloseButton.Location = New System.Drawing.Point(732, 0)
         Me.CloseButton.Name = "CloseButton"
-        Me.CloseButton.Size = New System.Drawing.Size(43, 36)
+        Me.CloseButton.Size = New System.Drawing.Size(32, 29)
         Me.CloseButton.TabIndex = 1
         '
         'cbxSex
@@ -579,10 +565,9 @@ Partial Class UpdateAndDismissPatient
         Me.cbxSex.ForeColor = System.Drawing.Color.Black
         Me.cbxSex.ItemHeight = 30
         Me.cbxSex.Items.AddRange(New Object() {"Male", "Female"})
-        Me.cbxSex.Location = New System.Drawing.Point(649, 231)
-        Me.cbxSex.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbxSex.Location = New System.Drawing.Point(474, 188)
         Me.cbxSex.Name = "cbxSex"
-        Me.cbxSex.Size = New System.Drawing.Size(129, 36)
+        Me.cbxSex.Size = New System.Drawing.Size(98, 36)
         Me.cbxSex.TabIndex = 163
         '
         'txbxNationality
@@ -599,14 +584,14 @@ Partial Class UpdateAndDismissPatient
         Me.txbxNationality.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txbxNationality.ForeColor = System.Drawing.Color.Black
         Me.txbxNationality.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txbxNationality.Location = New System.Drawing.Point(41, 231)
-        Me.txbxNationality.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.txbxNationality.Location = New System.Drawing.Point(31, 188)
+        Me.txbxNationality.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txbxNationality.Name = "txbxNationality"
         Me.txbxNationality.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txbxNationality.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txbxNationality.PlaceholderText = "Nationality"
         Me.txbxNationality.SelectedText = ""
-        Me.txbxNationality.Size = New System.Drawing.Size(253, 44)
+        Me.txbxNationality.Size = New System.Drawing.Size(178, 36)
         Me.txbxNationality.TabIndex = 162
         '
         'txbxPlaceOfBirth
@@ -623,14 +608,14 @@ Partial Class UpdateAndDismissPatient
         Me.txbxPlaceOfBirth.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txbxPlaceOfBirth.ForeColor = System.Drawing.Color.Black
         Me.txbxPlaceOfBirth.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txbxPlaceOfBirth.Location = New System.Drawing.Point(649, 180)
-        Me.txbxPlaceOfBirth.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.txbxPlaceOfBirth.Location = New System.Drawing.Point(487, 146)
+        Me.txbxPlaceOfBirth.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txbxPlaceOfBirth.Name = "txbxPlaceOfBirth"
         Me.txbxPlaceOfBirth.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txbxPlaceOfBirth.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txbxPlaceOfBirth.PlaceholderText = "Place of Birth"
         Me.txbxPlaceOfBirth.SelectedText = ""
-        Me.txbxPlaceOfBirth.Size = New System.Drawing.Size(329, 44)
+        Me.txbxPlaceOfBirth.Size = New System.Drawing.Size(247, 36)
         Me.txbxPlaceOfBirth.TabIndex = 161
         '
         'txbxExtensionName
@@ -647,14 +632,14 @@ Partial Class UpdateAndDismissPatient
         Me.txbxExtensionName.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txbxExtensionName.ForeColor = System.Drawing.Color.Black
         Me.txbxExtensionName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txbxExtensionName.Location = New System.Drawing.Point(883, 128)
-        Me.txbxExtensionName.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.txbxExtensionName.Location = New System.Drawing.Point(662, 104)
+        Me.txbxExtensionName.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txbxExtensionName.Name = "txbxExtensionName"
         Me.txbxExtensionName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txbxExtensionName.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txbxExtensionName.PlaceholderText = "Suffix"
         Me.txbxExtensionName.SelectedText = ""
-        Me.txbxExtensionName.Size = New System.Drawing.Size(96, 44)
+        Me.txbxExtensionName.Size = New System.Drawing.Size(72, 36)
         Me.txbxExtensionName.TabIndex = 159
         '
         'txbxmidname
@@ -671,14 +656,14 @@ Partial Class UpdateAndDismissPatient
         Me.txbxmidname.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txbxmidname.ForeColor = System.Drawing.Color.Black
         Me.txbxmidname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txbxmidname.Location = New System.Drawing.Point(649, 128)
-        Me.txbxmidname.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.txbxmidname.Location = New System.Drawing.Point(487, 104)
+        Me.txbxmidname.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txbxmidname.Name = "txbxmidname"
         Me.txbxmidname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txbxmidname.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txbxmidname.PlaceholderText = "Middle Name"
         Me.txbxmidname.SelectedText = ""
-        Me.txbxmidname.Size = New System.Drawing.Size(225, 44)
+        Me.txbxmidname.Size = New System.Drawing.Size(169, 36)
         Me.txbxmidname.TabIndex = 158
         '
         'txbxfirstname
@@ -695,14 +680,14 @@ Partial Class UpdateAndDismissPatient
         Me.txbxfirstname.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txbxfirstname.ForeColor = System.Drawing.Color.Black
         Me.txbxfirstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txbxfirstname.Location = New System.Drawing.Point(345, 128)
-        Me.txbxfirstname.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.txbxfirstname.Location = New System.Drawing.Point(259, 104)
+        Me.txbxfirstname.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txbxfirstname.Name = "txbxfirstname"
         Me.txbxfirstname.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txbxfirstname.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txbxfirstname.PlaceholderText = "First Name"
         Me.txbxfirstname.SelectedText = ""
-        Me.txbxfirstname.Size = New System.Drawing.Size(296, 44)
+        Me.txbxfirstname.Size = New System.Drawing.Size(222, 36)
         Me.txbxfirstname.TabIndex = 157
         '
         'txbxFamilyName
@@ -719,14 +704,14 @@ Partial Class UpdateAndDismissPatient
         Me.txbxFamilyName.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txbxFamilyName.ForeColor = System.Drawing.Color.Black
         Me.txbxFamilyName.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txbxFamilyName.Location = New System.Drawing.Point(41, 128)
-        Me.txbxFamilyName.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.txbxFamilyName.Location = New System.Drawing.Point(31, 104)
+        Me.txbxFamilyName.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txbxFamilyName.Name = "txbxFamilyName"
         Me.txbxFamilyName.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txbxFamilyName.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txbxFamilyName.PlaceholderText = "Last Name"
         Me.txbxFamilyName.SelectedText = ""
-        Me.txbxFamilyName.Size = New System.Drawing.Size(296, 44)
+        Me.txbxFamilyName.Size = New System.Drawing.Size(222, 36)
         Me.txbxFamilyName.TabIndex = 156
         '
         'Label10
@@ -734,10 +719,9 @@ Partial Class UpdateAndDismissPatient
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(36, 302)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Location = New System.Drawing.Point(28, 244)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(146, 23)
+        Me.Label10.Size = New System.Drawing.Size(119, 19)
         Me.Label10.TabIndex = 183
         Me.Label10.Text = "Initial Vital Signs"
         '
@@ -750,10 +734,9 @@ Partial Class UpdateAndDismissPatient
         Me.btnUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.btnUpdate.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
         Me.btnUpdate.ForeColor = System.Drawing.Color.White
-        Me.btnUpdate.Location = New System.Drawing.Point(836, 680)
-        Me.btnUpdate.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnUpdate.Location = New System.Drawing.Point(627, 560)
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(143, 44)
+        Me.btnUpdate.Size = New System.Drawing.Size(107, 36)
         Me.btnUpdate.TabIndex = 182
         Me.btnUpdate.Text = "Update"
         '
@@ -764,9 +747,8 @@ Partial Class UpdateAndDismissPatient
         Me.TopPanel.Dock = System.Windows.Forms.DockStyle.Top
         Me.TopPanel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TopPanel.Location = New System.Drawing.Point(0, 0)
-        Me.TopPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TopPanel.Name = "TopPanel"
-        Me.TopPanel.Size = New System.Drawing.Size(1019, 36)
+        Me.TopPanel.Size = New System.Drawing.Size(764, 29)
         Me.TopPanel.TabIndex = 181
         '
         'txbxCurrentAddress
@@ -783,14 +765,14 @@ Partial Class UpdateAndDismissPatient
         Me.txbxCurrentAddress.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txbxCurrentAddress.ForeColor = System.Drawing.Color.Black
         Me.txbxCurrentAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txbxCurrentAddress.Location = New System.Drawing.Point(41, 180)
-        Me.txbxCurrentAddress.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.txbxCurrentAddress.Location = New System.Drawing.Point(31, 146)
+        Me.txbxCurrentAddress.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txbxCurrentAddress.Name = "txbxCurrentAddress"
         Me.txbxCurrentAddress.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txbxCurrentAddress.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txbxCurrentAddress.PlaceholderText = "Current Address"
         Me.txbxCurrentAddress.SelectedText = ""
-        Me.txbxCurrentAddress.Size = New System.Drawing.Size(600, 44)
+        Me.txbxCurrentAddress.Size = New System.Drawing.Size(450, 36)
         Me.txbxCurrentAddress.TabIndex = 160
         '
         'txbxemergencynumber
@@ -807,14 +789,14 @@ Partial Class UpdateAndDismissPatient
         Me.txbxemergencynumber.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txbxemergencynumber.ForeColor = System.Drawing.Color.Black
         Me.txbxemergencynumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txbxemergencynumber.Location = New System.Drawing.Point(301, 617)
-        Me.txbxemergencynumber.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
+        Me.txbxemergencynumber.Location = New System.Drawing.Point(226, 491)
+        Me.txbxemergencynumber.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txbxemergencynumber.Name = "txbxemergencynumber"
         Me.txbxemergencynumber.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txbxemergencynumber.PlaceholderForeColor = System.Drawing.Color.Gray
         Me.txbxemergencynumber.PlaceholderText = "Emergency Number"
         Me.txbxemergencynumber.SelectedText = ""
-        Me.txbxemergencynumber.Size = New System.Drawing.Size(249, 44)
+        Me.txbxemergencynumber.Size = New System.Drawing.Size(187, 36)
         Me.txbxemergencynumber.TabIndex = 194
         '
         'Label6
@@ -822,18 +804,17 @@ Partial Class UpdateAndDismissPatient
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(37, 100)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(28, 81)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(151, 23)
+        Me.Label6.Size = New System.Drawing.Size(126, 19)
         Me.Label6.TabIndex = 195
         Me.Label6.Text = "Basic Information"
         '
         'UpdateAndDismissPatient
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1019, 759)
+        Me.ClientSize = New System.Drawing.Size(764, 617)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txbxemergencynumber)
         Me.Controls.Add(Me.txbxBirthdate)
@@ -873,7 +854,6 @@ Partial Class UpdateAndDismissPatient
         Me.Controls.Add(Me.TopPanel)
         Me.Controls.Add(Me.txbxCurrentAddress)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "UpdateAndDismissPatient"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "UpdateAndDismissPatient"
