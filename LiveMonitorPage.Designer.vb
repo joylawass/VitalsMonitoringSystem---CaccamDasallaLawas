@@ -91,7 +91,6 @@ Partial Class LiveMonitorPage
         Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.lbO2 = New System.Windows.Forms.Label()
-        Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.wardNumberLive = New System.Windows.Forms.Label()
         Me.patientName = New System.Windows.Forms.Label()
@@ -99,6 +98,7 @@ Partial Class LiveMonitorPage
         Me.Guna2Elipse12 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse13 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse14 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.liveMonitoringDTG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PatientInfoPanel.SuspendLayout()
         Me.historyLivePanel.SuspendLayout()
@@ -124,7 +124,6 @@ Partial Class LiveMonitorPage
         Me.Guna2Panel2.SuspendLayout()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Timer1
@@ -846,8 +845,8 @@ Partial Class LiveMonitorPage
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
+        Me.Guna2Panel1.Controls.Add(Me.Label5)
         Me.Guna2Panel1.Controls.Add(Me.lbO2)
-        Me.Guna2Panel1.Controls.Add(Me.Guna2PictureBox1)
         Me.Guna2Panel1.Location = New System.Drawing.Point(6, 108)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(142, 34)
@@ -865,17 +864,6 @@ Partial Class LiveMonitorPage
         Me.lbO2.TabIndex = 48
         Me.lbO2.Text = "100%"
         Me.lbO2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Guna2PictureBox1
-        '
-        Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
-        Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(7, 4)
-        Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(34, 28)
-        Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.Guna2PictureBox1.TabIndex = 0
-        Me.Guna2PictureBox1.TabStop = False
         '
         'Label19
         '
@@ -932,6 +920,19 @@ Partial Class LiveMonitorPage
         'Guna2Elipse14
         '
         Me.Guna2Elipse14.TargetControl = Me.NotesPanel
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label5.Location = New System.Drawing.Point(6, 7)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(43, 20)
+        Me.Label5.TabIndex = 49
+        Me.Label5.Text = "SpO₂"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LiveMonitorPage
         '
@@ -993,7 +994,6 @@ Partial Class LiveMonitorPage
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1056,7 +1056,6 @@ Partial Class LiveMonitorPage
     Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents lbO2 As Label
-    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Label19 As Label
     Friend WithEvents DiagnosisPanel As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents NotesPanel As Guna.UI2.WinForms.Guna2Panel
@@ -1070,4 +1069,5 @@ Partial Class LiveMonitorPage
     Friend WithEvents historyLive As Label
     Friend WithEvents Guna2Elipse13 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Guna2Elipse14 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents Label5 As Label
 End Class
