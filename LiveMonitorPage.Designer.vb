@@ -73,24 +73,24 @@ Partial Class LiveMonitorPage
         Me.Guna2ContextMenuStrip1 = New Guna.UI2.WinForms.Guna2ContextMenuStrip()
         Me.othersPanel = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.lbRFID = New System.Windows.Forms.Label()
         Me.Guna2PictureBox4 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel7 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.lbHall = New System.Windows.Forms.Label()
         Me.Guna2PictureBox6 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.lbBatt = New System.Windows.Forms.Label()
         Me.Guna2PictureBox5 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.vitalsPanel = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lbBpm = New System.Windows.Forms.Label()
         Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.lbTemp = New System.Windows.Forms.Label()
         Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.lbO2 = New System.Windows.Forms.Label()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.wardNumberLive = New System.Windows.Forms.Label()
@@ -645,25 +645,25 @@ Partial Class LiveMonitorPage
         '
         Me.Guna2Panel5.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel5.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
-        Me.Guna2Panel5.Controls.Add(Me.Label12)
+        Me.Guna2Panel5.Controls.Add(Me.lbRFID)
         Me.Guna2Panel5.Controls.Add(Me.Guna2PictureBox4)
         Me.Guna2Panel5.Location = New System.Drawing.Point(6, 108)
         Me.Guna2Panel5.Name = "Guna2Panel5"
         Me.Guna2Panel5.Size = New System.Drawing.Size(142, 34)
         Me.Guna2Panel5.TabIndex = 56
         '
-        'Label12
+        'lbRFID
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label12.Location = New System.Drawing.Point(57, 7)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(45, 20)
-        Me.Label12.TabIndex = 51
-        Me.Label12.Text = "100%"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbRFID.AutoSize = True
+        Me.lbRFID.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.lbRFID.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.lbRFID.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbRFID.Location = New System.Drawing.Point(57, 7)
+        Me.lbRFID.Name = "lbRFID"
+        Me.lbRFID.Size = New System.Drawing.Size(45, 20)
+        Me.lbRFID.TabIndex = 51
+        Me.lbRFID.Text = "100%"
+        Me.lbRFID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Guna2PictureBox4
         '
@@ -680,25 +680,25 @@ Partial Class LiveMonitorPage
         '
         Me.Guna2Panel7.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel7.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
-        Me.Guna2Panel7.Controls.Add(Me.Label11)
+        Me.Guna2Panel7.Controls.Add(Me.lbHall)
         Me.Guna2Panel7.Controls.Add(Me.Guna2PictureBox6)
         Me.Guna2Panel7.Location = New System.Drawing.Point(6, 35)
         Me.Guna2Panel7.Name = "Guna2Panel7"
         Me.Guna2Panel7.Size = New System.Drawing.Size(142, 34)
         Me.Guna2Panel7.TabIndex = 54
         '
-        'Label11
+        'lbHall
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label11.Location = New System.Drawing.Point(59, 8)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(60, 20)
-        Me.Label11.TabIndex = 50
-        Me.Label11.Text = "Inactive"
-        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbHall.AutoSize = True
+        Me.lbHall.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.lbHall.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.lbHall.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbHall.Location = New System.Drawing.Point(59, 8)
+        Me.lbHall.Name = "lbHall"
+        Me.lbHall.Size = New System.Drawing.Size(60, 20)
+        Me.lbHall.TabIndex = 50
+        Me.lbHall.Text = "Inactive"
+        Me.lbHall.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Guna2PictureBox6
         '
@@ -715,25 +715,25 @@ Partial Class LiveMonitorPage
         '
         Me.Guna2Panel6.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel6.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
-        Me.Guna2Panel6.Controls.Add(Me.Label10)
+        Me.Guna2Panel6.Controls.Add(Me.lbBatt)
         Me.Guna2Panel6.Controls.Add(Me.Guna2PictureBox5)
         Me.Guna2Panel6.Location = New System.Drawing.Point(6, 72)
         Me.Guna2Panel6.Name = "Guna2Panel6"
         Me.Guna2Panel6.Size = New System.Drawing.Size(142, 34)
         Me.Guna2Panel6.TabIndex = 55
         '
-        'Label10
+        'lbBatt
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label10.Location = New System.Drawing.Point(57, 6)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(45, 20)
-        Me.Label10.TabIndex = 49
-        Me.Label10.Text = "100%"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbBatt.AutoSize = True
+        Me.lbBatt.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.lbBatt.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.lbBatt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbBatt.Location = New System.Drawing.Point(57, 6)
+        Me.lbBatt.Name = "lbBatt"
+        Me.lbBatt.Size = New System.Drawing.Size(45, 20)
+        Me.lbBatt.TabIndex = 49
+        Me.lbBatt.Text = "100%"
+        Me.lbBatt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Guna2PictureBox5
         '
@@ -776,25 +776,25 @@ Partial Class LiveMonitorPage
         '
         Me.Guna2Panel3.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
-        Me.Guna2Panel3.Controls.Add(Me.Label5)
+        Me.Guna2Panel3.Controls.Add(Me.lbBpm)
         Me.Guna2Panel3.Controls.Add(Me.Guna2PictureBox3)
         Me.Guna2Panel3.Location = New System.Drawing.Point(6, 35)
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.Size = New System.Drawing.Size(142, 34)
         Me.Guna2Panel3.TabIndex = 60
         '
-        'Label5
+        'lbBpm
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label5.Location = New System.Drawing.Point(52, 7)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(68, 20)
-        Me.Label5.TabIndex = 46
-        Me.Label5.Text = "100 bpm"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbBpm.AutoSize = True
+        Me.lbBpm.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.lbBpm.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.lbBpm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbBpm.Location = New System.Drawing.Point(52, 7)
+        Me.lbBpm.Name = "lbBpm"
+        Me.lbBpm.Size = New System.Drawing.Size(68, 20)
+        Me.lbBpm.TabIndex = 46
+        Me.lbBpm.Text = "100 bpm"
+        Me.lbBpm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Guna2PictureBox3
         '
@@ -811,25 +811,25 @@ Partial Class LiveMonitorPage
         '
         Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
-        Me.Guna2Panel2.Controls.Add(Me.Label8)
+        Me.Guna2Panel2.Controls.Add(Me.lbTemp)
         Me.Guna2Panel2.Controls.Add(Me.Guna2PictureBox2)
         Me.Guna2Panel2.Location = New System.Drawing.Point(6, 72)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.Size = New System.Drawing.Size(142, 34)
         Me.Guna2Panel2.TabIndex = 59
         '
-        'Label8
+        'lbTemp
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label8.Location = New System.Drawing.Point(54, 8)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(44, 20)
-        Me.Label8.TabIndex = 47
-        Me.Label8.Text = "37 °C"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbTemp.AutoSize = True
+        Me.lbTemp.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.lbTemp.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.lbTemp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbTemp.Location = New System.Drawing.Point(54, 8)
+        Me.lbTemp.Name = "lbTemp"
+        Me.lbTemp.Size = New System.Drawing.Size(44, 20)
+        Me.lbTemp.TabIndex = 47
+        Me.lbTemp.Text = "37 °C"
+        Me.lbTemp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Guna2PictureBox2
         '
@@ -846,25 +846,25 @@ Partial Class LiveMonitorPage
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
-        Me.Guna2Panel1.Controls.Add(Me.Label9)
+        Me.Guna2Panel1.Controls.Add(Me.lbO2)
         Me.Guna2Panel1.Controls.Add(Me.Guna2PictureBox1)
         Me.Guna2Panel1.Location = New System.Drawing.Point(6, 108)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(142, 34)
         Me.Guna2Panel1.TabIndex = 58
         '
-        'Label9
+        'lbO2
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label9.Location = New System.Drawing.Point(52, 7)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(45, 20)
-        Me.Label9.TabIndex = 48
-        Me.Label9.Text = "100%"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbO2.AutoSize = True
+        Me.lbO2.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.lbO2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.lbO2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lbO2.Location = New System.Drawing.Point(52, 7)
+        Me.lbO2.Name = "lbO2"
+        Me.lbO2.Size = New System.Drawing.Size(45, 20)
+        Me.lbO2.TabIndex = 48
+        Me.lbO2.Text = "100%"
+        Me.lbO2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Guna2PictureBox1
         '
@@ -1038,24 +1038,24 @@ Partial Class LiveMonitorPage
     Friend WithEvents Guna2ContextMenuStrip1 As Guna.UI2.WinForms.Guna2ContextMenuStrip
     Friend WithEvents othersPanel As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label12 As Label
+    Friend WithEvents lbRFID As Label
     Friend WithEvents Guna2PictureBox4 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2Panel7 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label11 As Label
+    Friend WithEvents lbHall As Label
     Friend WithEvents Guna2PictureBox6 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2Panel6 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label10 As Label
+    Friend WithEvents lbBatt As Label
     Friend WithEvents Guna2PictureBox5 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Label15 As Label
     Friend WithEvents vitalsPanel As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label5 As Label
+    Friend WithEvents lbBpm As Label
     Friend WithEvents Guna2PictureBox3 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label8 As Label
+    Friend WithEvents lbTemp As Label
     Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label9 As Label
+    Friend WithEvents lbO2 As Label
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Label19 As Label
     Friend WithEvents DiagnosisPanel As Guna.UI2.WinForms.Guna2Panel

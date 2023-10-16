@@ -13,6 +13,7 @@ Public Class LiveMonitorPage
     Dim RFID As Boolean
     Dim tableName As String
     Dim currentDateTime As DateTime = DateTime.Now
+    Dim SelectedDevID As String
 
     Private dismissedPatientIDs As New List(Of String)
 
@@ -199,7 +200,7 @@ Public Class LiveMonitorPage
 
             ' Fetch patient information from the database using the selectedPatientID
             Connect()
-            query = "SELECT lastname, firstname, middlename, extname, birthdate, sex, blood_type, ward, height, weight, bmi, health_history FROM patient_info WHERE patientID = @patientID"
+            query = "SELECT lastname, firstname, middlename, extname, birthdate, sex, blood_type, ward, height, weight, bmi, health_history, Dev_ID FROM patient_info WHERE patientID = @patientID"
             Try
                 Using command As New MySqlCommand(query, connection)
                     command.Parameters.AddWithValue("@patientID", selectedPatientID)
@@ -220,7 +221,8 @@ Public Class LiveMonitorPage
                         bmiChange = reader.GetString("bmi")
                         wardChange = reader.GetString("ward")
                         history = reader.GetString("health_history")
-
+                        tableName = reader.GetString("lastname") & selectedPatientID
+                        SelectedDevID = reader.GetString("Dev_ID")
                         ' Attempt to parse the birthdate string into a Date
                         If Date.TryParse(birthdateString, patientBirthdate) Then
                             ' Calculate the age based on the birthdate
