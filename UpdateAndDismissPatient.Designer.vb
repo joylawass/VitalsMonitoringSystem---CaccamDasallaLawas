@@ -66,6 +66,7 @@ Partial Class UpdateAndDismissPatient
         Me.txbxCurrentAddress = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txbxemergencynumber = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.TopPanel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -810,6 +811,12 @@ Partial Class UpdateAndDismissPatient
         Me.Label6.TabIndex = 195
         Me.Label6.Text = "Basic Information"
         '
+        'Guna2DragControl1
+        '
+        Me.Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
+        Me.Guna2DragControl1.TargetControl = Me.TopPanel
+        Me.Guna2DragControl1.UseTransparentDrag = True
+        '
         'UpdateAndDismissPatient
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -906,4 +913,5 @@ Partial Class UpdateAndDismissPatient
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents txbxemergencynumber As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
 End Class
