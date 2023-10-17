@@ -223,6 +223,7 @@ Public Class LiveMonitorPage
                         history = reader.GetString("health_history")
                         tableName = reader.GetString("lastname") & selectedPatientID
                         SelectedDevID = reader.GetString("Dev_ID")
+                        Timer1.Enabled = True
                         ' Attempt to parse the birthdate string into a Date
                         If Date.TryParse(birthdateString, patientBirthdate) Then
                             ' Calculate the age based on the birthdate
@@ -305,5 +306,26 @@ Public Class LiveMonitorPage
 
     Private Sub IconEdit_Click(sender As Object, e As EventArgs) Handles IconEdit.Click
         Notes.Show()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Connect()
+        query = "select * from " & tableName
+        Try
+            With command
+                .Connection = connection
+                .CommandText = query
+                .Parameters.Clear()
+                reader = .ExecuteReader
+                While reader.Read()
+                    lbBpm.Text = reader.GetString("pulse")
+                    lbHall.Text = reader.GetString("wearStat")
+                    lbO2.Text = reader.GetString("SPO2")
+                    lbTemp.Text = reader.GetString("temperature")
+                End While
+            End With
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class
