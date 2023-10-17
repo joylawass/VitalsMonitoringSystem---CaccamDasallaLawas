@@ -185,7 +185,4 @@ Public Class MainForm
             LogoutButton.Font = New Font(LogoutButton.Font, FontStyle.Regular)
         End If
     End Sub
-
-
-
 End Class

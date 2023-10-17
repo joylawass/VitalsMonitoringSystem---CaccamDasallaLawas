@@ -126,7 +126,7 @@ Partial Class SignUpForm
         Me.btnReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.btnReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.btnReset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnReset.FillColor = System.Drawing.SystemColors.HotTrack
+        Me.btnReset.FillColor = System.Drawing.Color.Red
         Me.btnReset.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReset.ForeColor = System.Drawing.Color.White
         Me.btnReset.Location = New System.Drawing.Point(38, 343)
@@ -278,7 +278,7 @@ Partial Class SignUpForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(277, 427)
+        Me.ClientSize = New System.Drawing.Size(277, 414)
         Me.Controls.Add(Me.lblPasswordsDoNotMatch)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.showPassword)

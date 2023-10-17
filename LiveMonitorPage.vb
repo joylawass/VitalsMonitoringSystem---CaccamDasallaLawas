@@ -304,14 +304,6 @@ Public Class LiveMonitorPage
     End Sub
 
     Private Sub IconEdit_Click(sender As Object, e As EventArgs) Handles IconEdit.Click
-        txtbxNotes.ReadOnly = False
-        txtbxNotes.BorderStyle = BorderStyle.FixedSingle
-        txtbxNotes.Focus()
+        Notes.Show()
     End Sub
-
-    Private Sub txtbxNotes_LostFocus(sender As Object, e As EventArgs) Handles txtbxNotes.LostFocus
-        txtbxNotes.ReadOnly = True
-        txtbxNotes.BorderStyle = BorderStyle.None
-    End Sub
-
 End Class
