@@ -57,7 +57,7 @@ Partial Class SignUpForm
         Me.btnSignUp.FillColor = System.Drawing.SystemColors.HotTrack
         Me.btnSignUp.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSignUp.ForeColor = System.Drawing.Color.White
-        Me.btnSignUp.Location = New System.Drawing.Point(142, 362)
+        Me.btnSignUp.Location = New System.Drawing.Point(142, 343)
         Me.btnSignUp.Name = "btnSignUp"
         Me.btnSignUp.Size = New System.Drawing.Size(96, 32)
         Me.btnSignUp.TabIndex = 4
@@ -129,7 +129,7 @@ Partial Class SignUpForm
         Me.btnReset.FillColor = System.Drawing.SystemColors.HotTrack
         Me.btnReset.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReset.ForeColor = System.Drawing.Color.White
-        Me.btnReset.Location = New System.Drawing.Point(38, 362)
+        Me.btnReset.Location = New System.Drawing.Point(38, 343)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(96, 32)
         Me.btnReset.TabIndex = 22
@@ -154,7 +154,7 @@ Partial Class SignUpForm
         Me.txtbxConfirmPass.IconLeft = Global.VitalsMonitoringSystem.My.Resources.Resources.icons8_confirm_30
         Me.txtbxConfirmPass.IconLeftOffset = New System.Drawing.Point(3, 0)
         Me.txtbxConfirmPass.IconLeftSize = New System.Drawing.Size(25, 25)
-        Me.txtbxConfirmPass.Location = New System.Drawing.Point(38, 300)
+        Me.txtbxConfirmPass.Location = New System.Drawing.Point(38, 281)
         Me.txtbxConfirmPass.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txtbxConfirmPass.Name = "txtbxConfirmPass"
         Me.txtbxConfirmPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -183,7 +183,7 @@ Partial Class SignUpForm
         Me.txtbxPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtbxPassword.IconLeft = Global.VitalsMonitoringSystem.My.Resources.Resources.icons8_password_64
         Me.txtbxPassword.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.txtbxPassword.Location = New System.Drawing.Point(38, 263)
+        Me.txtbxPassword.Location = New System.Drawing.Point(38, 244)
         Me.txtbxPassword.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txtbxPassword.Name = "txtbxPassword"
         Me.txtbxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -213,7 +213,7 @@ Partial Class SignUpForm
         Me.txtbxUsername.IconLeft = Global.VitalsMonitoringSystem.My.Resources.Resources.icons8_username_64__3_
         Me.txtbxUsername.IconLeftOffset = New System.Drawing.Point(0, -4)
         Me.txtbxUsername.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.txtbxUsername.Location = New System.Drawing.Point(38, 227)
+        Me.txtbxUsername.Location = New System.Drawing.Point(38, 208)
         Me.txtbxUsername.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.txtbxUsername.Name = "txtbxUsername"
         Me.txtbxUsername.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -230,7 +230,7 @@ Partial Class SignUpForm
         Me.showPassword.BackColor = System.Drawing.Color.Transparent
         Me.showPassword.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.showPassword.ForeColor = System.Drawing.Color.White
-        Me.showPassword.Location = New System.Drawing.Point(38, 341)
+        Me.showPassword.Location = New System.Drawing.Point(38, 322)
         Me.showPassword.Name = "showPassword"
         Me.showPassword.Size = New System.Drawing.Size(108, 19)
         Me.showPassword.TabIndex = 26
@@ -242,7 +242,7 @@ Partial Class SignUpForm
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(59, 200)
+        Me.Label2.Location = New System.Drawing.Point(59, 181)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(158, 21)
         Me.Label2.TabIndex = 28
@@ -254,7 +254,7 @@ Partial Class SignUpForm
         Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
         Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-125, -40)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-126, -50)
         Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
         Me.Guna2PictureBox1.Size = New System.Drawing.Size(526, 302)
         Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -266,7 +266,7 @@ Partial Class SignUpForm
         Me.lblPasswordsDoNotMatch.AutoSize = True
         Me.lblPasswordsDoNotMatch.Font = New System.Drawing.Font("Segoe UI", 7.0!, System.Drawing.FontStyle.Italic)
         Me.lblPasswordsDoNotMatch.ForeColor = System.Drawing.Color.DarkRed
-        Me.lblPasswordsDoNotMatch.Location = New System.Drawing.Point(36, 397)
+        Me.lblPasswordsDoNotMatch.Location = New System.Drawing.Point(36, 378)
         Me.lblPasswordsDoNotMatch.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblPasswordsDoNotMatch.Name = "lblPasswordsDoNotMatch"
         Me.lblPasswordsDoNotMatch.Size = New System.Drawing.Size(115, 12)
