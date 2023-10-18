@@ -149,11 +149,14 @@ Public Class LiveMonitorPage
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+
     End Sub
 
     Private Sub ReloadBtn_Click(sender As Object, e As EventArgs) Handles ReloadBtn.Click
         ' Clear the DataGridView
         liveMonitoringDTG.Rows.Clear()
+        Timer1.Enabled = False
+        IconEdit.Enabled = False
 
         ' Re-fetch and load patient information, excluding dismissed patients
         Connect()
@@ -180,10 +183,31 @@ Public Class LiveMonitorPage
         Catch ex As Exception
             ' Handle any potential errors silently, without displaying a message
         End Try
+        ageLive.Text = ""
+        bloodtypeLive.Text = ""
+        bmiLive.Text = ""
+        heightLive.Text = ""
+        historyLive.Text = ""
+        sexLive.Text = ""
+        wardNumberLive.Text = ""
+        weightLive.Text = ""
+        lbBpm.Text = String.Empty
+        lbBpm.Text = "Pulse Rate"
+        lbTemp.Text = String.Empty
+        lbTemp.Text = "Body Temp"
+        lbO2.Text = String.Empty
+        lbO2.Text = "Blood O₂"
+        lbHall.Text = String.Empty
+        lbHall.Text = "Status"
+        lbBatt.Text = String.Empty
+        lbBatt.Text = "Batt Level"
+        lbRFID.Text = String.Empty
+        lbRFID.Text = "RFID"
     End Sub
 
     Private Sub liveMonitoringDTG_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles liveMonitoringDTG.CellClick
         If e.RowIndex >= 0 AndAlso e.RowIndex < liveMonitoringDTG.Rows.Count Then
+            IconEdit.Enabled = True
             ' Get the patient ID from the selected row
             Dim selectedPatientID As String = liveMonitoringDTG.Rows(e.RowIndex).Cells("patientID").Value.ToString()
 
@@ -251,6 +275,8 @@ Public Class LiveMonitorPage
             bmiLive.Text = bmiChange
             wardNumberLive.Text = wardChange
             historyLive.Text = history
+        Else
+            IconEdit.Enabled = False
         End If
     End Sub '
 

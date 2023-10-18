@@ -1,6 +1,8 @@
 ﻿Imports Org.BouncyCastle.Crypto.Macs
+Imports MySql.Data.MySqlClient
 
 Public Class Notes
+
     Private Sub CloseButton_Click(sender As Object, e As EventArgs) Handles CloseButton.Click
         Me.Close()
     End Sub
