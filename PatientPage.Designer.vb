@@ -23,9 +23,9 @@ Partial Class PatientPage
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -83,29 +83,29 @@ Partial Class PatientPage
         Me.DTGList.AllowUserToDeleteRows = False
         Me.DTGList.AllowUserToResizeColumns = False
         Me.DTGList.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.DTGList.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        Me.DTGList.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.DTGList.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DTGList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DTGList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DTGList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.DTGList.ColumnHeadersHeight = 28
         Me.DTGList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PatientID, Me.LastName, Me.FirstName, Me.WardNumber, Me.PhysiciansName, Me.Dev_ID})
         Me.DTGList.Cursor = System.Windows.Forms.Cursors.Arrow
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DTGList.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DTGList.DefaultCellStyle = DataGridViewCellStyle9
         Me.DTGList.GridColor = System.Drawing.Color.White
         Me.DTGList.Location = New System.Drawing.Point(29, 66)
         Me.DTGList.Name = "DTGList"
@@ -189,11 +189,11 @@ Partial Class PatientPage
         Me.AddPatientBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.AddPatientBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.AddPatientBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.AddPatientBtn.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.AddPatientBtn.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
         Me.AddPatientBtn.ForeColor = System.Drawing.Color.White
-        Me.AddPatientBtn.Location = New System.Drawing.Point(562, 32)
+        Me.AddPatientBtn.Location = New System.Drawing.Point(559, 32)
         Me.AddPatientBtn.Name = "AddPatientBtn"
-        Me.AddPatientBtn.Size = New System.Drawing.Size(106, 28)
+        Me.AddPatientBtn.Size = New System.Drawing.Size(109, 28)
         Me.AddPatientBtn.TabIndex = 35
         Me.AddPatientBtn.Text = "Add Patient"
         '
@@ -204,11 +204,11 @@ Partial Class PatientPage
         Me.ReloadBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.ReloadBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.ReloadBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.ReloadBtn.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.ReloadBtn.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
         Me.ReloadBtn.ForeColor = System.Drawing.Color.White
         Me.ReloadBtn.Location = New System.Drawing.Point(29, 32)
         Me.ReloadBtn.Name = "ReloadBtn"
-        Me.ReloadBtn.Size = New System.Drawing.Size(84, 28)
+        Me.ReloadBtn.Size = New System.Drawing.Size(79, 28)
         Me.ReloadBtn.TabIndex = 38
         Me.ReloadBtn.Text = "Reload"
         '
@@ -223,11 +223,11 @@ Partial Class PatientPage
         Me.UpdatePatientButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.UpdatePatientButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.UpdatePatientButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.UpdatePatientButton.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.UpdatePatientButton.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
         Me.UpdatePatientButton.ForeColor = System.Drawing.Color.White
-        Me.UpdatePatientButton.Location = New System.Drawing.Point(540, 476)
+        Me.UpdatePatientButton.Location = New System.Drawing.Point(537, 476)
         Me.UpdatePatientButton.Name = "UpdatePatientButton"
-        Me.UpdatePatientButton.Size = New System.Drawing.Size(128, 28)
+        Me.UpdatePatientButton.Size = New System.Drawing.Size(131, 28)
         Me.UpdatePatientButton.TabIndex = 39
         Me.UpdatePatientButton.Text = "Update Patient"
         '
@@ -238,9 +238,9 @@ Partial Class PatientPage
         Me.ActivePatientBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.ActivePatientBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.ActivePatientBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.ActivePatientBtn.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.ActivePatientBtn.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
         Me.ActivePatientBtn.ForeColor = System.Drawing.Color.White
-        Me.ActivePatientBtn.Location = New System.Drawing.Point(186, 476)
+        Me.ActivePatientBtn.Location = New System.Drawing.Point(187, 476)
         Me.ActivePatientBtn.Name = "ActivePatientBtn"
         Me.ActivePatientBtn.Size = New System.Drawing.Size(128, 28)
         Me.ActivePatientBtn.TabIndex = 40
@@ -254,11 +254,11 @@ Partial Class PatientPage
         Me.DismissedPatientBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.DismissedPatientBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.DismissedPatientBtn.FillColor = System.Drawing.Color.Red
-        Me.DismissedPatientBtn.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.DismissedPatientBtn.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
         Me.DismissedPatientBtn.ForeColor = System.Drawing.Color.White
         Me.DismissedPatientBtn.Location = New System.Drawing.Point(29, 476)
         Me.DismissedPatientBtn.Name = "DismissedPatientBtn"
-        Me.DismissedPatientBtn.Size = New System.Drawing.Size(151, 28)
+        Me.DismissedPatientBtn.Size = New System.Drawing.Size(152, 28)
         Me.DismissedPatientBtn.TabIndex = 41
         Me.DismissedPatientBtn.Text = "Dismissed Patients"
         '
