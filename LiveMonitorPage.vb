@@ -358,8 +358,4 @@ Public Class LiveMonitorPage
             MsgBox(ex.Message)
         End Try
     End Sub
-
-    Private Sub liveMonitoringDTG_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles liveMonitoringDTG.CellContentClick
-
-    End Sub
 End Class

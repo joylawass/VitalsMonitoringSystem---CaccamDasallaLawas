@@ -90,7 +90,7 @@ Partial Class LoginForm
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(86, 181)
+        Me.Label2.Location = New System.Drawing.Point(84, 181)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(108, 21)
         Me.Label2.TabIndex = 7
@@ -122,7 +122,7 @@ Partial Class LoginForm
         Me.linkLabelCreateAccount.AutoSize = True
         Me.linkLabelCreateAccount.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.linkLabelCreateAccount.LinkColor = System.Drawing.Color.Black
-        Me.linkLabelCreateAccount.Location = New System.Drawing.Point(94, 369)
+        Me.linkLabelCreateAccount.Location = New System.Drawing.Point(94, 375)
         Me.linkLabelCreateAccount.Name = "linkLabelCreateAccount"
         Me.linkLabelCreateAccount.Size = New System.Drawing.Size(89, 15)
         Me.linkLabelCreateAccount.TabIndex = 13
@@ -194,7 +194,7 @@ Partial Class LoginForm
         Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
         Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-126, -50)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-125, -50)
         Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
         Me.Guna2PictureBox1.Size = New System.Drawing.Size(526, 302)
         Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -238,7 +238,7 @@ Partial Class LoginForm
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(73, 351)
+        Me.Label3.Location = New System.Drawing.Point(73, 358)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(131, 15)
         Me.Label3.TabIndex = 26

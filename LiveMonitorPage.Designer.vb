@@ -34,8 +34,6 @@ Partial Class LiveMonitorPage
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.PatientInfoPanel = New Guna.UI2.WinForms.Guna2Panel()
-        Me.historyLivePanel = New Guna.UI2.WinForms.Guna2Panel()
-        Me.historyLive = New System.Windows.Forms.Label()
         Me.weightPanel = New Guna.UI2.WinForms.Guna2Panel()
         Me.weightLive = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -55,8 +53,6 @@ Partial Class LiveMonitorPage
         Me.bloodtypeLive = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.NotesPanel = New Guna.UI2.WinForms.Guna2Panel()
-        Me.notePanel = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.IconEdit = New FontAwesome.Sharp.IconPictureBox()
         Me.DiagnosisPanel = New Guna.UI2.WinForms.Guna2Panel()
@@ -100,9 +96,12 @@ Partial Class LiveMonitorPage
         Me.Guna2Elipse12 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse13 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse14 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.historyLive = New System.Windows.Forms.Label()
+        Me.historyLivePanel = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.notePanel = New Guna.UI2.WinForms.Guna2Panel()
         CType(Me.liveMonitoringDTG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PatientInfoPanel.SuspendLayout()
-        Me.historyLivePanel.SuspendLayout()
         Me.weightPanel.SuspendLayout()
         Me.bmiPanel.SuspendLayout()
         Me.heightPanell.SuspendLayout()
@@ -110,7 +109,6 @@ Partial Class LiveMonitorPage
         Me.sexPanel.SuspendLayout()
         Me.bloodTypePanel.SuspendLayout()
         Me.NotesPanel.SuspendLayout()
-        Me.notePanel.SuspendLayout()
         CType(Me.IconEdit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DiagnosisPanel.SuspendLayout()
         Me.othersPanel.SuspendLayout()
@@ -126,6 +124,8 @@ Partial Class LiveMonitorPage
         Me.Guna2Panel2.SuspendLayout()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
+        Me.historyLivePanel.SuspendLayout()
+        Me.notePanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'Timer1
@@ -234,29 +234,6 @@ Partial Class LiveMonitorPage
         Me.PatientInfoPanel.Name = "PatientInfoPanel"
         Me.PatientInfoPanel.Size = New System.Drawing.Size(315, 334)
         Me.PatientInfoPanel.TabIndex = 37
-        '
-        'historyLivePanel
-        '
-        Me.historyLivePanel.BackColor = System.Drawing.Color.White
-        Me.historyLivePanel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
-        Me.historyLivePanel.Controls.Add(Me.historyLive)
-        Me.historyLivePanel.Location = New System.Drawing.Point(15, 133)
-        Me.historyLivePanel.Name = "historyLivePanel"
-        Me.historyLivePanel.Size = New System.Drawing.Size(136, 183)
-        Me.historyLivePanel.TabIndex = 52
-        '
-        'historyLive
-        '
-        Me.historyLive.AutoSize = True
-        Me.historyLive.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.historyLive.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.historyLive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.historyLive.Location = New System.Drawing.Point(6, 14)
-        Me.historyLive.Name = "historyLive"
-        Me.historyLive.Size = New System.Drawing.Size(13, 20)
-        Me.historyLive.TabIndex = 46
-        Me.historyLive.Text = " "
-        Me.historyLive.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'weightPanel
         '
@@ -491,29 +468,6 @@ Partial Class LiveMonitorPage
         Me.NotesPanel.Name = "NotesPanel"
         Me.NotesPanel.Size = New System.Drawing.Size(139, 213)
         Me.NotesPanel.TabIndex = 52
-        '
-        'notePanel
-        '
-        Me.notePanel.BackColor = System.Drawing.Color.White
-        Me.notePanel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
-        Me.notePanel.Controls.Add(Me.Label8)
-        Me.notePanel.Location = New System.Drawing.Point(0, 26)
-        Me.notePanel.Name = "notePanel"
-        Me.notePanel.Size = New System.Drawing.Size(136, 183)
-        Me.notePanel.TabIndex = 53
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label8.Location = New System.Drawing.Point(6, 14)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(13, 20)
-        Me.Label8.TabIndex = 46
-        Me.Label8.Text = " "
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label1
         '
@@ -945,6 +899,52 @@ Partial Class LiveMonitorPage
         '
         Me.Guna2Elipse14.TargetControl = Me.NotesPanel
         '
+        'historyLive
+        '
+        Me.historyLive.AutoSize = True
+        Me.historyLive.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.historyLive.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.historyLive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.historyLive.Location = New System.Drawing.Point(6, 14)
+        Me.historyLive.Name = "historyLive"
+        Me.historyLive.Size = New System.Drawing.Size(13, 20)
+        Me.historyLive.TabIndex = 46
+        Me.historyLive.Text = " "
+        Me.historyLive.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'historyLivePanel
+        '
+        Me.historyLivePanel.BackColor = System.Drawing.Color.White
+        Me.historyLivePanel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
+        Me.historyLivePanel.Controls.Add(Me.historyLive)
+        Me.historyLivePanel.Location = New System.Drawing.Point(15, 133)
+        Me.historyLivePanel.Name = "historyLivePanel"
+        Me.historyLivePanel.Size = New System.Drawing.Size(136, 183)
+        Me.historyLivePanel.TabIndex = 52
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label8.Location = New System.Drawing.Point(6, 14)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(13, 20)
+        Me.Label8.TabIndex = 46
+        Me.Label8.Text = " "
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'notePanel
+        '
+        Me.notePanel.BackColor = System.Drawing.Color.White
+        Me.notePanel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
+        Me.notePanel.Controls.Add(Me.Label8)
+        Me.notePanel.Location = New System.Drawing.Point(0, 26)
+        Me.notePanel.Name = "notePanel"
+        Me.notePanel.Size = New System.Drawing.Size(136, 183)
+        Me.notePanel.TabIndex = 53
+        '
         'LiveMonitorPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -964,8 +964,6 @@ Partial Class LiveMonitorPage
         Me.Text = "LiveMonitorPage"
         CType(Me.liveMonitoringDTG, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PatientInfoPanel.ResumeLayout(False)
-        Me.historyLivePanel.ResumeLayout(False)
-        Me.historyLivePanel.PerformLayout()
         Me.weightPanel.ResumeLayout(False)
         Me.weightPanel.PerformLayout()
         Me.bmiPanel.ResumeLayout(False)
@@ -980,8 +978,6 @@ Partial Class LiveMonitorPage
         Me.bloodTypePanel.PerformLayout()
         Me.NotesPanel.ResumeLayout(False)
         Me.NotesPanel.PerformLayout()
-        Me.notePanel.ResumeLayout(False)
-        Me.notePanel.PerformLayout()
         CType(Me.IconEdit, System.ComponentModel.ISupportInitialize).EndInit()
         Me.DiagnosisPanel.ResumeLayout(False)
         Me.DiagnosisPanel.PerformLayout()
@@ -1006,6 +1002,10 @@ Partial Class LiveMonitorPage
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
+        Me.historyLivePanel.ResumeLayout(False)
+        Me.historyLivePanel.PerformLayout()
+        Me.notePanel.ResumeLayout(False)
+        Me.notePanel.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1076,11 +1076,11 @@ Partial Class LiveMonitorPage
     Friend WithEvents patientName As Label
     Friend WithEvents Guna2Elipse11 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Guna2Elipse12 As Guna.UI2.WinForms.Guna2Elipse
-    Friend WithEvents historyLivePanel As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents historyLive As Label
     Friend WithEvents Guna2Elipse13 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Guna2Elipse14 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Label5 As Label
+    Friend WithEvents historyLivePanel As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents historyLive As Label
     Friend WithEvents notePanel As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label8 As Label
 End Class
