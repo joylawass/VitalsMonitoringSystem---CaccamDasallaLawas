@@ -16,6 +16,7 @@ Public Class LiveMonitorPage
     Dim SelectedDevID As String
 
     Private dismissedPatientIDs As New List(Of String)
+    Private selectedPatientID As String = ""
 
     Public Sub UpdateUsernameText()
         'lblUsername.Text = LoggedInUser
@@ -209,7 +210,7 @@ Public Class LiveMonitorPage
         If e.RowIndex >= 0 AndAlso e.RowIndex < liveMonitoringDTG.Rows.Count Then
             IconEdit.Enabled = True
             ' Get the patient ID from the selected row
-            Dim selectedPatientID As String = liveMonitoringDTG.Rows(e.RowIndex).Cells("patientID").Value.ToString()
+            selectedPatientID = liveMonitoringDTG.Rows(e.RowIndex).Cells("patientID").Value.ToString()
 
             ' Retrieve patient information from the database using the selectedPatientID
             Dim patientNameChange As String = ""
@@ -224,7 +225,7 @@ Public Class LiveMonitorPage
 
             ' Fetch patient information from the database using the selectedPatientID
             Connect()
-            query = "SELECT lastname, firstname, middlename, extname, birthdate, sex, blood_type, ward, height, weight, bmi, health_history, Dev_ID FROM patient_info WHERE patientID = @patientID"
+            query = "SELECT lastname, firstname, middlename, extname, birthdate, sex, blood_type, ward, height, weight, bmi, Dev_ID, health_history FROM patient_info WHERE patientID = @patientID"
             Try
                 Using command As New MySqlCommand(query, connection)
                     command.Parameters.AddWithValue("@patientID", selectedPatientID)
@@ -274,6 +275,7 @@ Public Class LiveMonitorPage
             weightLive.Text = weightChange
             bmiLive.Text = bmiChange
             wardNumberLive.Text = wardChange
+            historyLive.Text = history
             historyLive.Text = history
         Else
             IconEdit.Enabled = False
@@ -331,7 +333,9 @@ Public Class LiveMonitorPage
     End Sub
 
     Private Sub IconEdit_Click(sender As Object, e As EventArgs) Handles IconEdit.Click
-        Notes.Show()
+        ' Show the Notes form with the selected patient's ID passed as an argument
+        Dim notesForm As New Notes(selectedPatientID)
+        notesForm.ShowDialog()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
