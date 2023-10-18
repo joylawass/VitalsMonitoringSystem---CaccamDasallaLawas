@@ -113,7 +113,7 @@ Partial Class MainForm
         Me.LogoutBtn.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.LogoutBtn.IconSize = 36
         Me.LogoutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LogoutBtn.Location = New System.Drawing.Point(8, 490)
+        Me.LogoutBtn.Location = New System.Drawing.Point(8, 473)
         Me.LogoutBtn.Name = "LogoutBtn"
         Me.LogoutBtn.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.LogoutBtn.Rotation = 180.0R
@@ -134,7 +134,7 @@ Partial Class MainForm
         Me.LiveMonitorButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.LiveMonitorButton.IconSize = 36
         Me.LiveMonitorButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LiveMonitorButton.Location = New System.Drawing.Point(8, 390)
+        Me.LiveMonitorButton.Location = New System.Drawing.Point(8, 362)
         Me.LiveMonitorButton.Name = "LiveMonitorButton"
         Me.LiveMonitorButton.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.LiveMonitorButton.Size = New System.Drawing.Size(240, 61)
@@ -154,7 +154,7 @@ Partial Class MainForm
         Me.PatientButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.PatientButton.IconSize = 36
         Me.PatientButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.PatientButton.Location = New System.Drawing.Point(8, 323)
+        Me.PatientButton.Location = New System.Drawing.Point(8, 301)
         Me.PatientButton.Name = "PatientButton"
         Me.PatientButton.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.PatientButton.Size = New System.Drawing.Size(240, 61)
@@ -174,7 +174,7 @@ Partial Class MainForm
         Me.DashboardButton.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.DashboardButton.IconSize = 36
         Me.DashboardButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.DashboardButton.Location = New System.Drawing.Point(8, 256)
+        Me.DashboardButton.Location = New System.Drawing.Point(8, 245)
         Me.DashboardButton.Name = "DashboardButton"
         Me.DashboardButton.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.DashboardButton.Size = New System.Drawing.Size(240, 61)
@@ -189,7 +189,7 @@ Partial Class MainForm
         Me.Guna2PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
         Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-51, -102)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(-90, -106)
         Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
         Me.Guna2PictureBox1.Size = New System.Drawing.Size(429, 428)
         Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -292,7 +292,7 @@ Partial Class MainForm
         Me.lblDate.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDate.ForeColor = System.Drawing.Color.White
         Me.lblDate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblDate.Location = New System.Drawing.Point(471, 11)
+        Me.lblDate.Location = New System.Drawing.Point(459, 11)
         Me.lblDate.Name = "lblDate"
         Me.lblDate.Size = New System.Drawing.Size(145, 25)
         Me.lblDate.TabIndex = 41

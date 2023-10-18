@@ -42,8 +42,10 @@ Partial Class DashboardPage
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.liveNotifPanel = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -75,7 +77,7 @@ Partial Class DashboardPage
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label3.Location = New System.Drawing.Point(25, 29)
+        Me.Label3.Location = New System.Drawing.Point(25, 26)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(151, 108)
         Me.Label3.TabIndex = 24
@@ -94,12 +96,12 @@ Partial Class DashboardPage
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label2.Location = New System.Drawing.Point(34, 9)
+        Me.Label2.Location = New System.Drawing.Point(12, 12)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(133, 24)
+        Me.Label2.Size = New System.Drawing.Size(112, 20)
         Me.Label2.TabIndex = 25
         Me.Label2.Text = "Active Devices"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -147,7 +149,7 @@ Partial Class DashboardPage
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Location = New System.Drawing.Point(235, 114)
         Me.Panel2.Name = "Panel2"
@@ -157,12 +159,12 @@ Partial Class DashboardPage
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label4.Location = New System.Drawing.Point(18, 9)
+        Me.Label4.Location = New System.Drawing.Point(12, 18)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(164, 24)
+        Me.Label4.Size = New System.Drawing.Size(141, 20)
         Me.Label4.TabIndex = 25
         Me.Label4.Text = "Recorded Patients"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -173,7 +175,7 @@ Partial Class DashboardPage
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
         Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label5.Location = New System.Drawing.Point(25, 26)
+        Me.Label5.Location = New System.Drawing.Point(25, 29)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(151, 108)
         Me.Label5.TabIndex = 24
@@ -182,7 +184,7 @@ Partial Class DashboardPage
         '
         'Panel3
         '
-        Me.Panel3.Controls.Add(Me.Label6)
+        Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Controls.Add(Me.Label7)
         Me.Panel3.Location = New System.Drawing.Point(28, 258)
         Me.Panel3.Name = "Panel3"
@@ -192,14 +194,14 @@ Partial Class DashboardPage
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Label6.ForeColor = System.Drawing.Color.Black
         Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label6.Location = New System.Drawing.Point(17, 7)
+        Me.Label6.Location = New System.Drawing.Point(4, 12)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(147, 24)
+        Me.Label6.Size = New System.Drawing.Size(191, 20)
         Me.Label6.TabIndex = 25
-        Me.Label6.Text = "Number of Beds"
+        Me.Label6.Text = "Patients within the Vicinity"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label7
@@ -240,12 +242,12 @@ Partial Class DashboardPage
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.Label9.ForeColor = System.Drawing.Color.Black
         Me.Label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label9.Location = New System.Drawing.Point(17, 7)
+        Me.Label9.Location = New System.Drawing.Point(4, 17)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(147, 24)
+        Me.Label9.Size = New System.Drawing.Size(124, 20)
         Me.Label9.TabIndex = 25
         Me.Label9.Text = "Number of Beds"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -253,41 +255,67 @@ Partial Class DashboardPage
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label10.ForeColor = System.Drawing.Color.White
         Me.Label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label10.Location = New System.Drawing.Point(33, 10)
+        Me.Label10.Location = New System.Drawing.Point(45, 28)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(162, 25)
+        Me.Label10.Size = New System.Drawing.Size(207, 21)
         Me.Label10.TabIndex = 36
-        Me.Label10.Text = "Live Notifications"
+        Me.Label10.Text = "Real-time Security Monitor"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'liveNotifPanel
         '
         Me.liveNotifPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.liveNotifPanel.Controls.Add(Me.TextBox2)
+        Me.liveNotifPanel.Controls.Add(Me.TextBox1)
         Me.liveNotifPanel.Controls.Add(Me.PictureBox1)
         Me.liveNotifPanel.Controls.Add(Me.Label10)
-        Me.liveNotifPanel.Location = New System.Drawing.Point(472, 15)
+        Me.liveNotifPanel.Location = New System.Drawing.Point(440, 11)
         Me.liveNotifPanel.Margin = New System.Windows.Forms.Padding(2)
         Me.liveNotifPanel.Name = "liveNotifPanel"
-        Me.liveNotifPanel.Size = New System.Drawing.Size(208, 470)
+        Me.liveNotifPanel.Size = New System.Drawing.Size(253, 521)
         Me.liveNotifPanel.TabIndex = 37
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Image = Global.VitalsMonitoringSystem.My.Resources.Resources.icons8_notification_24
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 9)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(26, 26)
-        Me.PictureBox1.TabIndex = 37
-        Me.PictureBox1.TabStop = False
         '
         'Guna2Elipse1
         '
         Me.Guna2Elipse1.TargetControl = Me.liveNotifPanel
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox1.Image = Global.VitalsMonitoringSystem.My.Resources.Resources.icons8_shield_24
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 24)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(26, 30)
+        Me.PictureBox1.TabIndex = 37
+        Me.PictureBox1.TabStop = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.TextBox1.Location = New System.Drawing.Point(12, 81)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(233, 54)
+        Me.TextBox1.TabIndex = 38
+        Me.TextBox1.Text = "(FULLNAME) removed the wearable device."
+        '
+        'TextBox2
+        '
+        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.TextBox2.Location = New System.Drawing.Point(12, 141)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(233, 54)
+        Me.TextBox2.TabIndex = 39
+        Me.TextBox2.Text = "(FULLNAME) is out of the vicinity."
         '
         'DashboardPage
         '
@@ -343,4 +371,6 @@ Partial Class DashboardPage
     Friend WithEvents liveNotifPanel As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox2 As TextBox
 End Class

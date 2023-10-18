@@ -29,33 +29,41 @@ Public Class RegisterPatient
         End Try
     End Sub
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-        If String.IsNullOrEmpty(txbxFamilyName.Text) OrElse
-          String.IsNullOrEmpty(txbxfirstname.Text) OrElse
-          String.IsNullOrEmpty(txbxmidname.Text) OrElse
-          String.IsNullOrEmpty(txbxCurrentAddress.Text) OrElse
-          String.IsNullOrEmpty(txbxNationality.Text) OrElse
-          String.IsNullOrEmpty(txbxBirthdate.Text) OrElse
-          String.IsNullOrEmpty(txbxPlaceOfBirth.Text) OrElse
-          cbxSex.SelectedItem Is Nothing OrElse
-          cbxBloodType.SelectedItem Is Nothing OrElse
-          String.IsNullOrEmpty(txbxbloodoxygen.Text) OrElse
-          String.IsNullOrEmpty(txbxtemperature.Text) OrElse
-          String.IsNullOrEmpty(txbxpulse.Text) OrElse
-          String.IsNullOrEmpty(txbxPhysician.Text) OrElse
-          String.IsNullOrEmpty(txbxward.Text) OrElse
-          String.IsNullOrEmpty(txbxemergencycontactname.Text) OrElse
-          String.IsNullOrEmpty(txbxRelationship.Text) OrElse
-          String.IsNullOrEmpty(txbxemergencyaddress.Text) OrElse
-          String.IsNullOrEmpty(txbxemergencynumber.Text) OrElse
-          String.IsNullOrEmpty(txtboxheight.Text) OrElse
-          String.IsNullOrEmpty(txtboxweight.Text) OrElse
-          String.IsNullOrEmpty(txtboxBmi.Text) OrElse
-          String.IsNullOrEmpty(healthHistory.Text) OrElse
-          cbxMac.SelectedItem Is Nothing Then
-            MessageBox.Show("Please fill in all the required fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return
-        End If
-        PatientRegister(txbxFamilyName.Text, txbxfirstname.Text, txbxmidname.Text, txbxExtensionName.Text, txbxCurrentAddress.Text, txbxNationality.Text, txbxBirthdate.Text, txbxPlaceOfBirth.Text, cbxSex.SelectedItem, cbxBloodType.SelectedItem, txbxbloodoxygen.Text, txbxtemperature.Text, txbxpulse.Text, txbxPhysician.Text, txbxward.Text, txbxemergencycontactname.Text, txbxRelationship.Text, txbxemergencyaddress.Text, txbxemergencynumber.Text, txtboxheight.Text, txtboxweight.Text, txtboxBmi.Text, cbxMac.SelectedItem.ToString(), healthHistory.Text)
+
+
+        Try
+            If String.IsNullOrEmpty(txbxFamilyName.Text) OrElse
+              String.IsNullOrEmpty(txbxfirstname.Text) OrElse
+              String.IsNullOrEmpty(txbxmidname.Text) OrElse
+              String.IsNullOrEmpty(txbxCurrentAddress.Text) OrElse
+              String.IsNullOrEmpty(txbxNationality.Text) OrElse
+              String.IsNullOrEmpty(txbxBirthdate.Text) OrElse
+              String.IsNullOrEmpty(txbxPlaceOfBirth.Text) OrElse
+              cbxSex.SelectedItem Is Nothing OrElse
+              cbxBloodType.SelectedItem Is Nothing OrElse
+              String.IsNullOrEmpty(txbxbloodoxygen.Text) OrElse
+              String.IsNullOrEmpty(txbxtemperature.Text) OrElse
+              String.IsNullOrEmpty(txbxpulse.Text) OrElse
+              String.IsNullOrEmpty(txbxPhysician.Text) OrElse
+              String.IsNullOrEmpty(txbxward.Text) OrElse
+              String.IsNullOrEmpty(txbxemergencycontactname.Text) OrElse
+              String.IsNullOrEmpty(txbxRelationship.Text) OrElse
+              String.IsNullOrEmpty(txbxemergencyaddress.Text) OrElse
+              String.IsNullOrEmpty(txbxemergencynumber.Text) OrElse
+              String.IsNullOrEmpty(txtboxheight.Text) OrElse
+              String.IsNullOrEmpty(txtboxweight.Text) OrElse
+              String.IsNullOrEmpty(txtboxBmi.Text) OrElse
+              String.IsNullOrEmpty(healthHistory.Text) OrElse
+              cbxMac.SelectedItem Is Nothing Then
+                MessageBox.Show("Please fill in all the required fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Else
+                PatientRegister(txbxFamilyName.Text, txbxfirstname.Text, txbxmidname.Text, txbxExtensionName.Text, txbxCurrentAddress.Text, txbxNationality.Text, txbxBirthdate.Text, txbxPlaceOfBirth.Text, cbxSex.SelectedItem, cbxBloodType.SelectedItem, txbxbloodoxygen.Text, txbxtemperature.Text, txbxpulse.Text, txbxPhysician.Text, txbxward.Text, txbxemergencycontactname.Text, txbxRelationship.Text, txbxemergencyaddress.Text, txbxemergencynumber.Text, txtboxheight.Text, txtboxweight.Text, txtboxBmi.Text, cbxMac.SelectedItem.ToString(), healthHistory.Text)
+                MessageBox.Show("Registration Successful! Your account has been created.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Registration Failed. An error occurred: " & ex.Message, "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
         txbxFamilyName.Clear()
         txbxfirstname.Clear()
         txbxmidname.Clear()
