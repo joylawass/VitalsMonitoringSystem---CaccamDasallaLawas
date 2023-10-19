@@ -125,6 +125,8 @@ Public Class LiveMonitorPage
     Private Sub LiveMonitorPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'lblUsername.Text = LoggedInUser
 
+        notestxtbox.Multiline = True
+        notestxtbox.TextAlign = HorizontalAlignment.Left
         liveMonitoringDTG.Rows.Clear()
         Connect()
         Try
@@ -221,11 +223,12 @@ Public Class LiveMonitorPage
             Dim bmiChange As String = ""
             Dim wardChange As String = ""
             Dim history As String = ""
+            Dim notes As String = ""
             Dim patientBirthdate As Date
 
             ' Fetch patient information from the database using the selectedPatientID
             Connect()
-            query = "SELECT lastname, firstname, middlename, extname, birthdate, sex, blood_type, ward, height, weight, bmi, Dev_ID, health_history FROM patient_info WHERE patientID = @patientID"
+            query = "SELECT lastname, firstname, middlename, extname, birthdate, sex, blood_type, ward, height, weight, bmi, Dev_ID, health_history, notes FROM patient_info WHERE patientID = @patientID"
             Try
                 Using command As New MySqlCommand(query, connection)
                     command.Parameters.AddWithValue("@patientID", selectedPatientID)
@@ -246,6 +249,7 @@ Public Class LiveMonitorPage
                         bmiChange = reader.GetString("bmi")
                         wardChange = reader.GetString("ward")
                         history = reader.GetString("health_history")
+                        notes = reader.GetString("notes")
                         tableName = reader.GetString("lastname") & selectedPatientID
                         SelectedDevID = reader.GetString("Dev_ID")
                         Timer1.Enabled = True
@@ -276,7 +280,7 @@ Public Class LiveMonitorPage
             bmiLive.Text = bmiChange
             wardNumberLive.Text = wardChange
             historyLive.Text = history
-            historyLive.Text = history
+            notestxtbox.Text = notes
         Else
             IconEdit.Enabled = False
         End If
@@ -358,4 +362,5 @@ Public Class LiveMonitorPage
             MsgBox(ex.Message)
         End Try
     End Sub
+
 End Class

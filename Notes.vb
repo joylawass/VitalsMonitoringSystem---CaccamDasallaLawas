@@ -17,6 +17,8 @@ Public Class Notes
     Private Sub Notes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtboxNotes.Multiline = True
         txtboxNotes.TextAlign = HorizontalAlignment.Left
+
+        DisplayPatientNotes()
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
@@ -43,6 +45,29 @@ Public Class Notes
         Catch ex As Exception
             ' Show an error message if the insertion fails
             MessageBox.Show("Failed to save notes. Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub DisplayPatientNotes()
+        ' Connect to the database
+        Connect()
+
+        ' Construct a SQL query to retrieve the notes for the specific patient
+        query = "SELECT notes FROM patient_info WHERE patientID = @patientID;"
+
+        Try
+            Using command As New MySqlCommand(query, connection)
+                command.Parameters.AddWithValue("@patientID", patientID)
+
+                ' Execute the SQL query to retrieve the notes
+                Dim notes As String = CStr(command.ExecuteScalar())
+
+                ' Display the retrieved notes in the txtboxNotes control
+                txtboxNotes.Text = notes
+            End Using
+        Catch ex As Exception
+            ' Show an error message if the retrieval fails
+            MessageBox.Show("Failed to retrieve notes. Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
