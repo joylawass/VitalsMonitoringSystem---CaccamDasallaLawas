@@ -191,6 +191,7 @@ Public Class LiveMonitorPage
         bmiLive.Text = ""
         heightLive.Text = ""
         historyLive.Text = ""
+        notestxtbox.Text = ""
         sexLive.Text = ""
         wardNumberLive.Text = ""
         weightLive.Text = ""
