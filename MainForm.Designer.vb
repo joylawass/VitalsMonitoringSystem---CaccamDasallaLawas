@@ -267,7 +267,7 @@ Partial Class MainForm
         Me.IconCurrentForm.IconChar = FontAwesome.Sharp.IconChar.Hive
         Me.IconCurrentForm.IconColor = System.Drawing.Color.White
         Me.IconCurrentForm.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconCurrentForm.Location = New System.Drawing.Point(8, 7)
+        Me.IconCurrentForm.Location = New System.Drawing.Point(8, 10)
         Me.IconCurrentForm.Name = "IconCurrentForm"
         Me.IconCurrentForm.Size = New System.Drawing.Size(32, 32)
         Me.IconCurrentForm.TabIndex = 42
@@ -279,7 +279,7 @@ Partial Class MainForm
         Me.PageTitle.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PageTitle.ForeColor = System.Drawing.Color.White
         Me.PageTitle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.PageTitle.Location = New System.Drawing.Point(46, 11)
+        Me.PageTitle.Location = New System.Drawing.Point(40, 11)
         Me.PageTitle.Name = "PageTitle"
         Me.PageTitle.Size = New System.Drawing.Size(109, 25)
         Me.PageTitle.TabIndex = 43
@@ -292,7 +292,7 @@ Partial Class MainForm
         Me.lblDate.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDate.ForeColor = System.Drawing.Color.White
         Me.lblDate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblDate.Location = New System.Drawing.Point(459, 11)
+        Me.lblDate.Location = New System.Drawing.Point(482, 11)
         Me.lblDate.Name = "lblDate"
         Me.lblDate.Size = New System.Drawing.Size(145, 25)
         Me.lblDate.TabIndex = 41

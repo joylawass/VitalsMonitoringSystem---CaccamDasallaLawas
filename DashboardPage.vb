@@ -5,13 +5,6 @@
         lblUsername1.Text = LoggedInUser
     End Sub
 
-    Private Sub lbBatt_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub liveNotifPanel_Paint(sender As Object, e As PaintEventArgs) Handles liveNotifPanel.Paint
-
-    End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Connect()
         query = "SELECT * from devicelist WHERE status = 'Active'"

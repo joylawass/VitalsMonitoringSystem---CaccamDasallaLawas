@@ -123,7 +123,7 @@ Module DatabaseQueries
                 End If
             End With
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MessageBox.Show("Login is not successful", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End Try
     End Sub
 
@@ -303,10 +303,6 @@ Module DatabaseQueries
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-    End Sub
-
-    Public Sub DashBoard_Monitor()
-
     End Sub
 
 End Module
