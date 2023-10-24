@@ -23,6 +23,7 @@ Partial Class DashboardPage
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DashboardPage))
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -38,18 +39,20 @@ Partial Class DashboardPage
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.liveNotifPanel = New System.Windows.Forms.Panel()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse3 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse4 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse5 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.Welcome = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -67,7 +70,7 @@ Partial Class DashboardPage
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label3.Location = New System.Drawing.Point(25, 32)
+        Me.Label3.Location = New System.Drawing.Point(28, 32)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(151, 108)
         Me.Label3.TabIndex = 24
@@ -155,7 +158,7 @@ Partial Class DashboardPage
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label5.Location = New System.Drawing.Point(25, 29)
+        Me.Label5.Location = New System.Drawing.Point(28, 29)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(151, 108)
         Me.Label5.TabIndex = 24
@@ -191,7 +194,7 @@ Partial Class DashboardPage
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label7.Location = New System.Drawing.Point(25, 34)
+        Me.Label7.Location = New System.Drawing.Point(28, 34)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(151, 108)
         Me.Label7.TabIndex = 24
@@ -204,7 +207,7 @@ Partial Class DashboardPage
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
         Me.Label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label8.Location = New System.Drawing.Point(25, 33)
+        Me.Label8.Location = New System.Drawing.Point(28, 33)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(151, 108)
         Me.Label8.TabIndex = 24
@@ -234,18 +237,9 @@ Partial Class DashboardPage
         Me.Label9.Text = "Number of Beds"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label10
+        'Guna2Elipse1
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label10.Location = New System.Drawing.Point(38, 13)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(207, 21)
-        Me.Label10.TabIndex = 36
-        Me.Label10.Text = "Real-time Security Monitor"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Guna2Elipse1.TargetControl = Me.liveNotifPanel
         '
         'liveNotifPanel
         '
@@ -295,9 +289,18 @@ Partial Class DashboardPage
         Me.PictureBox1.TabIndex = 37
         Me.PictureBox1.TabStop = False
         '
-        'Guna2Elipse1
+        'Label10
         '
-        Me.Guna2Elipse1.TargetControl = Me.liveNotifPanel
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label10.Location = New System.Drawing.Point(38, 13)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(207, 21)
+        Me.Label10.TabIndex = 36
+        Me.Label10.Text = "Real-time Security Monitor"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Guna2Elipse2
         '
@@ -341,12 +344,29 @@ Partial Class DashboardPage
         Me.Welcome.Text = "Welcome back,"
         Me.Welcome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button1.Location = New System.Drawing.Point(221, 419)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(137, 50)
+        Me.Button1.TabIndex = 42
+        Me.Button1.Text = "Notification"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'NotifyIcon1
+        '
+        Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
+        Me.NotifyIcon1.Text = "NotifyIcon1"
+        Me.NotifyIcon1.Visible = True
+        '
         'DashboardPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(697, 541)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblUsername)
         Me.Controls.Add(Me.liveNotifPanel)
         Me.Controls.Add(Me.Welcome)
@@ -389,16 +409,18 @@ Partial Class DashboardPage
     Friend WithEvents Label8 As Label
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents liveNotifPanel As Panel
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Guna2Elipse3 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Guna2Elipse4 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Guna2Elipse5 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents lblUsername As Label
     Friend WithEvents Welcome As Label
+    Friend WithEvents liveNotifPanel As Panel
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents NotifyIcon1 As NotifyIcon
 End Class

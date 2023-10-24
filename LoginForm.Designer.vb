@@ -90,7 +90,7 @@ Partial Class LoginForm
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(84, 181)
+        Me.Label2.Location = New System.Drawing.Point(84, 187)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(108, 21)
         Me.Label2.TabIndex = 7
@@ -108,7 +108,7 @@ Partial Class LoginForm
         Me.btnLogin.FillColor = System.Drawing.SystemColors.HotTrack
         Me.btnLogin.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
         Me.btnLogin.ForeColor = System.Drawing.Color.White
-        Me.btnLogin.Location = New System.Drawing.Point(142, 312)
+        Me.btnLogin.Location = New System.Drawing.Point(142, 318)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(96, 32)
         Me.btnLogin.TabIndex = 3
@@ -140,7 +140,7 @@ Partial Class LoginForm
         Me.btnReset.FillColor = System.Drawing.Color.Red
         Me.btnReset.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
         Me.btnReset.ForeColor = System.Drawing.Color.White
-        Me.btnReset.Location = New System.Drawing.Point(38, 312)
+        Me.btnReset.Location = New System.Drawing.Point(38, 318)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(96, 32)
         Me.btnReset.TabIndex = 23
@@ -152,7 +152,7 @@ Partial Class LoginForm
         Me.showPassword.BackColor = System.Drawing.Color.Transparent
         Me.showPassword.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.showPassword.ForeColor = System.Drawing.Color.White
-        Me.showPassword.Location = New System.Drawing.Point(39, 287)
+        Me.showPassword.Location = New System.Drawing.Point(39, 293)
         Me.showPassword.Name = "showPassword"
         Me.showPassword.Size = New System.Drawing.Size(108, 19)
         Me.showPassword.TabIndex = 10
@@ -178,7 +178,7 @@ Partial Class LoginForm
         Me.txtbxUsername.IconLeft = Global.VitalsMonitoringSystem.My.Resources.Resources.icons8_username_64__3_
         Me.txtbxUsername.IconLeftOffset = New System.Drawing.Point(0, -4)
         Me.txtbxUsername.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.txtbxUsername.Location = New System.Drawing.Point(38, 208)
+        Me.txtbxUsername.Location = New System.Drawing.Point(38, 214)
         Me.txtbxUsername.Margin = New System.Windows.Forms.Padding(6, 6, 5, 6)
         Me.txtbxUsername.Name = "txtbxUsername"
         Me.txtbxUsername.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -219,7 +219,7 @@ Partial Class LoginForm
         Me.txtbxPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtbxPassword.IconLeft = Global.VitalsMonitoringSystem.My.Resources.Resources.icons8_password_64
         Me.txtbxPassword.IconLeftSize = New System.Drawing.Size(30, 30)
-        Me.txtbxPassword.Location = New System.Drawing.Point(38, 244)
+        Me.txtbxPassword.Location = New System.Drawing.Point(38, 250)
         Me.txtbxPassword.Margin = New System.Windows.Forms.Padding(6, 6, 5, 6)
         Me.txtbxPassword.Name = "txtbxPassword"
         Me.txtbxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
