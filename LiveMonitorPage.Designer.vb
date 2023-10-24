@@ -23,9 +23,9 @@ Partial Class LiveMonitorPage
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LiveMonitorPage))
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
@@ -56,6 +56,7 @@ Partial Class LiveMonitorPage
         Me.Label4 = New System.Windows.Forms.Label()
         Me.NotesPanel = New Guna.UI2.WinForms.Guna2Panel()
         Me.notePanel = New Guna.UI2.WinForms.Guna2Panel()
+        Me.notestxtbox = New Guna.UI2.WinForms.Guna2TextBox()
         Me.noteslbl = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -89,7 +90,7 @@ Partial Class LiveMonitorPage
         Me.lbBpm = New System.Windows.Forms.Label()
         Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.lbTemp = New System.Windows.Forms.Label()
+        Me.lblTemp = New System.Windows.Forms.Label()
         Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -101,7 +102,6 @@ Partial Class LiveMonitorPage
         Me.Guna2Elipse12 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse13 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse14 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.notestxtbox = New Guna.UI2.WinForms.Guna2TextBox()
         CType(Me.liveMonitoringDTG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PatientInfoPanel.SuspendLayout()
         Me.historyLivePanel.SuspendLayout()
@@ -144,30 +144,30 @@ Partial Class LiveMonitorPage
         Me.liveMonitoringDTG.AllowUserToOrderColumns = True
         Me.liveMonitoringDTG.AllowUserToResizeColumns = False
         Me.liveMonitoringDTG.AllowUserToResizeRows = False
-        DataGridViewCellStyle16.BackColor = System.Drawing.Color.White
-        Me.liveMonitoringDTG.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.liveMonitoringDTG.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.liveMonitoringDTG.BackgroundColor = System.Drawing.SystemColors.Control
         Me.liveMonitoringDTG.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle17.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.liveMonitoringDTG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.liveMonitoringDTG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.liveMonitoringDTG.ColumnHeadersHeight = 28
         Me.liveMonitoringDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         Me.liveMonitoringDTG.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.patientID, Me.DataGridViewTextBoxColumn2})
         Me.liveMonitoringDTG.Cursor = System.Windows.Forms.Cursors.Arrow
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle18.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.liveMonitoringDTG.DefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.liveMonitoringDTG.DefaultCellStyle = DataGridViewCellStyle3
         Me.liveMonitoringDTG.GridColor = System.Drawing.Color.White
         Me.liveMonitoringDTG.Location = New System.Drawing.Point(17, 12)
         Me.liveMonitoringDTG.Name = "liveMonitoringDTG"
@@ -244,7 +244,7 @@ Partial Class LiveMonitorPage
         Me.historyLivePanel.Controls.Add(Me.historyLive)
         Me.historyLivePanel.Location = New System.Drawing.Point(15, 133)
         Me.historyLivePanel.Name = "historyLivePanel"
-        Me.historyLivePanel.Size = New System.Drawing.Size(136, 183)
+        Me.historyLivePanel.Size = New System.Drawing.Size(139, 183)
         Me.historyLivePanel.TabIndex = 52
         '
         'historyLive
@@ -505,6 +505,30 @@ Partial Class LiveMonitorPage
         Me.notePanel.Name = "notePanel"
         Me.notePanel.Size = New System.Drawing.Size(136, 183)
         Me.notePanel.TabIndex = 53
+        '
+        'notestxtbox
+        '
+        Me.notestxtbox.BorderColor = System.Drawing.Color.White
+        Me.notestxtbox.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.notestxtbox.DefaultText = ""
+        Me.notestxtbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.notestxtbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.notestxtbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.notestxtbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.notestxtbox.Enabled = False
+        Me.notestxtbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.notestxtbox.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.notestxtbox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.notestxtbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.notestxtbox.Location = New System.Drawing.Point(0, 1)
+        Me.notestxtbox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.notestxtbox.Name = "notestxtbox"
+        Me.notestxtbox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.notestxtbox.PlaceholderForeColor = System.Drawing.Color.White
+        Me.notestxtbox.PlaceholderText = ""
+        Me.notestxtbox.SelectedText = ""
+        Me.notestxtbox.Size = New System.Drawing.Size(139, 179)
+        Me.notestxtbox.TabIndex = 47
         '
         'noteslbl
         '
@@ -838,25 +862,25 @@ Partial Class LiveMonitorPage
         '
         Me.Guna2Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Guna2Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
-        Me.Guna2Panel2.Controls.Add(Me.lbTemp)
+        Me.Guna2Panel2.Controls.Add(Me.lblTemp)
         Me.Guna2Panel2.Controls.Add(Me.Guna2PictureBox2)
         Me.Guna2Panel2.Location = New System.Drawing.Point(6, 72)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.Size = New System.Drawing.Size(142, 34)
         Me.Guna2Panel2.TabIndex = 59
         '
-        'lbTemp
+        'lblTemp
         '
-        Me.lbTemp.AutoSize = True
-        Me.lbTemp.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.lbTemp.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.lbTemp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lbTemp.Location = New System.Drawing.Point(54, 8)
-        Me.lbTemp.Name = "lbTemp"
-        Me.lbTemp.Size = New System.Drawing.Size(84, 20)
-        Me.lbTemp.TabIndex = 47
-        Me.lbTemp.Text = "Body Temp"
-        Me.lbTemp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblTemp.AutoSize = True
+        Me.lblTemp.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.lblTemp.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.lblTemp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblTemp.Location = New System.Drawing.Point(54, 8)
+        Me.lblTemp.Name = "lblTemp"
+        Me.lblTemp.Size = New System.Drawing.Size(84, 20)
+        Me.lblTemp.TabIndex = 47
+        Me.lblTemp.Text = "Body Temp"
+        Me.lblTemp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Guna2PictureBox2
         '
@@ -961,29 +985,6 @@ Partial Class LiveMonitorPage
         'Guna2Elipse14
         '
         Me.Guna2Elipse14.TargetControl = Me.NotesPanel
-        '
-        'notestxtbox
-        '
-        Me.notestxtbox.BorderColor = System.Drawing.Color.White
-        Me.notestxtbox.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.notestxtbox.DefaultText = ""
-        Me.notestxtbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.notestxtbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.notestxtbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.notestxtbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.notestxtbox.Enabled = False
-        Me.notestxtbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.notestxtbox.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.notestxtbox.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.notestxtbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.notestxtbox.Location = New System.Drawing.Point(0, 1)
-        Me.notestxtbox.Name = "notestxtbox"
-        Me.notestxtbox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.notestxtbox.PlaceholderForeColor = System.Drawing.Color.White
-        Me.notestxtbox.PlaceholderText = ""
-        Me.notestxtbox.SelectedText = ""
-        Me.notestxtbox.Size = New System.Drawing.Size(135, 179)
-        Me.notestxtbox.TabIndex = 47
         '
         'LiveMonitorPage
         '
@@ -1103,7 +1104,7 @@ Partial Class LiveMonitorPage
     Friend WithEvents lbBpm As Label
     Friend WithEvents Guna2PictureBox3 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents lbTemp As Label
+    Friend WithEvents lblTemp As Label
     Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents lbO2 As Label

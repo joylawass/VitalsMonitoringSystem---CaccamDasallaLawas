@@ -36,4 +36,17 @@ Public Class LiveChart
         Me.Close()
     End Sub
 
+    Private Sub Chart2_Click(sender As Object, e As EventArgs) Handles Chart2.Click
+
+    End Sub
+
+
+
+    'create a conditional statement about
+
+    '1. first classifying the gender into male or female
+    '2. then, classifying the real-time value into low, normal, and high number ranges
+
+    'from mysql database in vb.net
+
 End Class

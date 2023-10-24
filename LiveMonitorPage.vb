@@ -197,8 +197,8 @@ Public Class LiveMonitorPage
         weightLive.Text = ""
         lbBpm.Text = String.Empty
         lbBpm.Text = "Pulse Rate"
-        lbTemp.Text = String.Empty
-        lbTemp.Text = "Body Temp"
+        lblTemp.Text = String.Empty
+        lblTemp.Text = "Body Temp"
         lbO2.Text = String.Empty
         lbO2.Text = "Blood O₂"
         lbHall.Text = String.Empty
@@ -356,7 +356,7 @@ Public Class LiveMonitorPage
                     lbBpm.Text = reader.GetString("pulse")
                     lbHall.Text = reader.GetString("wearStat")
                     lbO2.Text = reader.GetString("SPO2")
-                    lbTemp.Text = reader.GetString("temperature")
+                    lblTemp.Text = reader.GetString("temperature")
                 End While
             End With
         Catch ex As Exception
@@ -364,4 +364,43 @@ Public Class LiveMonitorPage
         End Try
     End Sub
 
+
+    Private Sub lblTemp_Click(sender As Object, e As EventArgs) Handles lblTemp.Click
+
+        ' chatgpt Help: create a conditional statement about classifying the temperature into low, normal, And high number ranges
+        ' From mysql database in vb.net then will change the text color based on the classification
+
+
+        ' chatgpt answer:
+        ' Assuming you have established a MySqlConnection object named 'connection'
+        ' Retrieve real-time value from the database
+
+        Dim query As String = "SELECT temperature FROM patient_info WHERE patientID = @patientID"
+
+        Dim cmd As New MySqlCommand(query, connection)
+        Dim reader As MySqlDataReader = cmd.ExecuteReader()
+
+        If reader.HasRows Then
+            While reader.Read()
+                ' Get real-time value from the database
+                Dim temperature As Double = Double.Parse(reader("real_time_value").ToString())
+
+                If temperature < 36.0 Then
+                    lblTemp.ForeColor = Color.Blue ' Change text color to blue for low temperature
+                ElseIf temperature >= 36.1 AndAlso temperature < 37.2 Then
+                    lblTemp.ForeColor = Color.Black ' Change text color to black for normal temperature
+                Else
+                    lblTemp.ForeColor = Color.Red ' Change text color to red for high temperature
+                End If
+
+            End While
+        Else
+            Console.WriteLine("fetching...")
+        End If
+
+        ' Close the reader and the database connection
+        reader.Close()
+        connection.Close()
+
+    End Sub
 End Class
