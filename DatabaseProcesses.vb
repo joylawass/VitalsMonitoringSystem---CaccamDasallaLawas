@@ -147,7 +147,7 @@ Module DatabaseQueries
                     Dim result As DialogResult = MessageBox.Show("Record Already Exists. Overwrite data?", "caption", MessageBoxButtons.YesNo)
                     If result = DialogResult.Yes Then
                         Connect()
-                        query = "UPDATE patient_info SET lastname = @lastname, firstname = @firstname, middlename = @middlename, extname = @extname, current_address = @current_address, nationality = @nationality, birthdate = @birthdate, birthplace = @birthplace, sex = @sex, blood_type = @blood_type, blood_oxygen = @blood_oxygen, physician = @physician, ward = @ward, emergency_name = @emergency_name, emergency_relation = @emergency_relation, emergency_address = @emergency_address, emergency_contact = @emergency_contact, height = @height, weight = @weight, bmi = @bmi, Dev_ID = @Dev_ID, health_history = @health_history WHERE patientID = @patientID;"
+                        query = "UPDATE patient_info SET lastname = @lastname, firstname = @firstname, middlename = @middlename, extname = @extname, current_address = @current_address, nationality = @nationality, birthdate = @birthdate, birthplace = @birthplace, sex = @sex, blood_type = @blood_type, blood_oxygen = @blood_oxygen, physician = @physician, ward = @ward, emergency_name = @emergency_name, emergency_relation = @emergency_relation, emergency_address = @emergency_address, emergency_contact = @emergency_contact, height = @height, weight = @weight, bmi = @bmi, Dev_ID = @Dev_ID WHERE patientID = @patientID;"
                         Try
                             With command
                                 .Connection = connection
@@ -176,7 +176,6 @@ Module DatabaseQueries
                                     .Add("@weight", MySqlDbType.VarChar).Value = weight
                                     .Add("@bmi", MySqlDbType.VarChar).Value = bmi
                                     .Add("@Dev_ID", MySqlDbType.VarChar).Value = Dev_ID
-                                    .Add("@health_history", MySqlDbType.VarChar).Value = health_history
                                 End With
                                 .ExecuteNonQuery()
                                 AdminLogs("Updated patient info with id = " + Identifier + " using credential : " & LoggedInUser)
@@ -190,7 +189,7 @@ Module DatabaseQueries
                 Else
                     Try
                         Connect()
-                        query = "INSERT INTO `patient_info` (lastname, firstname, middlename, extname, current_address, nationality, birthdate, birthplace, sex, blood_type, blood_oxygen, physician, ward, emergency_name, emergency_relation, emergency_address, emergency_contact, height, weight, bmi, Dev_ID, health_history, status) VALUES (@lastname, @firstname, @middlename, @extname, @current_address, @nationality, @birthdate, @birthplace, @sex, @blood_type, @blood_oxygen, @physician, @ward, @emergency_name, @emergency_relation, @emergency_address, @emergency_contact, @height, @weight, @bmi, @Dev_ID, @health_history, 'Active');"
+                        query = "INSERT INTO `patient_info` (lastname, firstname, middlename, extname, current_address, nationality, birthdate, birthplace, sex, blood_type, blood_oxygen, physician, ward, emergency_name, emergency_relation, emergency_address, emergency_contact, height, weight, bmi, Dev_ID, status) VALUES (@lastname, @firstname, @middlename, @extname, @current_address, @nationality, @birthdate, @birthplace, @sex, @blood_type, @blood_oxygen, @physician, @ward, @emergency_name, @emergency_relation, @emergency_address, @emergency_contact, @height, @weight, @bmi, @Dev_ID, 'Active');"
                         With command
                             .Connection = connection
                             .CommandText = query
