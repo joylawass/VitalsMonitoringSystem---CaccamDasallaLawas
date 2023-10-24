@@ -217,7 +217,6 @@ Module DatabaseQueries
                                 .Add("@weight", MySqlDbType.VarChar).Value = weight
                                 .Add("@bmi", MySqlDbType.VarChar).Value = bmi
                                 .Add("@Dev_ID", MySqlDbType.VarChar).Value = Dev_ID
-                                .Add("@health_history", MySqlDbType.VarChar).Value = health_history
                             End With
                             .ExecuteNonQuery()
                             AdminLogs("Registered new patient info with id = " + Identifier + " using credential : " & LoggedInUser)
@@ -241,7 +240,7 @@ Module DatabaseQueries
                             reader = .ExecuteReader
                             If reader.Read Then
                                 Identifier = reader.GetString("patientID")
-                                CreatePatientRecord(surname, Identifier, Temperature, bpm)
+                                CreatePatientRecord(surname, Identifier, Temperature, bpm, health_history)
                                 MessageBox.Show("Success", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
                             Else
@@ -260,17 +259,17 @@ Module DatabaseQueries
         End Try
     End Sub
 
-    Public Sub CreatePatientRecord(lastname As String, patientID As String, temperature As String, pulse As String)
+    Public Sub CreatePatientRecord(lastname As String, patientID As String, temperature As String, pulse As String, notes As String)
         Connect()
         Try
-            query = "CREATE TABLE " & lastname & patientID & " (temperature DECIMAL(4,2) , pulse INT(3), SPO2 INT(3), wearStat BOOLEAN, RFID BOOLEAN, time_stamp VarChar (30))"
+            query = "CREATE TABLE " & lastname & patientID & " (temperature DECIMAL(4,2) , pulse INT(3), SPO2 INT(3), wearStat BOOLEAN, RFID BOOLEAN,notes VarChar (100),  time_stamp VarChar (30))"
             With command
                 .Connection = connection
                 .CommandText = query
                 .ExecuteNonQuery()
             End With
             Connect()
-            query = "INSERT INTO " & lastname & patientID & " (temperature, pulse, wearStat, SPO2,RFID, time_stamp) VALUES (@temperature, @pulse, @wearStat, @SPO2,@RFID, @time_stamp)"
+            query = "INSERT INTO " & lastname & patientID & " (temperature, pulse, wearStat, SPO2,RFID, time_stamp, notes) VALUES (@temperature, @pulse, @wearStat, @SPO2,@RFID, @time_stamp, @notes)"
             With command
                 .Connection = connection
                 .CommandText = query
@@ -280,7 +279,9 @@ Module DatabaseQueries
                     .AddWithValue("@wearStat", False)
                     .AddWithValue("@SPO2", False)
                     .AddWithValue("@RFID", False)
+                    .AddWithValue("@notes", notes)
                     .AddWithValue("@time_stamp", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"))
+
                 End With
                 .ExecuteNonQuery()
                 AdminLogs("Created new patient Info Table with id = " + Identifier + " using credential : " & LoggedInUser)
