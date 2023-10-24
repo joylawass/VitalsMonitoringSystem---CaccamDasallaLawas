@@ -36,4 +36,5 @@ Public Class LiveChart
         Me.Close()
     End Sub
 
+
 End Class
