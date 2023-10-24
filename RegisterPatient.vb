@@ -59,34 +59,35 @@ Public Class RegisterPatient
             Else
                 PatientRegister(txbxFamilyName.Text, txbxfirstname.Text, txbxmidname.Text, txbxExtensionName.Text, txbxCurrentAddress.Text, txbxNationality.Text, txbxBirthdate.Text, txbxPlaceOfBirth.Text, cbxSex.SelectedItem, cbxBloodType.SelectedItem, txbxbloodoxygen.Text, txbxtemperature.Text, txbxpulse.Text, txbxPhysician.Text, txbxward.Text, txbxemergencycontactname.Text, txbxRelationship.Text, txbxemergencyaddress.Text, txbxemergencynumber.Text, txtboxheight.Text, txtboxweight.Text, txtboxBmi.Text, cbxMac.SelectedItem.ToString(), healthHistory.Text)
                 MessageBox.Show("Registration Successful! Your account has been created.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                txbxFamilyName.Clear()
+                txbxfirstname.Clear()
+                txbxmidname.Clear()
+                txbxExtensionName.Clear()
+                txbxCurrentAddress.Clear()
+                txbxNationality.Clear()
+                txbxPlaceOfBirth.Clear()
+                cbxSex.Items.Clear()
+                cbxBloodType.Items.Clear()
+                txbxbloodoxygen.Clear()
+                txbxtemperature.Clear()
+                txbxpulse.Clear()
+                txbxPhysician.Clear()
+                txbxward.Clear()
+                txbxemergencycontactname.Clear()
+                txbxRelationship.Clear()
+                txbxemergencyaddress.Clear()
+                txbxemergencynumber.Clear()
+                txtboxheight.Clear()
+                txtboxweight.Clear()
+                txtboxBmi.Clear()
+                cbxMac.Items.Clear()
+                healthHistory.Clear()
             End If
         Catch ex As Exception
             MessageBox.Show("Registration Failed. An error occurred: " & ex.Message, "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
-        txbxFamilyName.Clear()
-        txbxfirstname.Clear()
-        txbxmidname.Clear()
-        txbxExtensionName.Clear()
-        txbxCurrentAddress.Clear()
-        txbxNationality.Clear()
-        txbxPlaceOfBirth.Clear()
-        cbxSex.Items.Clear()
-        cbxBloodType.Items.Clear()
-        txbxbloodoxygen.Clear()
-        txbxtemperature.Clear()
-        txbxpulse.Clear()
-        txbxPhysician.Clear()
-        txbxward.Clear()
-        txbxemergencycontactname.Clear()
-        txbxRelationship.Clear()
-        txbxemergencyaddress.Clear()
-        txbxemergencynumber.Clear()
-        txtboxheight.Clear()
-        txtboxweight.Clear()
-        txtboxBmi.Clear()
-        cbxMac.Items.Clear()
-        healthHistory.Clear()
+
     End Sub
 
     Private Sub txbxFamilyName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txbxRelationship.KeyPress, txbxPlaceOfBirth.KeyPress, txbxPhysician.KeyPress, txbxNationality.KeyPress, txbxfirstname.KeyPress, txbxFamilyName.KeyPress, txbxemergencycontactname.KeyPress, txbxmidname.KeyPress, txbxExtensionName.KeyPress
@@ -191,5 +192,9 @@ Public Class RegisterPatient
         txtboxBmi.Clear()
         cbxMac.Items.Clear()
         healthHistory.Clear()
+    End Sub
+
+    Private Sub healthHistory_TextChanged(sender As Object, e As EventArgs) Handles healthHistory.TextChanged
+
     End Sub
 End Class

@@ -357,7 +357,9 @@ Public Class LiveMonitorPage
                     lbHall.Text = reader.GetString("wearStat")
                     lbO2.Text = reader.GetString("SPO2")
                     lbTemp.Text = reader.GetString("temperature")
+                    notestxtbox.Text = reader.GetString("notes")
                 End While
+
             End With
         Catch ex As Exception
             MsgBox(ex.Message)
