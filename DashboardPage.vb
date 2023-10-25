@@ -7,7 +7,7 @@
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Connect()
-        query = "SELECT * from devicelist WHERE status = 'Active'"
+        query = "SELECT * from patient_info WHERE Status = 'Active'"
         Try
             With command
                 .Connection = connection
@@ -25,7 +25,14 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        NotifyIcon1.ShowBalloonTip(1000, "Code Sunset", "Yes", ToolTipIcon.None)
+        NotifyIcon1.ShowBalloonTip(1000, "Device Status", "The device was removed from the patient.", ToolTipIcon.None)
+    End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        NotifyIcon1.ShowBalloonTip(1000, "RFID Status", "The patient escaped from the area.", ToolTipIcon.None)
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        NotifyIcon1.ShowBalloonTip(1000, "Low Battery", "The battery is getting low. 20% remaining.", ToolTipIcon.None)
     End Sub
 End Class

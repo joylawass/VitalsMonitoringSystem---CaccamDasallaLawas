@@ -141,7 +141,6 @@ Partial Class LiveMonitorPage
         '
         Me.liveMonitoringDTG.AllowUserToAddRows = False
         Me.liveMonitoringDTG.AllowUserToDeleteRows = False
-        Me.liveMonitoringDTG.AllowUserToOrderColumns = True
         Me.liveMonitoringDTG.AllowUserToResizeColumns = False
         Me.liveMonitoringDTG.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
@@ -157,7 +156,6 @@ Partial Class LiveMonitorPage
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.liveMonitoringDTG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.liveMonitoringDTG.ColumnHeadersHeight = 28
-        Me.liveMonitoringDTG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         Me.liveMonitoringDTG.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.patientID, Me.DataGridViewTextBoxColumn2})
         Me.liveMonitoringDTG.Cursor = System.Windows.Forms.Cursors.Arrow
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -188,7 +186,7 @@ Partial Class LiveMonitorPage
         Me.liveMonitoringDTG.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.liveMonitoringDTG.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.liveMonitoringDTG.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.liveMonitoringDTG.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.liveMonitoringDTG.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.liveMonitoringDTG.ThemeStyle.HeaderStyle.Height = 28
         Me.liveMonitoringDTG.ThemeStyle.ReadOnly = True
         Me.liveMonitoringDTG.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White

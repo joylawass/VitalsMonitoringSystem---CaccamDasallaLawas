@@ -24,7 +24,6 @@ Partial Class DashboardPage
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DashboardPage))
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -40,11 +39,6 @@ Partial Class DashboardPage
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.liveNotifPanel = New System.Windows.Forms.Panel()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse3 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Elipse4 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
@@ -53,16 +47,14 @@ Partial Class DashboardPage
         Me.Welcome = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        Me.liveNotifPanel.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Timer1
-        '
         '
         'Label3
         '
@@ -83,7 +75,7 @@ Partial Class DashboardPage
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Panel1.Location = New System.Drawing.Point(9, 66)
+        Me.Panel1.Location = New System.Drawing.Point(139, 76)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(206, 137)
         Me.Panel1.TabIndex = 26
@@ -134,7 +126,7 @@ Partial Class DashboardPage
         Me.Panel2.BackColor = System.Drawing.SystemColors.HotTrack
         Me.Panel2.Controls.Add(Me.Label6)
         Me.Panel2.Controls.Add(Me.Label5)
-        Me.Panel2.Location = New System.Drawing.Point(221, 66)
+        Me.Panel2.Location = New System.Drawing.Point(351, 76)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(206, 137)
         Me.Panel2.TabIndex = 27
@@ -183,7 +175,7 @@ Partial Class DashboardPage
         Me.Panel3.BackColor = System.Drawing.SystemColors.HotTrack
         Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Controls.Add(Me.Label7)
-        Me.Panel3.Location = New System.Drawing.Point(9, 209)
+        Me.Panel3.Location = New System.Drawing.Point(139, 219)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(206, 137)
         Me.Panel3.TabIndex = 27
@@ -219,7 +211,7 @@ Partial Class DashboardPage
         Me.Panel4.BackColor = System.Drawing.SystemColors.HotTrack
         Me.Panel4.Controls.Add(Me.Label9)
         Me.Panel4.Controls.Add(Me.Label8)
-        Me.Panel4.Location = New System.Drawing.Point(221, 210)
+        Me.Panel4.Location = New System.Drawing.Point(351, 220)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(206, 137)
         Me.Panel4.TabIndex = 28
@@ -236,71 +228,6 @@ Partial Class DashboardPage
         Me.Label9.TabIndex = 25
         Me.Label9.Text = "Number of Beds"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Guna2Elipse1
-        '
-        Me.Guna2Elipse1.TargetControl = Me.liveNotifPanel
-        '
-        'liveNotifPanel
-        '
-        Me.liveNotifPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.liveNotifPanel.Controls.Add(Me.TextBox2)
-        Me.liveNotifPanel.Controls.Add(Me.TextBox1)
-        Me.liveNotifPanel.Controls.Add(Me.PictureBox1)
-        Me.liveNotifPanel.Controls.Add(Me.Label10)
-        Me.liveNotifPanel.Location = New System.Drawing.Point(435, 11)
-        Me.liveNotifPanel.Margin = New System.Windows.Forms.Padding(2)
-        Me.liveNotifPanel.Name = "liveNotifPanel"
-        Me.liveNotifPanel.Size = New System.Drawing.Size(253, 503)
-        Me.liveNotifPanel.TabIndex = 37
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.TextBox2.Location = New System.Drawing.Point(12, 141)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(233, 54)
-        Me.TextBox2.TabIndex = 39
-        Me.TextBox2.Text = "(FULLNAME) is out of the vicinity."
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.TextBox1.Location = New System.Drawing.Point(12, 81)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(233, 54)
-        Me.TextBox1.TabIndex = 38
-        Me.TextBox1.Text = "(FULLNAME) removed the wearable device."
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox1.Image = Global.VitalsMonitoringSystem.My.Resources.Resources.icons8_shield_24
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 13)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(26, 30)
-        Me.PictureBox1.TabIndex = 37
-        Me.PictureBox1.TabStop = False
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label10.Location = New System.Drawing.Point(38, 13)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(207, 21)
-        Me.Label10.TabIndex = 36
-        Me.Label10.Text = "Real-time Security Monitor"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Guna2Elipse2
         '
@@ -324,7 +251,7 @@ Partial Class DashboardPage
         Me.lblUsername.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUsername.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lblUsername.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblUsername.Location = New System.Drawing.Point(242, 31)
+        Me.lblUsername.Location = New System.Drawing.Point(376, 41)
         Me.lblUsername.Name = "lblUsername"
         Me.lblUsername.Size = New System.Drawing.Size(101, 25)
         Me.lblUsername.TabIndex = 41
@@ -337,7 +264,7 @@ Partial Class DashboardPage
         Me.Welcome.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Welcome.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Welcome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Welcome.Location = New System.Drawing.Point(99, 31)
+        Me.Welcome.Location = New System.Drawing.Point(233, 41)
         Me.Welcome.Name = "Welcome"
         Me.Welcome.Size = New System.Drawing.Size(146, 25)
         Me.Welcome.TabIndex = 40
@@ -347,11 +274,13 @@ Partial Class DashboardPage
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Button1.Location = New System.Drawing.Point(221, 419)
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(139, 393)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(137, 50)
+        Me.Button1.Size = New System.Drawing.Size(118, 50)
         Me.Button1.TabIndex = 42
-        Me.Button1.Text = "Notification"
+        Me.Button1.Text = "Device Status"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'NotifyIcon1
@@ -360,15 +289,43 @@ Partial Class DashboardPage
         Me.NotifyIcon1.Text = "NotifyIcon1"
         Me.NotifyIcon1.Visible = True
         '
+        'Timer1
+        '
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(289, 393)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(118, 50)
+        Me.Button2.TabIndex = 43
+        Me.Button2.Text = "RFID Status"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(439, 393)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(118, 50)
+        Me.Button3.TabIndex = 44
+        Me.Button3.Text = "Battery Level"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
         'DashboardPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(697, 541)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblUsername)
-        Me.Controls.Add(Me.liveNotifPanel)
         Me.Controls.Add(Me.Welcome)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
@@ -387,14 +344,10 @@ Partial Class DashboardPage
         Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        Me.liveNotifPanel.ResumeLayout(False)
-        Me.liveNotifPanel.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Timer1 As Timer
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
@@ -416,11 +369,9 @@ Partial Class DashboardPage
     Friend WithEvents Guna2Elipse5 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents lblUsername As Label
     Friend WithEvents Welcome As Label
-    Friend WithEvents liveNotifPanel As Panel
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label10 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents NotifyIcon1 As NotifyIcon
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class

@@ -131,7 +131,7 @@ Public Class LiveMonitorPage
         Connect()
         Try
             ' Select patientID, lastname, firstname, middlename, and extname columns from the patient_info table
-            query = "SELECT patientID, lastname, firstname, middlename, extname FROM `patient_info` WHERE status = 'Active'"
+            query = "SELECT patientID, lastname, firstname, middlename, extname FROM `patient_info` WHERE Status = 'Active'"
             Using command As New MySqlCommand(query, connection)
                 reader = command.ExecuteReader
                 While reader.Read
@@ -165,7 +165,7 @@ Public Class LiveMonitorPage
         Connect()
         Try
             ' Select patientID, lastname, firstname, middlename, and extname columns from the patient_info table
-            query = "SELECT patientID, lastname, firstname, middlename, extname FROM `patient_info` WHERE status = 'Active'"
+            query = "SELECT patientID, lastname, firstname, middlename, extname FROM `patient_info` WHERE Status = 'Active'"
             Using command As New MySqlCommand(query, connection)
                 reader = command.ExecuteReader
                 While reader.Read
@@ -315,7 +315,7 @@ Public Class LiveMonitorPage
 
                 ' Update the status in the database (similar to your existing code)
                 Connect()
-                query = "UPDATE patient_info SET status = 'Inactive' WHERE patientID = @patientID;"
+                query = "UPDATE patient_info SET Status = 'Inactive' WHERE patientID = @patientID;"
                 Try
                     With command
                         .Connection = connection
@@ -366,4 +366,42 @@ Public Class LiveMonitorPage
         End Try
     End Sub
 
+    Private Sub lbTemp_Click(sender As Object, e As EventArgs) Handles lbTemp.Click
+
+        ' chatgpt Help: create a conditional statement about classifying the temperature into low, normal, And high number ranges
+        ' From mysql database in vb.net then will change the text color based on the classification
+
+
+        ' chatgpt answer:
+        ' Assuming you have established a MySqlConnection object named 'connection'
+        ' Retrieve real-time value from the database
+
+        Dim query As String = "SELECT temperature FROM patient_info WHERE patientID = @patientID"
+
+        Dim cmd As New MySqlCommand(query, connection)
+        Dim reader As MySqlDataReader = cmd.ExecuteReader()
+
+        If reader.HasRows Then
+            While reader.Read()
+                ' Get real-time value from the database
+                Dim temperature As Double = Double.Parse(reader("real_time_value").ToString())
+
+                If temperature < 36.0 Then
+                    lbTemp.ForeColor = Color.Blue ' Change text color to blue for low temperature
+                ElseIf temperature >= 36.1 AndAlso temperature < 37.2 Then
+                    lbTemp.ForeColor = Color.Black ' Change text color to black for normal temperature
+                Else
+                    lbTemp.ForeColor = Color.Red ' Change text color to red for high temperature
+                End If
+
+            End While
+        Else
+            Console.WriteLine("fetching...")
+        End If
+
+        ' Close the reader and the database connection
+        reader.Close()
+        connection.Close()
+
+    End Sub
 End Class

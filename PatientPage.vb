@@ -77,7 +77,7 @@ Public Class PatientPage
             updateForm.LoadPatientData(patientID)
             updateForm.Show()
         Else
-            MessageBox.Show("Please select a patient from the list before clicking Update.")
+            MessageBox.Show("Please select a patient from the list before clicking Update.", "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
 
