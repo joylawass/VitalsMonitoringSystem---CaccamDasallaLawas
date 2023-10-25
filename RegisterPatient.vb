@@ -194,7 +194,6 @@ Public Class RegisterPatient
         healthHistory.Clear()
     End Sub
 
-    Private Sub healthHistory_TextChanged(sender As Object, e As EventArgs) Handles healthHistory.TextChanged
 
-    End Sub
+
 End Class

@@ -751,12 +751,12 @@ Partial Class RegisterPatient
         Me.txbxBirthdate.ForeColor = System.Drawing.Color.Black
         Me.txbxBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.txbxBirthdate.Location = New System.Drawing.Point(283, 188)
-        Me.txbxBirthdate.MaxDate = New Date(2023, 9, 29, 0, 0, 0, 0)
-        Me.txbxBirthdate.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        Me.txbxBirthdate.MaxDate = New Date.Today
+        Me.txbxBirthdate.MinDate = New Date(1900, 1, 1, 0, 0, 0, 0)
         Me.txbxBirthdate.Name = "txbxBirthdate"
         Me.txbxBirthdate.Size = New System.Drawing.Size(151, 36)
         Me.txbxBirthdate.TabIndex = 155
-        Me.txbxBirthdate.Value = New Date(2023, 9, 29, 0, 0, 0, 0)
+        Me.txbxBirthdate.Value = New Date.Today
         '
         'txbxemergencynumber
         '
