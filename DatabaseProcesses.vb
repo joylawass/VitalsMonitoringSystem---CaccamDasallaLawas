@@ -263,14 +263,14 @@ Module DatabaseQueries
     Public Sub CreatePatientRecord(lastname As String, patientID As String, temperature As String, pulse As String)
         Connect()
         Try
-            query = "CREATE TABLE " & lastname & patientID & " (temperature DECIMAL(4,2) , pulse INT(3), SPO2 INT(3), wearStat BOOLEAN, RFID BOOLEAN, time_stamp VarChar (30))"
+            query = "CREATE TABLE " & lastname & patientID & " (temperature DECIMAL(4,2) , pulse INT(3), SPO2 INT(3), wearStat BOOLEAN, RFID BOOLEAN, time_stamp VarChar (30), notes VarChar (100))"
             With command
                 .Connection = connection
                 .CommandText = query
                 .ExecuteNonQuery()
             End With
             Connect()
-            query = "INSERT INTO " & lastname & patientID & " (temperature, pulse, wearStat, SPO2,RFID, time_stamp) VALUES (@temperature, @pulse, @wearStat, @SPO2,@RFID, @time_stamp)"
+            query = "INSERT INTO " & lastname & patientID & " (temperature, pulse, wearStat, SPO2,RFID, time_stamp) VALUES (@temperature, @pulse, @wearStat, @SPO2,@RFID, @time_stamp, @notes)"
             With command
                 .Connection = connection
                 .CommandText = query
@@ -281,7 +281,7 @@ Module DatabaseQueries
                     .AddWithValue("@SPO2", False)
                     .AddWithValue("@RFID", False)
                     .AddWithValue("@time_stamp", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"))
-
+                    .AddWithValue("@notes", "Patient Health Monitoring History Created at : " & DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"))
                 End With
                 .ExecuteNonQuery()
                 AdminLogs("Created new patient Info Table with id = " + Identifier + " using credential : " & LoggedInUser)

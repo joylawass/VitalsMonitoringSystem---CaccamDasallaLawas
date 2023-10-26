@@ -353,10 +353,39 @@ Public Class LiveMonitorPage
                 .Parameters.Clear()
                 reader = .ExecuteReader
                 While reader.Read()
+
+                    'Pulse
                     lbBpm.Text = reader.GetString("pulse")
+                    If Convert.ToInt32(lbBpm.Text) < 60 Or Convert.ToInt32(lbBpm.Text) > 100 Then
+                        lbBpm.ForeColor = Color.Red
+                    Else
+                        lbBpm.ForeColor = Color.FromArgb(94, 148, 255)
+                    End If
+
+                    'Hall Sensor
                     lbHall.Text = reader.GetString("wearStat")
+                    If Convert.ToInt32(lbHall.Text) < 60 Or Convert.ToInt32(lbHall.Text) > 100 Then
+                        lbBpm.ForeColor = Color.Red
+                    Else
+                        lbBpm.ForeColor = Color.FromArgb(94, 148, 255)
+                    End If
+
+                    'SPO2
                     lbO2.Text = reader.GetString("SPO2")
+                    If Convert.ToInt32(lbO2.Text) < 60 Or Convert.ToInt32(lbO2.Text) > 100 Then
+                        lbBpm.ForeColor = Color.Red
+                    Else
+                        lbBpm.ForeColor = Color.FromArgb(94, 148, 255)
+                    End If
+
+                    'Temperature
                     lbTemp.Text = reader.GetString("temperature")
+                    If Convert.ToInt32(lbTemp.Text) < 60 Or Convert.ToInt32(lbTemp.Text) > 100 Then
+                        lbBpm.ForeColor = Color.Red
+                    Else
+                        lbBpm.ForeColor = Color.FromArgb(94, 148, 255)
+                    End If
+
                     notestxtbox.Text = reader.GetString("notes")
                 End While
 
