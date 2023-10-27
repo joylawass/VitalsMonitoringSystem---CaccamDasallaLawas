@@ -229,7 +229,7 @@ Public Class LiveMonitorPage
 
             ' Fetch patient information from the database using the selectedPatientID
             Connect()
-            query = "SELECT lastname, firstname, middlename, extname, birthdate, sex, blood_type, ward, height, weight, bmi, Dev_ID, health_history, notes FROM patient_info WHERE patientID = @patientID"
+            query = "SELECT lastname, firstname, middlename, extname, birthdate, sex, blood_type, ward, height, weight, bmi, Dev_ID, health_history FROM patient_info WHERE patientID = @patientID"
             Try
                 Using command As New MySqlCommand(query, connection)
                     command.Parameters.AddWithValue("@patientID", selectedPatientID)
@@ -250,7 +250,6 @@ Public Class LiveMonitorPage
                         bmiChange = reader.GetString("bmi")
                         wardChange = reader.GetString("ward")
                         history = reader.GetString("health_history")
-                        notes = reader.GetString("notes")
                         tableName = reader.GetString("lastname") & selectedPatientID
                         SelectedDevID = reader.GetString("Dev_ID")
                         Timer1.Enabled = True
@@ -356,15 +355,15 @@ Public Class LiveMonitorPage
 
                     'Pulse
                     lbBpm.Text = reader.GetString("pulse")
-                    If Convert.ToInt32(lbBpm.Text) < 60 Or Convert.ToInt32(lbBpm.Text) > 100 Then
+                    If Convert.ToDouble(lbBpm.Text) < 59 Or Convert.ToDouble(lbBpm.Text) > 101 Then
                         lbBpm.ForeColor = Color.Red
                     Else
                         lbBpm.ForeColor = Color.FromArgb(94, 148, 255)
                     End If
 
                     'Hall Sensor
-                    lbHall.Text = reader.GetString("wearStat")
-                    If Convert.ToInt32(lbHall.Text) < 60 Or Convert.ToInt32(lbHall.Text) > 100 Then
+                    lbHall.Text = Convert.ToBoolean(reader.GetString("wearStat"))
+                    If Convert.ToBoolean(lbHall.Text) = False Then
                         lbBpm.ForeColor = Color.Red
                     Else
                         lbBpm.ForeColor = Color.FromArgb(94, 148, 255)
@@ -372,7 +371,7 @@ Public Class LiveMonitorPage
 
                     'SPO2
                     lbO2.Text = reader.GetString("SPO2")
-                    If Convert.ToInt32(lbO2.Text) < 60 Or Convert.ToInt32(lbO2.Text) > 100 Then
+                    If Convert.ToDouble(lbO2.Text) < 94 Or Convert.ToDouble(lbO2.Text) > 101 Then
                         lbBpm.ForeColor = Color.Red
                     Else
                         lbBpm.ForeColor = Color.FromArgb(94, 148, 255)
@@ -380,13 +379,22 @@ Public Class LiveMonitorPage
 
                     'Temperature
                     lbTemp.Text = reader.GetString("temperature")
-                    If Convert.ToInt32(lbTemp.Text) < 60 Or Convert.ToInt32(lbTemp.Text) > 100 Then
+                    If Convert.ToDouble(lbTemp.Text) < 36 Or Convert.ToDouble(lbTemp.Text) > 37.3 Then
                         lbBpm.ForeColor = Color.Red
                     Else
                         lbBpm.ForeColor = Color.FromArgb(94, 148, 255)
                     End If
 
                     notestxtbox.Text = reader.GetString("notes")
+
+                    'RFID
+                    lbRFID.Text = Convert.ToBoolean(reader.GetString("RFID"))
+                    If Convert.ToBoolean(lbHall.Text) = False Then
+                        lbBpm.ForeColor = Color.Red
+                    Else
+                        lbBpm.ForeColor = Color.FromArgb(94, 148, 255)
+                    End If
+
                 End While
 
             End With
@@ -396,14 +404,6 @@ Public Class LiveMonitorPage
     End Sub
 
     Private Sub lbTemp_Click(sender As Object, e As EventArgs) Handles lbTemp.Click
-
-        ' chatgpt Help: create a conditional statement about classifying the temperature into low, normal, And high number ranges
-        ' From mysql database in vb.net then will change the text color based on the classification
-
-
-        ' chatgpt answer:
-        ' Assuming you have established a MySqlConnection object named 'connection'
-        ' Retrieve real-time value from the database
 
         Dim query As String = "SELECT temperature FROM patient_info WHERE patientID = @patientID"
 
@@ -433,4 +433,6 @@ Public Class LiveMonitorPage
         connection.Close()
 
     End Sub
+
+
 End Class
