@@ -229,7 +229,7 @@ Public Class LiveMonitorPage
 
             ' Fetch patient information from the database using the selectedPatientID
             Connect()
-            query = "SELECT lastname, firstname, middlename, extname, birthdate, sex, blood_type, ward, height, weight, bmi, Dev_ID, health_history FROM patient_info WHERE patientID = @patientID"
+            query = "SELECT lastname, firstname, middlename, extname, birthdate, sex, blood_type, ward, height, weight, bmi, Dev_ID, health_history,  FROM patient_info WHERE patientID = @patientID"
             Try
                 Using command As New MySqlCommand(query, connection)
                     command.Parameters.AddWithValue("@patientID", selectedPatientID)
