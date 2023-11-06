@@ -4,6 +4,7 @@ Imports FontAwesome.Sharp
 Imports System.Windows.Forms
 Imports System.Net
 Imports System.Net.Sockets
+Imports System.Threading.Tasks
 Public Class MainForm
 
     Private currentBtn As IconButton
@@ -79,30 +80,10 @@ Public Class MainForm
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Switch panels as needed
+        'pre-load form panels
         switchPanel(LiveMonitorPage)
         switchPanel(PatientPage)
         switchPanel(DashboardPage)
-
-        ' Get the local IP address and save it to a string
-        Dim localIP As String = ""
-
-        ' Get the host name
-        Dim hostName As String = System.Net.Dns.GetHostName()
-
-        ' Get the IP addresses associated with the host
-        Dim ipAddresses As System.Net.IPAddress() = System.Net.Dns.GetHostAddresses(hostName)
-
-        ' Find the first IPv4 address (skip IPv6 addresses)
-        For Each ipAddress As System.Net.IPAddress In ipAddresses
-            If ipAddress.AddressFamily = System.Net.Sockets.AddressFamily.InterNetwork Then
-                localIP = ipAddress.ToString()
-                Exit For
-            End If
-        Next
-
-        ' Now, the localIP variable contains the local IP address
-        'MessageBox.Show("Local IP Address: " & localIP)
     End Sub
 
 
