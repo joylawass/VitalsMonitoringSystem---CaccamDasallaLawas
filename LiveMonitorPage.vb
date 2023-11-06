@@ -1,5 +1,6 @@
 ﻿Imports System.Windows.Media.Media3D
 Imports MySql.Data.MySqlClient
+Imports Mysqlx.XDevAPI.Relational
 Imports Org.BouncyCastle.Asn1
 
 Public Class LiveMonitorPage
@@ -128,6 +129,8 @@ Public Class LiveMonitorPage
         notestxtbox.Multiline = True
         notestxtbox.TextAlign = HorizontalAlignment.Left
         liveMonitoringDTG.Rows.Clear()
+        liveMonitoringDTG.Columns(0).Width = 40
+
         Connect()
         Try
             ' Select patientID, lastname, firstname, middlename, and extname columns from the patient_info table
@@ -229,7 +232,7 @@ Public Class LiveMonitorPage
 
             ' Fetch patient information from the database using the selectedPatientID
             Connect()
-            query = "SELECT lastname, firstname, middlename, extname, birthdate, sex, blood_type, ward, height, weight, bmi, Dev_ID, health_history FROM patient_info WHERE 'patientID' = '@patientID'"
+            query = "SELECT lastname, firstname, middlename, extname, birthdate, sex, blood_type, ward, height, weight, bmi, Dev_ID, health_history FROM patient_info WHERE patientID = @patientID"
             Try
                 Using command As New MySqlCommand(query, connection)
                     command.Parameters.AddWithValue("@patientID", selectedPatientID)
@@ -338,7 +341,7 @@ Public Class LiveMonitorPage
 
     Private Sub IconEdit_Click(sender As Object, e As EventArgs) Handles IconEdit.Click
         ' Show the Notes form with the selected patient's ID passed as an argument
-        Dim notesForm As New Notes(selectedPatientID)
+        Dim notesForm As New Notes(tableName)
         notesForm.ShowDialog()
     End Sub
 
@@ -433,6 +436,5 @@ Public Class LiveMonitorPage
         connection.Close()
 
     End Sub
-
 
 End Class

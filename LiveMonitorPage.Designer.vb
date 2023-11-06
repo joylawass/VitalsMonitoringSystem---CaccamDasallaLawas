@@ -23,9 +23,9 @@ Partial Class LiveMonitorPage
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LiveMonitorPage))
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
@@ -143,29 +143,29 @@ Partial Class LiveMonitorPage
         Me.liveMonitoringDTG.AllowUserToDeleteRows = False
         Me.liveMonitoringDTG.AllowUserToResizeColumns = False
         Me.liveMonitoringDTG.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.liveMonitoringDTG.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
+        Me.liveMonitoringDTG.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
         Me.liveMonitoringDTG.BackgroundColor = System.Drawing.SystemColors.Control
         Me.liveMonitoringDTG.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.liveMonitoringDTG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.liveMonitoringDTG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.liveMonitoringDTG.ColumnHeadersHeight = 28
         Me.liveMonitoringDTG.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.patientID, Me.DataGridViewTextBoxColumn2})
         Me.liveMonitoringDTG.Cursor = System.Windows.Forms.Cursors.Arrow
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.liveMonitoringDTG.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.liveMonitoringDTG.DefaultCellStyle = DataGridViewCellStyle12
         Me.liveMonitoringDTG.GridColor = System.Drawing.Color.White
         Me.liveMonitoringDTG.Location = New System.Drawing.Point(17, 12)
         Me.liveMonitoringDTG.Name = "liveMonitoringDTG"
@@ -173,7 +173,7 @@ Partial Class LiveMonitorPage
         Me.liveMonitoringDTG.RowHeadersVisible = False
         Me.liveMonitoringDTG.RowHeadersWidth = 72
         Me.liveMonitoringDTG.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.liveMonitoringDTG.Size = New System.Drawing.Size(340, 483)
+        Me.liveMonitoringDTG.Size = New System.Drawing.Size(241, 483)
         Me.liveMonitoringDTG.TabIndex = 50
         Me.liveMonitoringDTG.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.liveMonitoringDTG.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -200,7 +200,7 @@ Partial Class LiveMonitorPage
         'patientID
         '
         Me.patientID.DataPropertyName = "patientID"
-        Me.patientID.HeaderText = "Patient ID"
+        Me.patientID.HeaderText = "ID"
         Me.patientID.MinimumWidth = 9
         Me.patientID.Name = "patientID"
         Me.patientID.ReadOnly = True
@@ -230,9 +230,9 @@ Partial Class LiveMonitorPage
         Me.PatientInfoPanel.Controls.Add(Me.bloodTypePanel)
         Me.PatientInfoPanel.Controls.Add(Me.NotesPanel)
         Me.PatientInfoPanel.Controls.Add(Me.DiagnosisPanel)
-        Me.PatientInfoPanel.Location = New System.Drawing.Point(366, 195)
+        Me.PatientInfoPanel.Location = New System.Drawing.Point(278, 195)
         Me.PatientInfoPanel.Name = "PatientInfoPanel"
-        Me.PatientInfoPanel.Size = New System.Drawing.Size(315, 334)
+        Me.PatientInfoPanel.Size = New System.Drawing.Size(394, 334)
         Me.PatientInfoPanel.TabIndex = 37
         '
         'historyLivePanel
@@ -264,9 +264,9 @@ Partial Class LiveMonitorPage
         Me.weightPanel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
         Me.weightPanel.Controls.Add(Me.weightLive)
         Me.weightPanel.Controls.Add(Me.Label6)
-        Me.weightPanel.Location = New System.Drawing.Point(162, 42)
+        Me.weightPanel.Location = New System.Drawing.Point(201, 42)
         Me.weightPanel.Name = "weightPanel"
-        Me.weightPanel.Size = New System.Drawing.Size(139, 28)
+        Me.weightPanel.Size = New System.Drawing.Size(146, 28)
         Me.weightPanel.TabIndex = 47
         '
         'weightLive
@@ -301,9 +301,9 @@ Partial Class LiveMonitorPage
         Me.bmiPanel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
         Me.bmiPanel.Controls.Add(Me.bmiLive)
         Me.bmiPanel.Controls.Add(Me.Label7)
-        Me.bmiPanel.Location = New System.Drawing.Point(162, 72)
+        Me.bmiPanel.Location = New System.Drawing.Point(201, 72)
         Me.bmiPanel.Name = "bmiPanel"
-        Me.bmiPanel.Size = New System.Drawing.Size(139, 28)
+        Me.bmiPanel.Size = New System.Drawing.Size(146, 28)
         Me.bmiPanel.TabIndex = 48
         '
         'bmiLive
@@ -338,9 +338,9 @@ Partial Class LiveMonitorPage
         Me.heightPanell.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
         Me.heightPanell.Controls.Add(Me.heightLive)
         Me.heightPanell.Controls.Add(Me.heightPanel)
-        Me.heightPanell.Location = New System.Drawing.Point(162, 12)
+        Me.heightPanell.Location = New System.Drawing.Point(201, 12)
         Me.heightPanell.Name = "heightPanell"
-        Me.heightPanell.Size = New System.Drawing.Size(139, 28)
+        Me.heightPanell.Size = New System.Drawing.Size(146, 28)
         Me.heightPanell.TabIndex = 46
         '
         'heightLive
@@ -375,9 +375,9 @@ Partial Class LiveMonitorPage
         Me.agePanell.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
         Me.agePanell.Controls.Add(Me.ageLive)
         Me.agePanell.Controls.Add(Me.Label2)
-        Me.agePanell.Location = New System.Drawing.Point(15, 12)
+        Me.agePanell.Location = New System.Drawing.Point(47, 12)
         Me.agePanell.Name = "agePanell"
-        Me.agePanell.Size = New System.Drawing.Size(139, 28)
+        Me.agePanell.Size = New System.Drawing.Size(146, 28)
         Me.agePanell.TabIndex = 45
         '
         'ageLive
@@ -412,9 +412,9 @@ Partial Class LiveMonitorPage
         Me.sexPanel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
         Me.sexPanel.Controls.Add(Me.sexLive)
         Me.sexPanel.Controls.Add(Me.Label3)
-        Me.sexPanel.Location = New System.Drawing.Point(15, 42)
+        Me.sexPanel.Location = New System.Drawing.Point(47, 42)
         Me.sexPanel.Name = "sexPanel"
-        Me.sexPanel.Size = New System.Drawing.Size(139, 28)
+        Me.sexPanel.Size = New System.Drawing.Size(146, 28)
         Me.sexPanel.TabIndex = 46
         '
         'sexLive
@@ -449,9 +449,9 @@ Partial Class LiveMonitorPage
         Me.bloodTypePanel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
         Me.bloodTypePanel.Controls.Add(Me.bloodtypeLive)
         Me.bloodTypePanel.Controls.Add(Me.Label4)
-        Me.bloodTypePanel.Location = New System.Drawing.Point(15, 72)
+        Me.bloodTypePanel.Location = New System.Drawing.Point(47, 72)
         Me.bloodTypePanel.Name = "bloodTypePanel"
-        Me.bloodTypePanel.Size = New System.Drawing.Size(139, 28)
+        Me.bloodTypePanel.Size = New System.Drawing.Size(146, 28)
         Me.bloodTypePanel.TabIndex = 47
         '
         'bloodtypeLive
@@ -489,7 +489,7 @@ Partial Class LiveMonitorPage
         Me.NotesPanel.Controls.Add(Me.IconEdit)
         Me.NotesPanel.Location = New System.Drawing.Point(162, 106)
         Me.NotesPanel.Name = "NotesPanel"
-        Me.NotesPanel.Size = New System.Drawing.Size(139, 213)
+        Me.NotesPanel.Size = New System.Drawing.Size(216, 213)
         Me.NotesPanel.TabIndex = 52
         '
         'notePanel
@@ -501,7 +501,7 @@ Partial Class LiveMonitorPage
         Me.notePanel.Controls.Add(Me.Label8)
         Me.notePanel.Location = New System.Drawing.Point(0, 26)
         Me.notePanel.Name = "notePanel"
-        Me.notePanel.Size = New System.Drawing.Size(136, 183)
+        Me.notePanel.Size = New System.Drawing.Size(213, 183)
         Me.notePanel.TabIndex = 53
         '
         'notestxtbox
@@ -525,7 +525,7 @@ Partial Class LiveMonitorPage
         Me.notestxtbox.PlaceholderForeColor = System.Drawing.Color.White
         Me.notestxtbox.PlaceholderText = ""
         Me.notestxtbox.SelectedText = ""
-        Me.notestxtbox.Size = New System.Drawing.Size(135, 179)
+        Me.notestxtbox.Size = New System.Drawing.Size(212, 178)
         Me.notestxtbox.TabIndex = 47
         '
         'noteslbl
@@ -577,7 +577,7 @@ Partial Class LiveMonitorPage
         Me.IconEdit.IconColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.IconEdit.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconEdit.IconSize = 25
-        Me.IconEdit.Location = New System.Drawing.Point(114, 3)
+        Me.IconEdit.Location = New System.Drawing.Point(188, 4)
         Me.IconEdit.Name = "IconEdit"
         Me.IconEdit.Size = New System.Drawing.Size(25, 25)
         Me.IconEdit.TabIndex = 57
@@ -640,7 +640,7 @@ Partial Class LiveMonitorPage
         Me.ReloadBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.ReloadBtn.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
         Me.ReloadBtn.ForeColor = System.Drawing.Color.White
-        Me.ReloadBtn.Location = New System.Drawing.Point(193, 501)
+        Me.ReloadBtn.Location = New System.Drawing.Point(94, 501)
         Me.ReloadBtn.Name = "ReloadBtn"
         Me.ReloadBtn.Size = New System.Drawing.Size(79, 28)
         Me.ReloadBtn.TabIndex = 51
@@ -656,7 +656,7 @@ Partial Class LiveMonitorPage
         Me.DismissBtn.FillColor = System.Drawing.Color.Red
         Me.DismissBtn.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
         Me.DismissBtn.ForeColor = System.Drawing.Color.White
-        Me.DismissBtn.Location = New System.Drawing.Point(278, 501)
+        Me.DismissBtn.Location = New System.Drawing.Point(179, 501)
         Me.DismissBtn.Name = "DismissBtn"
         Me.DismissBtn.Size = New System.Drawing.Size(79, 28)
         Me.DismissBtn.TabIndex = 52
@@ -685,9 +685,9 @@ Partial Class LiveMonitorPage
         Me.othersPanel.Controls.Add(Me.Guna2Panel7)
         Me.othersPanel.Controls.Add(Me.Guna2Panel6)
         Me.othersPanel.Controls.Add(Me.Label15)
-        Me.othersPanel.Location = New System.Drawing.Point(526, 40)
+        Me.othersPanel.Location = New System.Drawing.Point(479, 40)
         Me.othersPanel.Name = "othersPanel"
-        Me.othersPanel.Size = New System.Drawing.Size(155, 149)
+        Me.othersPanel.Size = New System.Drawing.Size(146, 149)
         Me.othersPanel.TabIndex = 54
         '
         'Guna2Panel5
@@ -696,7 +696,7 @@ Partial Class LiveMonitorPage
         Me.Guna2Panel5.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
         Me.Guna2Panel5.Controls.Add(Me.lbRFID)
         Me.Guna2Panel5.Controls.Add(Me.Guna2PictureBox4)
-        Me.Guna2Panel5.Location = New System.Drawing.Point(6, 108)
+        Me.Guna2Panel5.Location = New System.Drawing.Point(2, 108)
         Me.Guna2Panel5.Name = "Guna2Panel5"
         Me.Guna2Panel5.Size = New System.Drawing.Size(142, 34)
         Me.Guna2Panel5.TabIndex = 56
@@ -731,7 +731,7 @@ Partial Class LiveMonitorPage
         Me.Guna2Panel7.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
         Me.Guna2Panel7.Controls.Add(Me.lbHall)
         Me.Guna2Panel7.Controls.Add(Me.Guna2PictureBox6)
-        Me.Guna2Panel7.Location = New System.Drawing.Point(6, 35)
+        Me.Guna2Panel7.Location = New System.Drawing.Point(2, 35)
         Me.Guna2Panel7.Name = "Guna2Panel7"
         Me.Guna2Panel7.Size = New System.Drawing.Size(142, 34)
         Me.Guna2Panel7.TabIndex = 54
@@ -766,7 +766,7 @@ Partial Class LiveMonitorPage
         Me.Guna2Panel6.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
         Me.Guna2Panel6.Controls.Add(Me.lbBatt)
         Me.Guna2Panel6.Controls.Add(Me.Guna2PictureBox5)
-        Me.Guna2Panel6.Location = New System.Drawing.Point(6, 72)
+        Me.Guna2Panel6.Location = New System.Drawing.Point(2, 72)
         Me.Guna2Panel6.Name = "Guna2Panel6"
         Me.Guna2Panel6.Size = New System.Drawing.Size(142, 34)
         Me.Guna2Panel6.TabIndex = 55
@@ -801,7 +801,7 @@ Partial Class LiveMonitorPage
         Me.Label15.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Bold)
         Me.Label15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label15.Location = New System.Drawing.Point(29, 7)
+        Me.Label15.Location = New System.Drawing.Point(25, 7)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(103, 20)
         Me.Label15.TabIndex = 53
@@ -816,9 +816,9 @@ Partial Class LiveMonitorPage
         Me.vitalsPanel.Controls.Add(Me.Guna2Panel2)
         Me.vitalsPanel.Controls.Add(Me.Guna2Panel1)
         Me.vitalsPanel.Controls.Add(Me.Label19)
-        Me.vitalsPanel.Location = New System.Drawing.Point(366, 40)
+        Me.vitalsPanel.Location = New System.Drawing.Point(325, 40)
         Me.vitalsPanel.Name = "vitalsPanel"
-        Me.vitalsPanel.Size = New System.Drawing.Size(155, 149)
+        Me.vitalsPanel.Size = New System.Drawing.Size(146, 149)
         Me.vitalsPanel.TabIndex = 53
         '
         'Guna2Panel3
@@ -827,7 +827,7 @@ Partial Class LiveMonitorPage
         Me.Guna2Panel3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
         Me.Guna2Panel3.Controls.Add(Me.lbBpm)
         Me.Guna2Panel3.Controls.Add(Me.Guna2PictureBox3)
-        Me.Guna2Panel3.Location = New System.Drawing.Point(6, 35)
+        Me.Guna2Panel3.Location = New System.Drawing.Point(2, 35)
         Me.Guna2Panel3.Name = "Guna2Panel3"
         Me.Guna2Panel3.Size = New System.Drawing.Size(142, 34)
         Me.Guna2Panel3.TabIndex = 60
@@ -862,7 +862,7 @@ Partial Class LiveMonitorPage
         Me.Guna2Panel2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
         Me.Guna2Panel2.Controls.Add(Me.lbTemp)
         Me.Guna2Panel2.Controls.Add(Me.Guna2PictureBox2)
-        Me.Guna2Panel2.Location = New System.Drawing.Point(6, 72)
+        Me.Guna2Panel2.Location = New System.Drawing.Point(2, 72)
         Me.Guna2Panel2.Name = "Guna2Panel2"
         Me.Guna2Panel2.Size = New System.Drawing.Size(142, 34)
         Me.Guna2Panel2.TabIndex = 59
@@ -873,7 +873,7 @@ Partial Class LiveMonitorPage
         Me.lbTemp.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.lbTemp.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lbTemp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lbTemp.Location = New System.Drawing.Point(54, 8)
+        Me.lbTemp.Location = New System.Drawing.Point(52, 8)
         Me.lbTemp.Name = "lbTemp"
         Me.lbTemp.Size = New System.Drawing.Size(84, 20)
         Me.lbTemp.TabIndex = 47
@@ -897,7 +897,7 @@ Partial Class LiveMonitorPage
         Me.Guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
         Me.Guna2Panel1.Controls.Add(Me.Label5)
         Me.Guna2Panel1.Controls.Add(Me.lbO2)
-        Me.Guna2Panel1.Location = New System.Drawing.Point(6, 108)
+        Me.Guna2Panel1.Location = New System.Drawing.Point(2, 108)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.Size = New System.Drawing.Size(142, 34)
         Me.Guna2Panel1.TabIndex = 58
@@ -921,7 +921,7 @@ Partial Class LiveMonitorPage
         Me.lbO2.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.lbO2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lbO2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lbO2.Location = New System.Drawing.Point(55, 7)
+        Me.lbO2.Location = New System.Drawing.Point(52, 7)
         Me.lbO2.Name = "lbO2"
         Me.lbO2.Size = New System.Drawing.Size(70, 20)
         Me.lbO2.TabIndex = 48
@@ -934,7 +934,7 @@ Partial Class LiveMonitorPage
         Me.Label19.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Bold)
         Me.Label19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label19.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label19.Location = New System.Drawing.Point(21, 8)
+        Me.Label19.Location = New System.Drawing.Point(17, 8)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(112, 20)
         Me.Label19.TabIndex = 57
@@ -948,7 +948,7 @@ Partial Class LiveMonitorPage
         Me.wardNumberLive.Font = New System.Drawing.Font("Segoe UI", 11.14286!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.wardNumberLive.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.wardNumberLive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.wardNumberLive.Location = New System.Drawing.Point(656, 12)
+        Me.wardNumberLive.Location = New System.Drawing.Point(545, 12)
         Me.wardNumberLive.Name = "wardNumberLive"
         Me.wardNumberLive.Size = New System.Drawing.Size(13, 20)
         Me.wardNumberLive.TabIndex = 56
@@ -961,7 +961,7 @@ Partial Class LiveMonitorPage
         Me.patientName.Font = New System.Drawing.Font("Segoe UI", 11.14286!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.patientName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.patientName.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.patientName.Location = New System.Drawing.Point(368, 12)
+        Me.patientName.Location = New System.Drawing.Point(274, 12)
         Me.patientName.Name = "patientName"
         Me.patientName.Size = New System.Drawing.Size(93, 20)
         Me.patientName.TabIndex = 55
@@ -1079,8 +1079,6 @@ Partial Class LiveMonitorPage
     Friend WithEvents Guna2Elipse10 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents ReloadBtn As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents DismissBtn As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents patientID As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents agePanell As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents ageLive As Label
     Friend WithEvents Label2 As Label
@@ -1124,4 +1122,6 @@ Partial Class LiveMonitorPage
     Friend WithEvents Label8 As Label
     Friend WithEvents noteslbl As Label
     Friend WithEvents notestxtbox As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents patientID As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
 End Class
