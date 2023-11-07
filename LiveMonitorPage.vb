@@ -129,7 +129,7 @@ Public Class LiveMonitorPage
         notestxtbox.Multiline = True
         notestxtbox.TextAlign = HorizontalAlignment.Left
         liveMonitoringDTG.Rows.Clear()
-        liveMonitoringDTG.Columns(0).Width = 40
+        liveMonitoringDTG.Columns(0).Width = 45
 
         Connect()
         Try
@@ -339,7 +339,7 @@ Public Class LiveMonitorPage
         End If
     End Sub
 
-    Private Sub IconEdit_Click(sender As Object, e As EventArgs) Handles IconEdit.Click
+    Private Sub IconEdit_Click(sender As Object, e As EventArgs)
         ' Show the Notes form with the selected patient's ID passed as an argument
         Dim notesForm As New Notes(tableName)
         notesForm.ShowDialog()
