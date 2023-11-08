@@ -162,7 +162,7 @@ Public Class LiveMonitorPage
         ' Clear the DataGridView
         liveMonitoringDTG.Rows.Clear()
         Timer1.Enabled = False
-        IconEdit.Enabled = False
+        'IconEdit.Enabled = False
 
         ' Re-fetch and load patient information, excluding dismissed patients
         Connect()
@@ -214,7 +214,7 @@ Public Class LiveMonitorPage
 
     Private Sub liveMonitoringDTG_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles liveMonitoringDTG.CellClick
         If e.RowIndex >= 0 AndAlso e.RowIndex < liveMonitoringDTG.Rows.Count Then
-            IconEdit.Enabled = True
+            'IconEdit.Enabled = True
             ' Get the patient ID from the selected row
             selectedPatientID = liveMonitoringDTG.Rows(e.RowIndex).Cells("patientID").Value.ToString()
 
@@ -285,7 +285,7 @@ Public Class LiveMonitorPage
             historyLive.Text = history
             notestxtbox.Text = notes
         Else
-            IconEdit.Enabled = False
+            'IconEdit.Enabled = False
         End If
     End Sub '
 

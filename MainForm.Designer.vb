@@ -292,7 +292,7 @@ Partial Class MainForm
         Me.lblDate.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDate.ForeColor = System.Drawing.Color.White
         Me.lblDate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblDate.Location = New System.Drawing.Point(482, 11)
+        Me.lblDate.Location = New System.Drawing.Point(465, 11)
         Me.lblDate.Name = "lblDate"
         Me.lblDate.Size = New System.Drawing.Size(145, 25)
         Me.lblDate.TabIndex = 41
