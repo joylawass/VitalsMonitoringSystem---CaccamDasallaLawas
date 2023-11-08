@@ -1,4 +1,5 @@
-﻿Imports System.Windows.Media.Media3D
+﻿Imports System.Threading
+Imports System.Windows.Media.Media3D
 Imports MySql.Data.MySqlClient
 Imports Mysqlx.XDevAPI.Relational
 Imports Org.BouncyCastle.Asn1
@@ -339,12 +340,6 @@ Public Class LiveMonitorPage
         End If
     End Sub
 
-    Private Sub IconEdit_Click(sender As Object, e As EventArgs)
-        ' Show the Notes form with the selected patient's ID passed as an argument
-        Dim notesForm As New Notes(tableName)
-        notesForm.ShowDialog()
-    End Sub
-
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Connect()
         query = "select * from " & tableName
@@ -358,7 +353,9 @@ Public Class LiveMonitorPage
 
                     'Pulse
                     lbBpm.Text = reader.GetString("pulse")
-                    If Convert.ToDouble(lbBpm.Text) < 59 Or Convert.ToDouble(lbBpm.Text) > 101 Then
+                    If Convert.ToDouble(lbBpm.Text) < 60 Then
+                        lbBpm.ForeColor = Color.Red
+                    ElseIf Convert.ToDouble(lbBpm.Text) > 100 Then
                         lbBpm.ForeColor = Color.Red
                     Else
                         lbBpm.ForeColor = Color.FromArgb(94, 148, 255)
@@ -367,35 +364,41 @@ Public Class LiveMonitorPage
                     'Hall Sensor
                     lbHall.Text = Convert.ToBoolean(reader.GetString("wearStat"))
                     If Convert.ToBoolean(lbHall.Text) = False Then
-                        lbBpm.ForeColor = Color.Red
+                        lbHall.ForeColor = Color.Red
                     Else
-                        lbBpm.ForeColor = Color.FromArgb(94, 148, 255)
+                        lbHall.ForeColor = Color.FromArgb(94, 148, 255)
                     End If
 
                     'SPO2
                     lbO2.Text = reader.GetString("SPO2")
-                    If Convert.ToDouble(lbO2.Text) < 94 Or Convert.ToDouble(lbO2.Text) > 101 Then
-                        lbBpm.ForeColor = Color.Red
+                    If Convert.ToDouble(lbO2.Text) < 95 Then
+                        lbO2.ForeColor = Color.Red
+                    ElseIf Convert.ToDouble(lbO2.Text) > 100 Then
+                        lbO2.ForeColor = Color.Red
                     Else
-                        lbBpm.ForeColor = Color.FromArgb(94, 148, 255)
+                        lbO2.ForeColor = Color.FromArgb(94, 148, 255)
                     End If
 
                     'Temperature
                     lbTemp.Text = reader.GetString("temperature")
-                    If Convert.ToDouble(lbTemp.Text) < 36 Or Convert.ToDouble(lbTemp.Text) > 37.3 Then
-                        lbBpm.ForeColor = Color.Red
+                    If Convert.ToDouble(lbTemp.Text) < 36 Then
+                        Timer1.Enabled = False
+                        lbTemp.ForeColor = Color.Red
+                        NotifyIcon1.ShowBalloonTip(1000, "Body Temperature", "Patient [Patient]'s body temperature is below normal. Please check the patient.", ToolTipIcon.Warning)
+                    ElseIf Convert.ToDouble(lbTemp.Text) > 37.2 Then
+                        lbTemp.ForeColor = Color.Red
                     Else
-                        lbBpm.ForeColor = Color.FromArgb(94, 148, 255)
+                        lbTemp.ForeColor = Color.FromArgb(94, 148, 255)
                     End If
 
                     notestxtbox.Text = reader.GetString("notes")
 
                     'RFID
                     lbRFID.Text = Convert.ToBoolean(reader.GetString("RFID"))
-                    If Convert.ToBoolean(lbHall.Text) = False Then
-                        lbBpm.ForeColor = Color.Red
+                    If Convert.ToBoolean(lbRFID.Text) = False Then
+                        lbRFID.ForeColor = Color.Red
                     Else
-                        lbBpm.ForeColor = Color.FromArgb(94, 148, 255)
+                        lbRFID.ForeColor = Color.FromArgb(94, 148, 255)
                     End If
 
                 End While
@@ -405,36 +408,4 @@ Public Class LiveMonitorPage
             MsgBox(ex.Message)
         End Try
     End Sub
-
-    Private Sub lbTemp_Click(sender As Object, e As EventArgs) Handles lbTemp.Click
-
-        Dim query As String = "SELECT temperature FROM patient_info WHERE patientID = @patientID"
-
-        Dim cmd As New MySqlCommand(query, connection)
-        Dim reader As MySqlDataReader = cmd.ExecuteReader()
-
-        If reader.HasRows Then
-            While reader.Read()
-                ' Get real-time value from the database
-                Dim temperature As Double = Double.Parse(reader("real_time_value").ToString())
-
-                If temperature < 36.0 Then
-                    lbTemp.ForeColor = Color.Blue ' Change text color to blue for low temperature
-                ElseIf temperature >= 36.1 AndAlso temperature < 37.2 Then
-                    lbTemp.ForeColor = Color.Black ' Change text color to black for normal temperature
-                Else
-                    lbTemp.ForeColor = Color.Red ' Change text color to red for high temperature
-                End If
-
-            End While
-        Else
-            Console.WriteLine("fetching...")
-        End If
-
-        ' Close the reader and the database connection
-        reader.Close()
-        connection.Close()
-
-    End Sub
-
 End Class
