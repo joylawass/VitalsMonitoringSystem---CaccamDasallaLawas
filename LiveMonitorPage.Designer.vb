@@ -23,9 +23,9 @@ Partial Class LiveMonitorPage
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LiveMonitorPage))
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
@@ -100,6 +100,10 @@ Partial Class LiveMonitorPage
         Me.Guna2Panel8 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Elipse17 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.NotifyIcon2 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.NotifyIcon3 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.NotifyIcon4 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.NotifyIcon5 = New System.Windows.Forms.NotifyIcon(Me.components)
         CType(Me.liveMonitoringDTG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PatientInfoPanel.SuspendLayout()
         Me.weightPanel.SuspendLayout()
@@ -141,29 +145,29 @@ Partial Class LiveMonitorPage
         Me.liveMonitoringDTG.AllowUserToDeleteRows = False
         Me.liveMonitoringDTG.AllowUserToResizeColumns = False
         Me.liveMonitoringDTG.AllowUserToResizeRows = False
-        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
-        Me.liveMonitoringDTG.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
+        Me.liveMonitoringDTG.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
         Me.liveMonitoringDTG.BackgroundColor = System.Drawing.SystemColors.Control
         Me.liveMonitoringDTG.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.liveMonitoringDTG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.liveMonitoringDTG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
         Me.liveMonitoringDTG.ColumnHeadersHeight = 28
         Me.liveMonitoringDTG.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.patientID, Me.DataGridViewTextBoxColumn2})
         Me.liveMonitoringDTG.Cursor = System.Windows.Forms.Cursors.Arrow
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.liveMonitoringDTG.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.liveMonitoringDTG.DefaultCellStyle = DataGridViewCellStyle15
         Me.liveMonitoringDTG.GridColor = System.Drawing.Color.White
         Me.liveMonitoringDTG.Location = New System.Drawing.Point(21, 12)
         Me.liveMonitoringDTG.Name = "liveMonitoringDTG"
@@ -496,7 +500,7 @@ Partial Class LiveMonitorPage
         Me.historyLivePanel.BackColor = System.Drawing.SystemColors.Control
         Me.historyLivePanel.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash
         Me.historyLivePanel.Controls.Add(Me.historyLive)
-        Me.historyLivePanel.Location = New System.Drawing.Point(0, 27)
+        Me.historyLivePanel.Location = New System.Drawing.Point(2, 27)
         Me.historyLivePanel.Name = "historyLivePanel"
         Me.historyLivePanel.Size = New System.Drawing.Size(297, 150)
         Me.historyLivePanel.TabIndex = 52
@@ -845,7 +849,7 @@ Partial Class LiveMonitorPage
         Me.wardNumberLive.Font = New System.Drawing.Font("Segoe UI", 11.14286!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.wardNumberLive.ForeColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.wardNumberLive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.wardNumberLive.Location = New System.Drawing.Point(637, 12)
+        Me.wardNumberLive.Location = New System.Drawing.Point(632, 12)
         Me.wardNumberLive.Name = "wardNumberLive"
         Me.wardNumberLive.Size = New System.Drawing.Size(13, 20)
         Me.wardNumberLive.TabIndex = 56
@@ -900,7 +904,7 @@ Partial Class LiveMonitorPage
         Me.notestxtbox.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Bold)
         Me.notestxtbox.ForeColor = System.Drawing.Color.White
         Me.notestxtbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.notestxtbox.Location = New System.Drawing.Point(7, 33)
+        Me.notestxtbox.Location = New System.Drawing.Point(9, 33)
         Me.notestxtbox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.notestxtbox.Name = "notestxtbox"
         Me.notestxtbox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -958,6 +962,30 @@ Partial Class LiveMonitorPage
         Me.NotifyIcon1.Text = "NotifyIcon1"
         Me.NotifyIcon1.Visible = True
         '
+        'NotifyIcon2
+        '
+        Me.NotifyIcon2.Icon = CType(resources.GetObject("NotifyIcon2.Icon"), System.Drawing.Icon)
+        Me.NotifyIcon2.Text = "NotifyIcon2"
+        Me.NotifyIcon2.Visible = True
+        '
+        'NotifyIcon3
+        '
+        Me.NotifyIcon3.Icon = CType(resources.GetObject("NotifyIcon3.Icon"), System.Drawing.Icon)
+        Me.NotifyIcon3.Text = "NotifyIcon3"
+        Me.NotifyIcon3.Visible = True
+        '
+        'NotifyIcon4
+        '
+        Me.NotifyIcon4.Icon = CType(resources.GetObject("NotifyIcon4.Icon"), System.Drawing.Icon)
+        Me.NotifyIcon4.Text = "NotifyIcon4"
+        Me.NotifyIcon4.Visible = True
+        '
+        'NotifyIcon5
+        '
+        Me.NotifyIcon5.Icon = CType(resources.GetObject("NotifyIcon5.Icon"), System.Drawing.Icon)
+        Me.NotifyIcon5.Text = "NotifyIcon5"
+        Me.NotifyIcon5.Visible = True
+        '
         'LiveMonitorPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -975,6 +1003,7 @@ Partial Class LiveMonitorPage
         Me.Controls.Add(Me.liveMonitoringDTG)
         Me.Controls.Add(Me.PatientInfoPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "LiveMonitorPage"
         Me.Text = "LiveMonitorPage"
         CType(Me.liveMonitoringDTG, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1097,4 +1126,8 @@ Partial Class LiveMonitorPage
     Friend WithEvents historyLive As Label
     Friend WithEvents notestxtbox As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents NotifyIcon1 As NotifyIcon
+    Friend WithEvents NotifyIcon2 As NotifyIcon
+    Friend WithEvents NotifyIcon3 As NotifyIcon
+    Friend WithEvents NotifyIcon4 As NotifyIcon
+    Friend WithEvents NotifyIcon5 As NotifyIcon
 End Class

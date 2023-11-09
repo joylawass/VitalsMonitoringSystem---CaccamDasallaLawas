@@ -6,6 +6,7 @@ Public Class PatientPage
 
     Private selectedPatientID As String
     Private Sub PatientPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        DTGList.Columns(0).Width = 45
         lblUsername.Text = LoggedInUser
         DTGList.Rows.Clear()
         Connect()
@@ -81,23 +82,6 @@ Public Class PatientPage
         End If
     End Sub
 
-    Private Sub DTGList_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DTGList.CellContentClick
-        ' Check if a row is clicked (ignore header clicks and other clicks)
-        If e.RowIndex >= 0 Then
-            ' Get the patient's unique identifier (e.g., patientID) from the selected row
-            Dim selectedRow As DataGridViewRow = DTGList.Rows(e.RowIndex)
-            ChartGen = selectedRow.Cells("Lastname").Value.ToString().ToLower + selectedRow.Cells("PatientID").Value.ToString()
-
-            ' Create an instance of the LiveChart form
-            Dim liveChartForm As New LiveChart()
-
-            ' Pass the patientID to the LiveChart form (if needed)
-
-            ' Show the LiveChart form
-            liveChartForm.Show()
-        End If
-    End Sub
-
     Private Sub DismissedPatientBtn_Click(sender As Object, e As EventArgs) Handles DismissedPatientBtn.Click
         DTGList.Rows.Clear()
         Connect()
@@ -147,5 +131,22 @@ Public Class PatientPage
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+    End Sub
+
+    Private Sub DTGList_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DTGList.CellClick
+        ' Check if a row is clicked (ignore header clicks and other clicks)
+        If e.RowIndex >= 0 Then
+            ' Get the patient's unique identifier (e.g., patientID) from the selected row
+            Dim selectedRow As DataGridViewRow = DTGList.Rows(e.RowIndex)
+            ChartGen = selectedRow.Cells("Lastname").Value.ToString().ToLower + selectedRow.Cells("PatientID").Value.ToString()
+
+            ' Create an instance of the LiveChart form
+            Dim liveChartForm As New LiveChart()
+
+            ' Pass the patientID to the LiveChart form (if needed)
+
+            ' Show the LiveChart form
+            liveChartForm.Show()
+        End If
     End Sub
 End Class

@@ -23,25 +23,25 @@ Partial Class PatientPage
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DTGList = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.PatientID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LastName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FirstName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.WardNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PhysiciansName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Dev_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AddPatientBtn = New Guna.UI2.WinForms.Guna2Button()
         Me.ReloadBtn = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.UpdatePatientButton = New Guna.UI2.WinForms.Guna2Button()
         Me.ActivePatientBtn = New Guna.UI2.WinForms.Guna2Button()
         Me.DismissedPatientBtn = New Guna.UI2.WinForms.Guna2Button()
+        Me.PatientID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LastName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FirstName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.WardNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PhysiciansName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Dev_ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DTGList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -83,29 +83,29 @@ Partial Class PatientPage
         Me.DTGList.AllowUserToDeleteRows = False
         Me.DTGList.AllowUserToResizeColumns = False
         Me.DTGList.AllowUserToResizeRows = False
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
-        Me.DTGList.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.DTGList.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DTGList.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DTGList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LightCoral
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DTGList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightCoral
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DTGList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DTGList.ColumnHeadersHeight = 28
         Me.DTGList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PatientID, Me.LastName, Me.FirstName, Me.WardNumber, Me.PhysiciansName, Me.Dev_ID})
         Me.DTGList.Cursor = System.Windows.Forms.Cursors.Arrow
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DTGList.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DTGList.DefaultCellStyle = DataGridViewCellStyle3
         Me.DTGList.GridColor = System.Drawing.Color.White
         Me.DTGList.Location = New System.Drawing.Point(29, 66)
         Me.DTGList.Name = "DTGList"
@@ -134,53 +134,6 @@ Partial Class PatientPage
         Me.DTGList.ThemeStyle.RowsStyle.Height = 22
         Me.DTGList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DTGList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        '
-        'PatientID
-        '
-        Me.PatientID.FillWeight = 99.53053!
-        Me.PatientID.HeaderText = "Patient ID"
-        Me.PatientID.Name = "PatientID"
-        Me.PatientID.ReadOnly = True
-        '
-        'LastName
-        '
-        Me.LastName.DataPropertyName = "lastname"
-        Me.LastName.FillWeight = 100.5994!
-        Me.LastName.HeaderText = "Last Name"
-        Me.LastName.Name = "LastName"
-        Me.LastName.ReadOnly = True
-        '
-        'FirstName
-        '
-        Me.FirstName.DataPropertyName = "firstname"
-        Me.FirstName.FillWeight = 99.44451!
-        Me.FirstName.HeaderText = "First Name"
-        Me.FirstName.Name = "FirstName"
-        Me.FirstName.ReadOnly = True
-        '
-        'WardNumber
-        '
-        Me.WardNumber.DataPropertyName = "ward"
-        Me.WardNumber.FillWeight = 100.5335!
-        Me.WardNumber.HeaderText = "Ward Number"
-        Me.WardNumber.Name = "WardNumber"
-        Me.WardNumber.ReadOnly = True
-        '
-        'PhysiciansName
-        '
-        Me.PhysiciansName.DataPropertyName = "physician"
-        Me.PhysiciansName.FillWeight = 99.39546!
-        Me.PhysiciansName.HeaderText = "Physician's Name"
-        Me.PhysiciansName.Name = "PhysiciansName"
-        Me.PhysiciansName.ReadOnly = True
-        '
-        'Dev_ID
-        '
-        Me.Dev_ID.DataPropertyName = "Device ID"
-        Me.Dev_ID.FillWeight = 100.4967!
-        Me.Dev_ID.HeaderText = "Device_ID"
-        Me.Dev_ID.Name = "Dev_ID"
-        Me.Dev_ID.ReadOnly = True
         '
         'AddPatientBtn
         '
@@ -261,6 +214,53 @@ Partial Class PatientPage
         Me.DismissedPatientBtn.Size = New System.Drawing.Size(152, 28)
         Me.DismissedPatientBtn.TabIndex = 41
         Me.DismissedPatientBtn.Text = "Dismissed Patients"
+        '
+        'PatientID
+        '
+        Me.PatientID.FillWeight = 99.53053!
+        Me.PatientID.HeaderText = "ID"
+        Me.PatientID.Name = "PatientID"
+        Me.PatientID.ReadOnly = True
+        '
+        'LastName
+        '
+        Me.LastName.DataPropertyName = "lastname"
+        Me.LastName.FillWeight = 100.5994!
+        Me.LastName.HeaderText = "Last Name"
+        Me.LastName.Name = "LastName"
+        Me.LastName.ReadOnly = True
+        '
+        'FirstName
+        '
+        Me.FirstName.DataPropertyName = "firstname"
+        Me.FirstName.FillWeight = 99.44451!
+        Me.FirstName.HeaderText = "First Name"
+        Me.FirstName.Name = "FirstName"
+        Me.FirstName.ReadOnly = True
+        '
+        'WardNumber
+        '
+        Me.WardNumber.DataPropertyName = "ward"
+        Me.WardNumber.FillWeight = 100.5335!
+        Me.WardNumber.HeaderText = "Ward Number"
+        Me.WardNumber.Name = "WardNumber"
+        Me.WardNumber.ReadOnly = True
+        '
+        'PhysiciansName
+        '
+        Me.PhysiciansName.DataPropertyName = "physician"
+        Me.PhysiciansName.FillWeight = 99.39546!
+        Me.PhysiciansName.HeaderText = "Physician's Name"
+        Me.PhysiciansName.Name = "PhysiciansName"
+        Me.PhysiciansName.ReadOnly = True
+        '
+        'Dev_ID
+        '
+        Me.Dev_ID.DataPropertyName = "Device ID"
+        Me.Dev_ID.FillWeight = 100.4967!
+        Me.Dev_ID.HeaderText = "Device_ID"
+        Me.Dev_ID.Name = "Dev_ID"
+        Me.Dev_ID.ReadOnly = True
         '
         'PatientPage
         '

@@ -312,12 +312,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Notes.Designer.vb">
-      <DependentUpon>Notes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Notes.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="PatientPage.Designer.vb">
       <DependentUpon>PatientPage.vb</DependentUpon>
     </Compile>
@@ -370,9 +364,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Notes.resx">
-      <DependentUpon>Notes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PatientPage.resx">
       <DependentUpon>PatientPage.vb</DependentUpon>

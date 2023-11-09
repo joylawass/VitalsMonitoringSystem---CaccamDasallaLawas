@@ -341,8 +341,11 @@ Public Class LiveMonitorPage
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        ' Initialize a variable to keep track of the currently displayed notification
+        Dim currentlyDisplayedNotification As String = ""
+
         Connect()
-        query = "select * from " & tableName
+        query = "SELECT * from " & tableName
         Try
             With command
                 .Connection = connection
@@ -350,62 +353,65 @@ Public Class LiveMonitorPage
                 .Parameters.Clear()
                 reader = .ExecuteReader
                 While reader.Read()
-
-                    'Pulse
+                    ' Update patient data
                     lbBpm.Text = reader.GetString("pulse")
-                    If Convert.ToDouble(lbBpm.Text) < 60 Then
-                        lbBpm.ForeColor = Color.Red
-                    ElseIf Convert.ToDouble(lbBpm.Text) > 100 Then
-                        lbBpm.ForeColor = Color.Red
-                    Else
-                        lbBpm.ForeColor = Color.FromArgb(94, 148, 255)
-                    End If
-
-                    'Hall Sensor
                     lbHall.Text = Convert.ToBoolean(reader.GetString("wearStat"))
-                    If Convert.ToBoolean(lbHall.Text) = False Then
-                        lbHall.ForeColor = Color.Red
-                    Else
-                        lbHall.ForeColor = Color.FromArgb(94, 148, 255)
-                    End If
-
-                    'SPO2
                     lbO2.Text = reader.GetString("SPO2")
-                    If Convert.ToDouble(lbO2.Text) < 95 Then
-                        lbO2.ForeColor = Color.Red
-                    ElseIf Convert.ToDouble(lbO2.Text) > 100 Then
-                        lbO2.ForeColor = Color.Red
-                    Else
-                        lbO2.ForeColor = Color.FromArgb(94, 148, 255)
-                    End If
-
-                    'Temperature
                     lbTemp.Text = reader.GetString("temperature")
-                    If Convert.ToDouble(lbTemp.Text) < 36 Then
-                        Timer1.Enabled = False
-                        lbTemp.ForeColor = Color.Red
-                        NotifyIcon1.ShowBalloonTip(1000, "Body Temperature", "Patient [Patient]'s body temperature is below normal. Please check the patient.", ToolTipIcon.Warning)
-                    ElseIf Convert.ToDouble(lbTemp.Text) > 37.2 Then
-                        lbTemp.ForeColor = Color.Red
-                    Else
-                        lbTemp.ForeColor = Color.FromArgb(94, 148, 255)
-                    End If
-
                     notestxtbox.Text = reader.GetString("notes")
-
-                    'RFID
                     lbRFID.Text = Convert.ToBoolean(reader.GetString("RFID"))
-                    If Convert.ToBoolean(lbRFID.Text) = False Then
-                        lbRFID.ForeColor = Color.Red
-                    Else
-                        lbRFID.ForeColor = Color.FromArgb(94, 148, 255)
+
+                    ' Check conditions for displaying notifications
+                    If Convert.ToDouble(lbBpm.Text) < 60 Or Convert.ToDouble(lbBpm.Text) > 100 Then
+                        Timer1.Enabled = False
+                        currentlyDisplayedNotification = "PulseRate"
+                    ElseIf Convert.ToBoolean(lbHall.Text) = False Then
+                        Timer1.Enabled = False
+                        currentlyDisplayedNotification = "HallSensor"
+                    ElseIf Convert.ToDouble(lbO2.Text) < 95 Or Convert.ToDouble(lbO2.Text) > 100 Then
+                        Timer1.Enabled = False
+                        currentlyDisplayedNotification = "BloodO2"
+                    ElseIf Convert.ToDouble(lbTemp.Text) < 36 Or Convert.ToDouble(lbTemp.Text) > 37.2 Then
+                        Timer1.Enabled = False
+                        currentlyDisplayedNotification = "BodyTemp"
+                    ElseIf Convert.ToBoolean(lbRFID.Text) = False Then
+                        Timer1.Enabled = False
+                        currentlyDisplayedNotification = "RFID"
                     End If
-
                 End While
-
             End With
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+
+        ' Display a notification based on the currentlyDisplayedNotification variable
+        If currentlyDisplayedNotification = "PulseRate" Then
+            ' Display Pulse Rate notification
+            lbBpm.ForeColor = Color.Red
+            NotifyIcon1.ShowBalloonTip(1000, "Pulse Rate", "Pulse rate is outside the normal range.", ToolTipIcon.Warning)
+        ElseIf currentlyDisplayedNotification = "HallSensor" Then
+            ' Display Hall Sensor notification
+            lbHall.ForeColor = Color.Red
+            NotifyIcon2.ShowBalloonTip(1000, "Hall Sensor", "Hall sensor detected device removal.", ToolTipIcon.Warning)
+        ElseIf currentlyDisplayedNotification = "BloodO2" Then
+            ' Display Blood Oxygen notification
+            lbO2.ForeColor = Color.Red
+            NotifyIcon3.ShowBalloonTip(1000, "Blood Oxygen", "Blood oxygen level is outside the normal range.", ToolTipIcon.Warning)
+        ElseIf currentlyDisplayedNotification = "BodyTemp" Then
+            ' Display Body Temperature notification
+            lbTemp.ForeColor = Color.Red
+            NotifyIcon4.ShowBalloonTip(1000, "Body Temperature", "Body temperature is outside the normal range.", ToolTipIcon.Warning)
+        ElseIf currentlyDisplayedNotification = "RFID" Then
+            ' Display RFID notification
+            lbRFID.ForeColor = Color.Red
+            NotifyIcon5.ShowBalloonTip(1000, "RFID Status", "RFID sensor detected possible device removal.", ToolTipIcon.Warning)
+        Else
+            ' Reset the notification icons and colors if no conditions are met
+            lbBpm.ForeColor = Color.FromArgb(94, 148, 255)
+            lbHall.ForeColor = Color.FromArgb(94, 148, 255)
+            lbO2.ForeColor = Color.FromArgb(94, 148, 255)
+            lbTemp.ForeColor = Color.FromArgb(94, 148, 255)
+            lbRFID.ForeColor = Color.FromArgb(94, 148, 255)
+        End If
     End Sub
 End Class

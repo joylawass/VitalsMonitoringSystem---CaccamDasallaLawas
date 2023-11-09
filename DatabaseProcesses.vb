@@ -299,7 +299,7 @@ Module DatabaseQueries
                 .Connection = connection
                 .CommandText = query
                 Dim deviceCount As Integer = CInt(.ExecuteScalar())
-                DashboardPage.Label3.Text = deviceCount.ToString()
+                DashboardPage.Label3.Text = deviceCount.ToString("D2")
             End With
         Catch ex As Exception
             MsgBox(ex.Message)
