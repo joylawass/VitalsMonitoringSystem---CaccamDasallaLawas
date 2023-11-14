@@ -1,6 +1,7 @@
 ﻿Public Class DashboardPage
     Private Sub DashboardPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CountDevices()
+        CountPatients()
         lblUsername.Text = LoggedInUser + "!"
         lblUsername1.Text = LoggedInUser
     End Sub

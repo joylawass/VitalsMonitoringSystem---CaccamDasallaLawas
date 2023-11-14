@@ -300,6 +300,24 @@ Module DatabaseQueries
                 .CommandText = query
                 Dim deviceCount As Integer = CInt(.ExecuteScalar())
                 DashboardPage.Label3.Text = deviceCount.ToString("D2")
+                DashboardPage.Label5.Text = deviceCount.ToString("D2")
+            End With
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Public Sub CountPatients()
+        Connect()
+        query = "SELECT COUNT(*) FROM patient_info"
+        Try
+            With command
+                .Connection = connection
+                .CommandText = query
+                Dim patientCount As Integer = CInt(.ExecuteScalar())
+                DashboardPage.Label7.Text = patientCount.ToString("D2")
+                Dim bedNumbers As Integer = 20 - DashboardPage.Label7.Text
+                DashboardPage.Label8.Text = bedNumbers.ToString("D2")
             End With
         Catch ex As Exception
             MsgBox(ex.Message)

@@ -57,7 +57,7 @@ Partial Class DashboardPage
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label3.Location = New System.Drawing.Point(43, 43)
+        Me.Label3.Location = New System.Drawing.Point(40, 43)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(151, 108)
         Me.Label3.TabIndex = 24
@@ -81,11 +81,11 @@ Partial Class DashboardPage
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label2.Location = New System.Drawing.Point(50, 26)
+        Me.Label2.Location = New System.Drawing.Point(35, 25)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(126, 20)
+        Me.Label2.Size = New System.Drawing.Size(157, 20)
         Me.Label2.TabIndex = 25
-        Me.Label2.Text = "Active Devices"
+        Me.Label2.Text = "ACTIVE DEVICES"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label1
@@ -132,11 +132,11 @@ Partial Class DashboardPage
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label6.Location = New System.Drawing.Point(17, 26)
+        Me.Label6.Location = New System.Drawing.Point(14, 25)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(192, 20)
+        Me.Label6.Size = New System.Drawing.Size(198, 20)
         Me.Label6.TabIndex = 25
-        Me.Label6.Text = "Patients Within Vicinity"
+        Me.Label6.Text = "PATIENTS IN VICINITY"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label5
@@ -158,11 +158,11 @@ Partial Class DashboardPage
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label4.Location = New System.Drawing.Point(34, 26)
+        Me.Label4.Location = New System.Drawing.Point(13, 25)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(158, 20)
+        Me.Label4.Size = New System.Drawing.Size(200, 20)
         Me.Label4.TabIndex = 25
-        Me.Label4.Text = "Recorded Patients"
+        Me.Label4.Text = "RECORDED PATIENTS"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Panel3
@@ -181,7 +181,7 @@ Partial Class DashboardPage
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label7.Location = New System.Drawing.Point(43, 43)
+        Me.Label7.Location = New System.Drawing.Point(39, 43)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(151, 108)
         Me.Label7.TabIndex = 24
@@ -194,7 +194,7 @@ Partial Class DashboardPage
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 72.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
         Me.Label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label8.Location = New System.Drawing.Point(43, 43)
+        Me.Label8.Location = New System.Drawing.Point(38, 43)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(151, 108)
         Me.Label8.TabIndex = 24
@@ -217,11 +217,11 @@ Partial Class DashboardPage
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label9.ForeColor = System.Drawing.Color.White
         Me.Label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label9.Location = New System.Drawing.Point(44, 26)
+        Me.Label9.Location = New System.Drawing.Point(33, 25)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(138, 20)
+        Me.Label9.Size = New System.Drawing.Size(161, 20)
         Me.Label9.TabIndex = 25
-        Me.Label9.Text = "Number of Beds"
+        Me.Label9.Text = "AVAILABLE BEDS"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Guna2Elipse2

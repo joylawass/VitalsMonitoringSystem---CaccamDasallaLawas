@@ -1,6 +1,7 @@
 ﻿Imports Guna.UI2.WinForms
 
 Public Class RegisterPatient
+
     Private Sub CloseButton_Click(sender As Object, e As EventArgs) Handles CloseButton.Click
         Me.Close()
     End Sub
@@ -86,8 +87,6 @@ Public Class RegisterPatient
         Catch ex As Exception
             MessageBox.Show("Registration Failed. An error occurred: " & ex.Message, "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
-
-
     End Sub
 
     Private Sub txbxFamilyName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txbxRelationship.KeyPress, txbxPlaceOfBirth.KeyPress, txbxPhysician.KeyPress, txbxNationality.KeyPress, txbxfirstname.KeyPress, txbxFamilyName.KeyPress, txbxemergencycontactname.KeyPress, txbxmidname.KeyPress, txbxExtensionName.KeyPress
