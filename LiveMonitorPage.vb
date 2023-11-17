@@ -1,4 +1,5 @@
 ﻿Imports System.Threading
+Imports System.Windows.Controls
 Imports System.Windows.Media.Media3D
 Imports MySql.Data.MySqlClient
 Imports Mysqlx.XDevAPI.Relational
@@ -385,26 +386,29 @@ Public Class LiveMonitorPage
         End Try
 
         ' Display a notification based on the currentlyDisplayedNotification variable
+        Dim notificationTitle As String = ""
+        Dim notificationMessage As String = ""
+
         If currentlyDisplayedNotification = "PulseRate" Then
-            ' Display Pulse Rate notification
+            notificationTitle = "Pulse Rate"
+            notificationMessage = "Pulse rate is outside the normal range"
             lbBpm.ForeColor = Color.Red
-            NotifyIcon1.ShowBalloonTip(1000, "Pulse Rate", "Pulse rate is outside the normal range.", ToolTipIcon.Warning)
         ElseIf currentlyDisplayedNotification = "HallSensor" Then
-            ' Display Hall Sensor notification
+            notificationTitle = "Device Removal Detected"
+            notificationMessage = "Hall sensor detected device removal"
             lbHall.ForeColor = Color.Red
-            NotifyIcon2.ShowBalloonTip(1000, "Hall Sensor", "Hall sensor detected device removal.", ToolTipIcon.Warning)
         ElseIf currentlyDisplayedNotification = "BloodO2" Then
-            ' Display Blood Oxygen notification
+            notificationTitle = "Blood Oxygen"
+            notificationMessage = "Blood oxygen level is outside the normal range"
             lbO2.ForeColor = Color.Red
-            NotifyIcon3.ShowBalloonTip(1000, "Blood Oxygen", "Blood oxygen level is outside the normal range.", ToolTipIcon.Warning)
         ElseIf currentlyDisplayedNotification = "BodyTemp" Then
-            ' Display Body Temperature notification
+            notificationTitle = "Body Temperature"
+            notificationMessage = "Body temperature is outside the normal range"
             lbTemp.ForeColor = Color.Red
-            NotifyIcon4.ShowBalloonTip(1000, "Body Temperature", "Body temperature is outside the normal range.", ToolTipIcon.Warning)
         ElseIf currentlyDisplayedNotification = "RFID" Then
-            ' Display RFID notification
+            notificationTitle = "Breach Attempt Detected"
+            notificationMessage = "RFID sensor detected possible device removal"
             lbRFID.ForeColor = Color.Red
-            NotifyIcon5.ShowBalloonTip(1000, "RFID Status", "RFID sensor detected possible device removal.", ToolTipIcon.Warning)
         Else
             ' Reset the notification icons and colors if no conditions are met
             lbBpm.ForeColor = Color.FromArgb(94, 148, 255)
@@ -412,6 +416,30 @@ Public Class LiveMonitorPage
             lbO2.ForeColor = Color.FromArgb(94, 148, 255)
             lbTemp.ForeColor = Color.FromArgb(94, 148, 255)
             lbRFID.ForeColor = Color.FromArgb(94, 148, 255)
+        End If
+
+        ' Fetch patient information from the database
+        Dim patientInfo As String = ""
+        Connect()
+        query = "SELECT patientID, ward FROM patient_info WHERE patientID = @patientID"
+        Try
+            Using command As New MySqlCommand(query, connection)
+                command.Parameters.AddWithValue("@patientID", selectedPatientID)
+                reader = command.ExecuteReader()
+                If reader.Read() Then
+                    ' Retrieve patient information
+                    Dim patientID As String = reader.GetString("patientID")
+                    Dim ward As String = reader.GetString("ward")
+                    patientInfo = $" for Patient {patientID} in Ward {ward}."
+                End If
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+        ' Display a notification with patient information
+        If Not String.IsNullOrEmpty(notificationTitle) AndAlso Not String.IsNullOrEmpty(notificationMessage) Then
+            NotifyIcon1.ShowBalloonTip(1000, notificationTitle, notificationMessage & patientInfo, ToolTipIcon.Warning)
         End If
     End Sub
 End Class

@@ -30,8 +30,6 @@ Public Class RegisterPatient
         End Try
     End Sub
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
-
-
         Try
             If String.IsNullOrEmpty(txbxFamilyName.Text) OrElse
               String.IsNullOrEmpty(txbxfirstname.Text) OrElse
@@ -192,7 +190,4 @@ Public Class RegisterPatient
         cbxMac.Items.Clear()
         healthHistory.Clear()
     End Sub
-
-
-
 End Class
