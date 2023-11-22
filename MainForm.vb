@@ -5,6 +5,8 @@ Imports System.Windows.Forms
 Imports System.Net
 Imports System.Net.Sockets
 Imports System.Threading.Tasks
+Imports MySql.Data.MySqlClient
+
 Public Class MainForm
 
     Private currentBtn As IconButton
@@ -138,11 +140,6 @@ Public Class MainForm
         End If
     End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        lblDate.Text = Date.Now.ToString("MMM dd, yyyy")
-        lblTimee.Text = Date.Now.ToString("hh:mm:ss")
-    End Sub
-
     Private Sub LogoutBtn_Click(sender As Object, e As EventArgs) Handles LogoutBtn.Click
         ActivateButton(sender, Color.White)
         Dim response As Integer
@@ -166,4 +163,38 @@ Public Class MainForm
             LogoutButton.Font = New Font(LogoutButton.Font, FontStyle.Regular)
         End If
     End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        lblDate.Text = Date.Now.ToString("MMM dd, yyyy")
+        lblTimee.Text = Date.Now.ToString("hh:mm:ss")
+    End Sub
+
+    Private Sub CheckNotificationChanges()
+        Try
+            Connect()
+
+            ' Assuming devicelist is a DataGridView
+            Dim query As String = "SELECT Notification FROM devicelist"
+            Using command As New MySqlCommand(query, connection)
+                Using reader As MySqlDataReader = command.ExecuteReader()
+                    While reader.Read()
+                        ' Replace "Notification" with the actual column name in devicelist
+                        Dim notificationValue As String = reader("Notification").ToString()
+
+                        ' Check if the Notification column is not blank/null
+                        If Not String.IsNullOrEmpty(notificationValue) Then
+                            ' Display a balloon tip with the notification value
+                            NotifyIcon1.ShowBalloonTip(1000, "Device Status", notificationValue, ToolTipIcon.Warning)
+                        End If
+                    End While
+                End Using
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            ' Close the connection in the finally block to ensure it's always closed
+            connection.Close()
+        End Try
+    End Sub
+
 End Class

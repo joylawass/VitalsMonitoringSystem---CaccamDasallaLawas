@@ -44,6 +44,7 @@ Partial Class MainForm
         Me.PageTitle = New System.Windows.Forms.Label()
         Me.lblDate = New System.Windows.Forms.Label()
         Me.lblTime = New System.Windows.Forms.Label()
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.TopPanelMainForm.SuspendLayout()
         Me.MenuPanelMainForm.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -312,6 +313,11 @@ Partial Class MainForm
         Me.lblTime.Text = "HH:MM:SS"
         Me.lblTime.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
+        'NotifyIcon1
+        '
+        Me.NotifyIcon1.Text = "NotifyIcon1"
+        Me.NotifyIcon1.Visible = True
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -359,4 +365,5 @@ Partial Class MainForm
     Friend WithEvents LogoutBtn As FontAwesome.Sharp.IconButton
     Friend WithEvents lblTimee As Label
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents NotifyIcon1 As NotifyIcon
 End Class
