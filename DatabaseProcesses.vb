@@ -40,7 +40,7 @@ Module DatabaseQueries
     Public Sub Connect()
         Try
             connection.Close()
-            connection = New MySqlConnection("server=192.168.1.8;database=monitoring system;username=UserAdmin;password=UserAdmin")
+            connection = New MySqlConnection("server=192.168.1.11;database=monitoring system;username=UserAdmin;password=UserAdmin")
             connection.Open()
         Catch ex As Exception
             MsgBox(ex.Message)

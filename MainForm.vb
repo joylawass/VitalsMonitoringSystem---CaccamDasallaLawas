@@ -73,11 +73,10 @@ Public Class MainForm
     Private Sub CloseButton_Click(sender As Object, e As EventArgs) Handles CloseButton.Click
         Dim response As Integer
 
-        response = MessageBox.Show("Are you sure you want to exit without logging out?", "Close Window",
+        response = MessageBox.Show("Are you sure you want to close?", "Close Window",
                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If response = vbYes Then
-            Me.Hide()
-            LoginForm.Show()
+            Application.Exit()
         End If
     End Sub
 
@@ -167,34 +166,7 @@ Public Class MainForm
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         lblDate.Text = Date.Now.ToString("MMM dd, yyyy")
         lblTimee.Text = Date.Now.ToString("hh:mm:ss")
-    End Sub
 
-    Private Sub CheckNotificationChanges()
-        Try
-            Connect()
-
-            ' Assuming devicelist is a DataGridView
-            Dim query As String = "SELECT Notification FROM devicelist"
-            Using command As New MySqlCommand(query, connection)
-                Using reader As MySqlDataReader = command.ExecuteReader()
-                    While reader.Read()
-                        ' Replace "Notification" with the actual column name in devicelist
-                        Dim notificationValue As String = reader("Notification").ToString()
-
-                        ' Check if the Notification column is not blank/null
-                        If Not String.IsNullOrEmpty(notificationValue) Then
-                            ' Display a balloon tip with the notification value
-                            NotifyIcon1.ShowBalloonTip(1000, "Device Status", notificationValue, ToolTipIcon.Warning)
-                        End If
-                    End While
-                End Using
-            End Using
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        Finally
-            ' Close the connection in the finally block to ensure it's always closed
-            connection.Close()
-        End Try
     End Sub
 
 End Class

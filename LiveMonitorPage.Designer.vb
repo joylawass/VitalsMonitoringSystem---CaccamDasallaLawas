@@ -99,11 +99,6 @@ Partial Class LiveMonitorPage
         Me.Guna2Elipse16 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2Panel8 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Elipse17 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.NotifyIcon2 = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.NotifyIcon3 = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.NotifyIcon4 = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.NotifyIcon5 = New System.Windows.Forms.NotifyIcon(Me.components)
         CType(Me.liveMonitoringDTG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PatientInfoPanel.SuspendLayout()
         Me.weightPanel.SuspendLayout()
@@ -956,36 +951,6 @@ Partial Class LiveMonitorPage
         '
         Me.Guna2Elipse17.TargetControl = Me.Guna2Panel8
         '
-        'NotifyIcon1
-        '
-        Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
-        Me.NotifyIcon1.Text = "NotifyIcon1"
-        Me.NotifyIcon1.Visible = True
-        '
-        'NotifyIcon2
-        '
-        Me.NotifyIcon2.Icon = CType(resources.GetObject("NotifyIcon2.Icon"), System.Drawing.Icon)
-        Me.NotifyIcon2.Text = "NotifyIcon2"
-        Me.NotifyIcon2.Visible = True
-        '
-        'NotifyIcon3
-        '
-        Me.NotifyIcon3.Icon = CType(resources.GetObject("NotifyIcon3.Icon"), System.Drawing.Icon)
-        Me.NotifyIcon3.Text = "NotifyIcon3"
-        Me.NotifyIcon3.Visible = True
-        '
-        'NotifyIcon4
-        '
-        Me.NotifyIcon4.Icon = CType(resources.GetObject("NotifyIcon4.Icon"), System.Drawing.Icon)
-        Me.NotifyIcon4.Text = "NotifyIcon4"
-        Me.NotifyIcon4.Visible = True
-        '
-        'NotifyIcon5
-        '
-        Me.NotifyIcon5.Icon = CType(resources.GetObject("NotifyIcon5.Icon"), System.Drawing.Icon)
-        Me.NotifyIcon5.Text = "NotifyIcon5"
-        Me.NotifyIcon5.Visible = True
-        '
         'LiveMonitorPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1125,9 +1090,4 @@ Partial Class LiveMonitorPage
     Friend WithEvents historyLivePanel As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents historyLive As Label
     Friend WithEvents notestxtbox As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents NotifyIcon1 As NotifyIcon
-    Friend WithEvents NotifyIcon2 As NotifyIcon
-    Friend WithEvents NotifyIcon3 As NotifyIcon
-    Friend WithEvents NotifyIcon4 As NotifyIcon
-    Friend WithEvents NotifyIcon5 As NotifyIcon
 End Class

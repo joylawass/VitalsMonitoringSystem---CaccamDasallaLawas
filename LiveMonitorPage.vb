@@ -361,85 +361,11 @@ Public Class LiveMonitorPage
                     lbTemp.Text = reader.GetString("temperature")
                     notestxtbox.Text = reader.GetString("notes")
                     lbRFID.Text = Convert.ToBoolean(reader.GetString("RFID"))
-
-                    ' Check conditions for displaying notifications
-                    If Convert.ToDouble(lbBpm.Text) < 60 Or Convert.ToDouble(lbBpm.Text) > 100 Then
-                        Timer1.Enabled = False
-                        currentlyDisplayedNotification = "PulseRate"
-                    ElseIf Convert.ToBoolean(lbHall.Text) = False Then
-                        Timer1.Enabled = False
-                        currentlyDisplayedNotification = "HallSensor"
-                    ElseIf Convert.ToDouble(lbO2.Text) < 95 Or Convert.ToDouble(lbO2.Text) > 100 Then
-                        Timer1.Enabled = False
-                        currentlyDisplayedNotification = "BloodO2"
-                    ElseIf Convert.ToDouble(lbTemp.Text) < 36 Or Convert.ToDouble(lbTemp.Text) > 37.2 Then
-                        Timer1.Enabled = False
-                        currentlyDisplayedNotification = "BodyTemp"
-                    ElseIf Convert.ToBoolean(lbRFID.Text) = False Then
-                        Timer1.Enabled = False
-                        currentlyDisplayedNotification = "RFID"
-                    End If
                 End While
             End With
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
 
-        ' Display a notification based on the currentlyDisplayedNotification variable
-        Dim notificationTitle As String = ""
-        Dim notificationMessage As String = ""
-
-        If currentlyDisplayedNotification = "PulseRate" Then
-            notificationTitle = "Pulse Rate"
-            notificationMessage = "Pulse rate is outside the normal range"
-            lbBpm.ForeColor = Color.Red
-        ElseIf currentlyDisplayedNotification = "HallSensor" Then
-            notificationTitle = "Device Removal Detected"
-            notificationMessage = "Hall sensor detected device removal"
-            lbHall.ForeColor = Color.Red
-        ElseIf currentlyDisplayedNotification = "BloodO2" Then
-            notificationTitle = "Blood Oxygen"
-            notificationMessage = "Blood oxygen level is outside the normal range"
-            lbO2.ForeColor = Color.Red
-        ElseIf currentlyDisplayedNotification = "BodyTemp" Then
-            notificationTitle = "Body Temperature"
-            notificationMessage = "Body temperature is outside the normal range"
-            lbTemp.ForeColor = Color.Red
-        ElseIf currentlyDisplayedNotification = "RFID" Then
-            notificationTitle = "Breach Attempt Detected"
-            notificationMessage = "RFID sensor detected possible device removal"
-            lbRFID.ForeColor = Color.Red
-        Else
-            ' Reset the notification icons and colors if no conditions are met
-            lbBpm.ForeColor = Color.FromArgb(94, 148, 255)
-            lbHall.ForeColor = Color.FromArgb(94, 148, 255)
-            lbO2.ForeColor = Color.FromArgb(94, 148, 255)
-            lbTemp.ForeColor = Color.FromArgb(94, 148, 255)
-            lbRFID.ForeColor = Color.FromArgb(94, 148, 255)
-        End If
-
-        ' Fetch patient information from the database
-        Dim patientInfo As String = ""
-        Connect()
-        query = "SELECT patientID, ward FROM patient_info WHERE patientID = @patientID"
-        Try
-            Using command As New MySqlCommand(query, connection)
-                command.Parameters.AddWithValue("@patientID", selectedPatientID)
-                reader = command.ExecuteReader()
-                If reader.Read() Then
-                    ' Retrieve patient information
-                    Dim patientID As String = reader.GetString("patientID")
-                    Dim ward As String = reader.GetString("ward")
-                    patientInfo = $" for Patient {patientID} in Ward {ward}."
-                End If
-            End Using
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-
-        ' Display a notification with patient information
-        If Not String.IsNullOrEmpty(notificationTitle) AndAlso Not String.IsNullOrEmpty(notificationMessage) Then
-            NotifyIcon1.ShowBalloonTip(1000, notificationTitle, notificationMessage & patientInfo, ToolTipIcon.Warning)
-        End If
     End Sub
 End Class
