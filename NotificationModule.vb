@@ -11,7 +11,7 @@
         Try
             With command
                 .Connection = connection
-                Notification.CommandText = query
+                .CommandText = query
                 reader = .ExecuteReader
                 While reader.Read
                     Dim patientID As String = reader("patientID").ToString()
