@@ -27,11 +27,19 @@
                             .MiddleName = reader("middlename").ToString()
                             .ExtName = reader("extname").ToString()
                             .Ward = reader("ward").ToString()
+                            .PrevNotif = ""
                             .Notification = reader("Notification").ToString()
                             patientList.Add(patient)
                         End With
                     Else
-                        patient.Notification = reader("Notification").ToString()
+                        With patient
+                            .PrevNotif = .Notification
+                            If .Notification.Equals(.PrevNotif) Then
+
+                                'insert notification logic here'
+
+                            End If
+                        End With
                     End If
                 End While
             End With

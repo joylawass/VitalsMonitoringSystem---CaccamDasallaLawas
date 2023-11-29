@@ -5,5 +5,8 @@
     Public Property MiddleName As String
     Public Property ExtName As String
     Public Property Ward As String
+
+    Public Property PrevNotif As String
+
     Public Property Notification As String
 End Class
