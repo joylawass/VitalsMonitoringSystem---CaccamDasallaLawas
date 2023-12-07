@@ -4,6 +4,7 @@ Imports System.Windows.Media.Media3D
 Imports MySql.Data.MySqlClient
 Imports Mysqlx.XDevAPI.Relational
 Imports Org.BouncyCastle.Asn1
+Imports Tulpep.NotificationWindow
 
 Public Class LiveMonitorPage
 
@@ -343,7 +344,6 @@ Public Class LiveMonitorPage
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         ' Initialize a variable to keep track of the currently displayed notification
-        Dim currentlyDisplayedNotification As String = ""
 
         Connect()
         query = "SELECT * from " & tableName

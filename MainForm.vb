@@ -13,7 +13,6 @@ Public Class MainForm
     Private leftBorderBtn As Panel
 
     Public Sub New()
-
         ' This call is required by the designer.
         InitializeComponent()
 
@@ -47,7 +46,6 @@ Public Class MainForm
 
             PageTitle.Text = currentBtn.Text
         End If
-
     End Sub
 
     Public Sub DisabledButton()
@@ -166,7 +164,5 @@ Public Class MainForm
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         lblDate.Text = Date.Now.ToString("MMM dd, yyyy")
         lblTimee.Text = Date.Now.ToString("hh:mm:ss")
-
     End Sub
-
 End Class
