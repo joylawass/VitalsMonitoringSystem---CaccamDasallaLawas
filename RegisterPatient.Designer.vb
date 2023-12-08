@@ -23,6 +23,7 @@ Partial Class RegisterPatient
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RegisterPatient))
         Me.lblNote = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label4 = New System.Windows.Forms.Label()
@@ -751,12 +752,12 @@ Partial Class RegisterPatient
         Me.txbxBirthdate.ForeColor = System.Drawing.Color.Black
         Me.txbxBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.txbxBirthdate.Location = New System.Drawing.Point(283, 188)
-        Me.txbxBirthdate.MaxDate = Date.Today
+        Me.txbxBirthdate.MaxDate = New Date(2023, 12, 8, 0, 0, 0, 0)
         Me.txbxBirthdate.MinDate = New Date(1900, 1, 1, 0, 0, 0, 0)
         Me.txbxBirthdate.Name = "txbxBirthdate"
         Me.txbxBirthdate.Size = New System.Drawing.Size(151, 36)
         Me.txbxBirthdate.TabIndex = 155
-        Me.txbxBirthdate.Value = Date.Today
+        Me.txbxBirthdate.Value = New Date(2023, 12, 8, 0, 0, 0, 0)
         '
         'txbxemergencynumber
         '
@@ -843,6 +844,7 @@ Partial Class RegisterPatient
         Me.Controls.Add(Me.healthHistory)
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "RegisterPatient"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "RegisterPatient"

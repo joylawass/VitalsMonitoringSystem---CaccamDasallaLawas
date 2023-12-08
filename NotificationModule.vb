@@ -4,7 +4,7 @@ Imports Tulpep.NotificationWindow
 Module NotificationModule
     Dim tableName As String
 
-    Sub NotifList(Bpm As String, Hall As String, O2 As String, Temp As String, RFID As String)
+    Sub NotifList(Bpm As String, Hall As String, O2 As String, Temp As String, RFID As String, notes As String)
 
         ' Create a list to store patients
         Dim patientList As New List(Of Notification)
@@ -58,20 +58,26 @@ Module NotificationModule
                                                 O2 = reader.GetString("SPO2")
                                                 Temp = reader.GetString("temperature")
                                                 RFID = reader.GetString("RFID")
+                                                notes = reader.GetString("notes")
                                             End With
 
                                             ' Check conditions for displaying notifications
                                             ' Wala pa nko natry if mugana
                                             If Convert.ToDouble(Bpm) < 60 Or Convert.ToDouble(Bpm) > 100 Then
-                                                PulseRate()
+                                                PopupNotification.lblNotifTitle.Text = "Pulse Rate"
+                                                PopupNotification.lblNotifContent.Text = "Notification"
                                             ElseIf Convert.ToBoolean(Hall) = False Then
-                                                HallSensor()
+                                                PopupNotification.lblNotifTitle.Text = "Device Removal Detected"
+                                                PopupNotification.lblNotifContent.Text = "Notification"
                                             ElseIf Convert.ToDouble(O2) < 95 Or Convert.ToDouble(O2) > 100 Then
-                                                SPO2()
+                                                PopupNotification.lblNotifTitle.Text = "Blood Oxygen"
+                                                PopupNotification.lblNotifContent.Text = "Notification"
                                             ElseIf Convert.ToDouble(Temp) < 36 Or Convert.ToDouble(Temp) > 37.2 Then
-                                                Temperature()
+                                                PopupNotification.lblNotifTitle.Text = "Body Temperature"
+                                                PopupNotification.lblNotifContent.Text = "Notification"
                                             ElseIf Convert.ToBoolean(RFID) = False Then
-                                                RFIDDevice()
+                                                PopupNotification.lblNotifTitle.Text = "Breach Attempt Detected"
+                                                PopupNotification.lblNotifContent.Text = "Notification"
                                             End If
                                         End While
                                     End With
@@ -89,70 +95,5 @@ Module NotificationModule
 
         ' Access patient information
         Console.ReadLine()
-    End Sub
-
-    Public Sub PulseRate()
-        Dim popup As New PopupNotifier()
-        popup.Image = My.Resources.icons8_warning_501
-        popup.BodyColor = Color.FromArgb(255, 193, 7)
-        popup.TitleText = "Pulse Rate"
-        popup.TitleColor = Color.White
-        popup.TitleFont = New Font("Segoe UI", 15, FontStyle.Bold)
-        popup.ContentText = "Pulse rate is outside the normal range" 'MYSQL Database Notification must reflect on this message, pls pakichange boss katong exact na message gikan sa notification sa db
-        popup.ContentColor = Color.White
-        popup.ContentFont = New Font("Segoe UI", 12)
-        popup.Popup()
-    End Sub
-
-    Public Sub HallSensor()
-        Dim popup As New PopupNotifier()
-        popup.Image = My.Resources.icons8_warning_501
-        popup.BodyColor = Color.FromArgb(255, 193, 7)
-        popup.TitleText = "Device Removal Detected"
-        popup.TitleColor = Color.White
-        popup.TitleFont = New Font("Segoe UI", 15, FontStyle.Bold)
-        popup.ContentText = "Hall sensor detected device removal" 'MYSQL Database Notification must reflect on this message, pls pakichange boss katong exact na message gikan sa notification sa db
-        popup.ContentColor = Color.White
-        popup.ContentFont = New Font("Segoe UI", 12)
-        popup.Popup()
-    End Sub
-
-    Public Sub SPO2()
-        Dim popup As New PopupNotifier()
-        popup.Image = My.Resources.icons8_warning_501
-        popup.BodyColor = Color.FromArgb(255, 193, 7)
-        popup.TitleText = "Blood Oxygen"
-        popup.TitleColor = Color.White
-        popup.TitleFont = New Font("Segoe UI", 15, FontStyle.Bold)
-        popup.ContentText = "Blood oxygen level is outside the normal range" 'MYSQL Database Notification must reflect on this message, pls pakichange boss katong exact na message gikan sa notification sa db
-        popup.ContentColor = Color.White
-        popup.ContentFont = New Font("Segoe UI", 12)
-        popup.Popup()
-    End Sub
-
-    Public Sub Temperature()
-        Dim popup As New PopupNotifier()
-        popup.Image = My.Resources.icons8_warning_501
-        popup.BodyColor = Color.FromArgb(255, 193, 7)
-        popup.TitleText = "Body Temperature"
-        popup.TitleColor = Color.White
-        popup.TitleFont = New Font("Segoe UI", 15, FontStyle.Bold)
-        popup.ContentText = "Body temperature is outside the normal range" 'MYSQL Database Notification must reflect on this message, pls pakichange boss katong exact na message gikan sa notification sa db
-        popup.ContentColor = Color.White
-        popup.ContentFont = New Font("Segoe UI", 12)
-        popup.Popup()
-    End Sub
-
-    Public Sub RFIDDevice()
-        Dim popup As New PopupNotifier()
-        popup.Image = My.Resources.icons8_warning_501
-        popup.BodyColor = Color.FromArgb(255, 193, 7)
-        popup.TitleText = "Breach Attempt Detected"
-        popup.TitleColor = Color.White
-        popup.TitleFont = New Font("Segoe UI", 15, FontStyle.Bold)
-        popup.ContentText = "RFID sensor detected possible device removal" 'MYSQL Database Notification must reflect on this message, pls pakichange boss katong exact na message gikan sa notification sa db
-        popup.ContentColor = Color.White
-        popup.ContentFont = New Font("Segoe UI", 12)
-        popup.Popup()
     End Sub
 End Module

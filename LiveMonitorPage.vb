@@ -230,7 +230,6 @@ Public Class LiveMonitorPage
             Dim bmiChange As String = ""
             Dim wardChange As String = ""
             Dim history As String = ""
-            Dim notes As String = ""
             Dim patientBirthdate As Date
 
             ' Fetch patient information from the database using the selectedPatientID
@@ -286,7 +285,6 @@ Public Class LiveMonitorPage
             bmiLive.Text = bmiChange
             wardNumberLive.Text = wardChange
             historyLive.Text = history
-            notestxtbox.Text = notes
         Else
             'IconEdit.Enabled = False
         End If
@@ -366,6 +364,7 @@ Public Class LiveMonitorPage
                     If Convert.ToDouble(lbBpm.Text) < 60 Or Convert.ToDouble(lbBpm.Text) > 100 Then
                         Timer1.Enabled = False
                         lbBpm.ForeColor = Color.Red
+                        PopupNotification.Show()
                     ElseIf Convert.ToBoolean(lbHall.Text) = False Then
                         Timer1.Enabled = False
                         lbBpm.ForeColor = Color.Red

@@ -122,7 +122,7 @@ Partial Class LoginForm
         Me.linkLabelCreateAccount.AutoSize = True
         Me.linkLabelCreateAccount.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.linkLabelCreateAccount.LinkColor = System.Drawing.Color.Black
-        Me.linkLabelCreateAccount.Location = New System.Drawing.Point(94, 375)
+        Me.linkLabelCreateAccount.Location = New System.Drawing.Point(94, 380)
         Me.linkLabelCreateAccount.Name = "linkLabelCreateAccount"
         Me.linkLabelCreateAccount.Size = New System.Drawing.Size(89, 15)
         Me.linkLabelCreateAccount.TabIndex = 13
@@ -238,7 +238,7 @@ Partial Class LoginForm
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(73, 358)
+        Me.Label3.Location = New System.Drawing.Point(73, 363)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(131, 15)
         Me.Label3.TabIndex = 26
@@ -261,6 +261,7 @@ Partial Class LoginForm
         Me.Controls.Add(Me.TopPanel)
         Me.Controls.Add(Me.Guna2PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "LoginForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "LoginForm"

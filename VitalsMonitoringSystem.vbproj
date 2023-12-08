@@ -323,6 +323,12 @@
     <Compile Include="PatientPage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="PopupNotification.Designer.vb">
+      <DependentUpon>PopupNotification.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PopupNotification.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Practice.Designer.vb">
       <DependentUpon>Practice.vb</DependentUpon>
     </Compile>
@@ -372,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PatientPage.resx">
       <DependentUpon>PatientPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupNotification.resx">
+      <DependentUpon>PopupNotification.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Practice.resx">
       <DependentUpon>Practice.vb</DependentUpon>

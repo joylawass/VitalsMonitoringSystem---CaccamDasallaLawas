@@ -29,27 +29,27 @@ Partial Class MainForm
         Me.MinimizeButton = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.CloseButton = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.MenuPanelMainForm = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
+        Me.MainBox = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.lblTimee = New System.Windows.Forms.Label()
+        Me.PageTitle = New System.Windows.Forms.Label()
+        Me.lblDate = New System.Windows.Forms.Label()
+        Me.lblTime = New System.Windows.Forms.Label()
+        Me.VMS = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.IconCurrentForm = New FontAwesome.Sharp.IconPictureBox()
         Me.LogoutBtn = New FontAwesome.Sharp.IconButton()
         Me.LiveMonitorButton = New FontAwesome.Sharp.IconButton()
         Me.PatientButton = New FontAwesome.Sharp.IconButton()
         Me.DashboardButton = New FontAwesome.Sharp.IconButton()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.LogoutButton = New FontAwesome.Sharp.IconButton()
-        Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
-        Me.MainBox = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.lblTimee = New System.Windows.Forms.Label()
-        Me.IconCurrentForm = New FontAwesome.Sharp.IconPictureBox()
-        Me.PageTitle = New System.Windows.Forms.Label()
-        Me.lblDate = New System.Windows.Forms.Label()
-        Me.lblTime = New System.Windows.Forms.Label()
-        Me.VMS = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.TopPanelMainForm.SuspendLayout()
         Me.MenuPanelMainForm.SuspendLayout()
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2Panel1.SuspendLayout()
         CType(Me.IconCurrentForm, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -103,6 +103,107 @@ Partial Class MainForm
         Me.MenuPanelMainForm.Name = "MenuPanelMainForm"
         Me.MenuPanelMainForm.Size = New System.Drawing.Size(256, 600)
         Me.MenuPanelMainForm.TabIndex = 1
+        '
+        'Guna2DragControl1
+        '
+        Me.Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
+        Me.Guna2DragControl1.TargetControl = Me.TopPanelMainForm
+        Me.Guna2DragControl1.UseTransparentDrag = True
+        '
+        'MainBox
+        '
+        Me.MainBox.Location = New System.Drawing.Point(264, 80)
+        Me.MainBox.Name = "MainBox"
+        Me.MainBox.Size = New System.Drawing.Size(697, 541)
+        Me.MainBox.TabIndex = 21
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        '
+        'Guna2Panel1
+        '
+        Me.Guna2Panel1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.Guna2Panel1.Controls.Add(Me.lblTimee)
+        Me.Guna2Panel1.Controls.Add(Me.IconCurrentForm)
+        Me.Guna2Panel1.Controls.Add(Me.PageTitle)
+        Me.Guna2Panel1.Controls.Add(Me.lblDate)
+        Me.Guna2Panel1.Controls.Add(Me.lblTime)
+        Me.Guna2Panel1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Guna2Panel1.Location = New System.Drawing.Point(264, 35)
+        Me.Guna2Panel1.Name = "Guna2Panel1"
+        Me.Guna2Panel1.Size = New System.Drawing.Size(697, 47)
+        Me.Guna2Panel1.TabIndex = 22
+        '
+        'lblTimee
+        '
+        Me.lblTimee.AutoSize = True
+        Me.lblTimee.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTimee.ForeColor = System.Drawing.Color.White
+        Me.lblTimee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblTimee.Location = New System.Drawing.Point(603, 11)
+        Me.lblTimee.Name = "lblTimee"
+        Me.lblTimee.Size = New System.Drawing.Size(94, 25)
+        Me.lblTimee.TabIndex = 44
+        Me.lblTimee.Text = "hh:mm:ss"
+        Me.lblTimee.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'PageTitle
+        '
+        Me.PageTitle.AutoSize = True
+        Me.PageTitle.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PageTitle.ForeColor = System.Drawing.Color.White
+        Me.PageTitle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.PageTitle.Location = New System.Drawing.Point(40, 11)
+        Me.PageTitle.Name = "PageTitle"
+        Me.PageTitle.Size = New System.Drawing.Size(109, 25)
+        Me.PageTitle.TabIndex = 43
+        Me.PageTitle.Text = "Dashboard"
+        Me.PageTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblDate
+        '
+        Me.lblDate.AutoSize = True
+        Me.lblDate.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDate.ForeColor = System.Drawing.Color.White
+        Me.lblDate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblDate.Location = New System.Drawing.Point(465, 11)
+        Me.lblDate.Name = "lblDate"
+        Me.lblDate.Size = New System.Drawing.Size(145, 25)
+        Me.lblDate.TabIndex = 41
+        Me.lblDate.Text = "MMM dd, yyyy"
+        Me.lblDate.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'lblTime
+        '
+        Me.lblTime.AutoSize = True
+        Me.lblTime.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTime.ForeColor = System.Drawing.Color.White
+        Me.lblTime.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblTime.Location = New System.Drawing.Point(1106, 7)
+        Me.lblTime.Name = "lblTime"
+        Me.lblTime.Size = New System.Drawing.Size(100, 25)
+        Me.lblTime.TabIndex = 40
+        Me.lblTime.Text = "HH:MM:SS"
+        Me.lblTime.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'VMS
+        '
+        Me.VMS.Icon = CType(resources.GetObject("VMS.Icon"), System.Drawing.Icon)
+        Me.VMS.Text = "NotifyIcon1"
+        Me.VMS.Visible = True
+        '
+        'IconCurrentForm
+        '
+        Me.IconCurrentForm.BackColor = System.Drawing.Color.Transparent
+        Me.IconCurrentForm.IconChar = FontAwesome.Sharp.IconChar.Hive
+        Me.IconCurrentForm.IconColor = System.Drawing.Color.White
+        Me.IconCurrentForm.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconCurrentForm.Location = New System.Drawing.Point(8, 10)
+        Me.IconCurrentForm.Name = "IconCurrentForm"
+        Me.IconCurrentForm.Size = New System.Drawing.Size(32, 32)
+        Me.IconCurrentForm.TabIndex = 42
+        Me.IconCurrentForm.TabStop = False
         '
         'LogoutBtn
         '
@@ -218,107 +319,6 @@ Partial Class MainForm
         Me.LogoutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.LogoutButton.UseVisualStyleBackColor = True
         '
-        'Guna2DragControl1
-        '
-        Me.Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
-        Me.Guna2DragControl1.TargetControl = Me.TopPanelMainForm
-        Me.Guna2DragControl1.UseTransparentDrag = True
-        '
-        'MainBox
-        '
-        Me.MainBox.Location = New System.Drawing.Point(264, 80)
-        Me.MainBox.Name = "MainBox"
-        Me.MainBox.Size = New System.Drawing.Size(697, 541)
-        Me.MainBox.TabIndex = 21
-        '
-        'Timer1
-        '
-        Me.Timer1.Enabled = True
-        '
-        'Guna2Panel1
-        '
-        Me.Guna2Panel1.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.Guna2Panel1.Controls.Add(Me.lblTimee)
-        Me.Guna2Panel1.Controls.Add(Me.IconCurrentForm)
-        Me.Guna2Panel1.Controls.Add(Me.PageTitle)
-        Me.Guna2Panel1.Controls.Add(Me.lblDate)
-        Me.Guna2Panel1.Controls.Add(Me.lblTime)
-        Me.Guna2Panel1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.Guna2Panel1.Location = New System.Drawing.Point(264, 35)
-        Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(697, 47)
-        Me.Guna2Panel1.TabIndex = 22
-        '
-        'lblTimee
-        '
-        Me.lblTimee.AutoSize = True
-        Me.lblTimee.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTimee.ForeColor = System.Drawing.Color.White
-        Me.lblTimee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblTimee.Location = New System.Drawing.Point(603, 11)
-        Me.lblTimee.Name = "lblTimee"
-        Me.lblTimee.Size = New System.Drawing.Size(94, 25)
-        Me.lblTimee.TabIndex = 44
-        Me.lblTimee.Text = "hh:mm:ss"
-        Me.lblTimee.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'IconCurrentForm
-        '
-        Me.IconCurrentForm.BackColor = System.Drawing.Color.Transparent
-        Me.IconCurrentForm.IconChar = FontAwesome.Sharp.IconChar.Hive
-        Me.IconCurrentForm.IconColor = System.Drawing.Color.White
-        Me.IconCurrentForm.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconCurrentForm.Location = New System.Drawing.Point(8, 10)
-        Me.IconCurrentForm.Name = "IconCurrentForm"
-        Me.IconCurrentForm.Size = New System.Drawing.Size(32, 32)
-        Me.IconCurrentForm.TabIndex = 42
-        Me.IconCurrentForm.TabStop = False
-        '
-        'PageTitle
-        '
-        Me.PageTitle.AutoSize = True
-        Me.PageTitle.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PageTitle.ForeColor = System.Drawing.Color.White
-        Me.PageTitle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.PageTitle.Location = New System.Drawing.Point(40, 11)
-        Me.PageTitle.Name = "PageTitle"
-        Me.PageTitle.Size = New System.Drawing.Size(109, 25)
-        Me.PageTitle.TabIndex = 43
-        Me.PageTitle.Text = "Dashboard"
-        Me.PageTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblDate
-        '
-        Me.lblDate.AutoSize = True
-        Me.lblDate.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDate.ForeColor = System.Drawing.Color.White
-        Me.lblDate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblDate.Location = New System.Drawing.Point(465, 11)
-        Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(145, 25)
-        Me.lblDate.TabIndex = 41
-        Me.lblDate.Text = "MMM dd, yyyy"
-        Me.lblDate.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'lblTime
-        '
-        Me.lblTime.AutoSize = True
-        Me.lblTime.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTime.ForeColor = System.Drawing.Color.White
-        Me.lblTime.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblTime.Location = New System.Drawing.Point(1106, 7)
-        Me.lblTime.Name = "lblTime"
-        Me.lblTime.Size = New System.Drawing.Size(100, 25)
-        Me.lblTime.TabIndex = 40
-        Me.lblTime.Text = "HH:MM:SS"
-        Me.lblTime.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'VMS
-        '
-        Me.VMS.Icon = CType(resources.GetObject("VMS.Icon"), System.Drawing.Icon)
-        Me.VMS.Text = "NotifyIcon1"
-        Me.VMS.Visible = True
-        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -338,10 +338,10 @@ Partial Class MainForm
         Me.Text = "Vitals Monitoring System"
         Me.TopPanelMainForm.ResumeLayout(False)
         Me.MenuPanelMainForm.ResumeLayout(False)
-        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2Panel1.ResumeLayout(False)
         Me.Guna2Panel1.PerformLayout()
         CType(Me.IconCurrentForm, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

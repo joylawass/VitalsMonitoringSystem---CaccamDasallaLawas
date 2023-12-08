@@ -23,6 +23,7 @@ Partial Class UpdateAndDismissPatient
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UpdateAndDismissPatient))
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.txbxBirthdate = New Guna.UI2.WinForms.Guna2DateTimePicker()
@@ -862,6 +863,7 @@ Partial Class UpdateAndDismissPatient
         Me.Controls.Add(Me.TopPanel)
         Me.Controls.Add(Me.txbxCurrentAddress)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "UpdateAndDismissPatient"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "UpdateAndDismissPatient"
