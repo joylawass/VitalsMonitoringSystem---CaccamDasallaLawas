@@ -3,11 +3,8 @@ Imports Tulpep.NotificationWindow
 
 Module NotificationModule
     Dim tableName As String
-
-    Sub NotifList(Bpm As String, Hall As String, O2 As String, Temp As String, RFID As String, notes As String)
-
-        ' Create a list to store patients
-        Dim patientList As New List(Of Notification)
+    Dim patientList As New List(Of Notification)
+    Sub NotifList()
 
 
         Connect()
@@ -37,53 +34,27 @@ Module NotificationModule
                             patientList.Add(patient)
                         End With
                     Else
+
                         With patient
+                            .PatientID = patientID
+                            .LastName = lastName
+                            .FirstName = reader("firstname").ToString()
+                            .MiddleName = reader("middlename").ToString()
+                            .ExtName = reader("extname").ToString()
+                            .Ward = reader("ward").ToString()
                             .PrevNotif = .Notification
-                            If .Notification.Equals(.PrevNotif) Then
+                            .Notification = reader("Notification").ToString()
+                            If Not .Notification.Equals(.PrevNotif) Then
 
                                 'insert notification logic here'
-                                Connect()
-                                query = "SELECT * from " & tableName
-                                Try
-                                    With command
-                                        .Connection = connection
-                                        .CommandText = query
-                                        .Parameters.Clear()
-                                        reader = .ExecuteReader
-                                        While reader.Read()
-                                            ' Update patient data
-                                            With .Parameters
-                                                Bpm = reader.GetString("pulse")
-                                                Hall = reader.GetString("wearStat")
-                                                O2 = reader.GetString("SPO2")
-                                                Temp = reader.GetString("temperature")
-                                                RFID = reader.GetString("RFID")
-                                                notes = reader.GetString("notes")
-                                            End With
+                                PopupNotification.lblNotifTitle.Font = New Font("Arial", 16, FontStyle.Bold)
+                                PopupNotification.lblNotifContent.Font() = New Font("Arial", 5, FontStyle.Bold)
+                                PopupNotification.lblNotifTitle.Text = "Notification"
+                                PopupNotification.lblNotifContent.Text = .LastName + ", " + .FirstName + " at ward " + .Ward + "
+" + .Notification
+                                PopupNotification.Show()
 
-                                            ' Check conditions for displaying notifications
-                                            ' Wala pa nko natry if mugana
-                                            If Convert.ToDouble(Bpm) < 60 Or Convert.ToDouble(Bpm) > 100 Then
-                                                PopupNotification.lblNotifTitle.Text = "Pulse Rate"
-                                                PopupNotification.lblNotifContent.Text = "Notification"
-                                            ElseIf Convert.ToBoolean(Hall) = False Then
-                                                PopupNotification.lblNotifTitle.Text = "Device Removal Detected"
-                                                PopupNotification.lblNotifContent.Text = "Notification"
-                                            ElseIf Convert.ToDouble(O2) < 95 Or Convert.ToDouble(O2) > 100 Then
-                                                PopupNotification.lblNotifTitle.Text = "Blood Oxygen"
-                                                PopupNotification.lblNotifContent.Text = "Notification"
-                                            ElseIf Convert.ToDouble(Temp) < 36 Or Convert.ToDouble(Temp) > 37.2 Then
-                                                PopupNotification.lblNotifTitle.Text = "Body Temperature"
-                                                PopupNotification.lblNotifContent.Text = "Notification"
-                                            ElseIf Convert.ToBoolean(RFID) = False Then
-                                                PopupNotification.lblNotifTitle.Text = "Breach Attempt Detected"
-                                                PopupNotification.lblNotifContent.Text = "Notification"
-                                            End If
-                                        End While
-                                    End With
-                                Catch ex As Exception
-                                    MsgBox(ex.Message)
-                                End Try
+
                             End If
                         End With
                     End If
