@@ -44,13 +44,13 @@ Partial Class PopupNotification
         'lblNotifTitle
         '
         Me.lblNotifTitle.AutoSize = True
-        Me.lblNotifTitle.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNotifTitle.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNotifTitle.ForeColor = System.Drawing.Color.Black
-        Me.lblNotifTitle.Location = New System.Drawing.Point(92, 37)
+        Me.lblNotifTitle.Location = New System.Drawing.Point(92, 38)
         Me.lblNotifTitle.Name = "lblNotifTitle"
-        Me.lblNotifTitle.Size = New System.Drawing.Size(158, 28)
+        Me.lblNotifTitle.Size = New System.Drawing.Size(206, 21)
         Me.lblNotifTitle.TabIndex = 1
-        Me.lblNotifTitle.Text = "Notification Title"
+        Me.lblNotifTitle.Text = "Device Removal Detected"
         '
         'CloseButton
         '
@@ -89,7 +89,7 @@ Partial Class PopupNotification
         '
         Me.Guna2PictureBox1.Image = Global.VitalsMonitoringSystem.My.Resources.Resources.icons8_warning_50
         Me.Guna2PictureBox1.ImageRotate = 0!
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(7, 37)
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(7, 36)
         Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
         Me.Guna2PictureBox1.Size = New System.Drawing.Size(79, 64)
         Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -98,14 +98,13 @@ Partial Class PopupNotification
         '
         'lblNotifContent
         '
-        Me.lblNotifContent.AutoSize = True
         Me.lblNotifContent.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNotifContent.ForeColor = System.Drawing.Color.Black
-        Me.lblNotifContent.Location = New System.Drawing.Point(93, 69)
+        Me.lblNotifContent.Location = New System.Drawing.Point(92, 58)
         Me.lblNotifContent.Name = "lblNotifContent"
-        Me.lblNotifContent.Size = New System.Drawing.Size(150, 21)
+        Me.lblNotifContent.Size = New System.Drawing.Size(194, 42)
         Me.lblNotifContent.TabIndex = 6
-        Me.lblNotifContent.Text = "Notification Content"
+        Me.lblNotifContent.Text = "Detected possible device removal for Patient 1."
         '
         'Guna2Elipse2
         '

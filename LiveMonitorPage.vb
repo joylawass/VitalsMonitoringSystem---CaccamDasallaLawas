@@ -360,6 +360,31 @@ Public Class LiveMonitorPage
                     notestxtbox.Text = reader.GetString("notes")
                     lbRFID.Text = Convert.ToBoolean(reader.GetString("RFID"))
 
+                    ' Check conditions for displaying notifications
+                    If Convert.ToDouble(lbBpm.Text) < 60 Or Convert.ToDouble(lbBpm.Text) > 100 Then
+                        Timer1.Enabled = False
+                        lbBpm.ForeColor = Color.Red
+                    ElseIf Convert.ToBoolean(lbHall.Text) = False Then
+                        Timer1.Enabled = False
+                        lbBpm.ForeColor = Color.Red
+                    ElseIf Convert.ToDouble(lbO2.Text) < 95 Or Convert.ToDouble(lbO2.Text) > 100 Then
+                        Timer1.Enabled = False
+                        lbBpm.ForeColor = Color.Red
+                    ElseIf Convert.ToDouble(lbTemp.Text) < 36 Or Convert.ToDouble(lbTemp.Text) > 37.2 Then
+                        Timer1.Enabled = False
+                        lbBpm.ForeColor = Color.Red
+                    ElseIf Convert.ToBoolean(lbRFID.Text) = False Then
+                        Timer1.Enabled = False
+                        lbBpm.ForeColor = Color.Red
+                    Else
+                        ' Reset the notification icons and colors if no conditions are met
+                        lbBpm.ForeColor = Color.FromArgb(94, 148, 255)
+                        lbHall.ForeColor = Color.FromArgb(94, 148, 255)
+                        lbO2.ForeColor = Color.FromArgb(94, 148, 255)
+                        lbTemp.ForeColor = Color.FromArgb(94, 148, 255)
+                        lbRFID.ForeColor = Color.FromArgb(94, 148, 255)
+                    End If
+
                 End While
             End With
         Catch ex As Exception

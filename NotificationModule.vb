@@ -47,14 +47,14 @@ Module NotificationModule
                             If Not .Notification.Equals(.PrevNotif) Then
 
                                 'insert notification logic here'
-                                PopupNotification.lblNotifTitle.Font = New Font("Arial", 16, FontStyle.Bold)
-                                PopupNotification.lblNotifContent.Font() = New Font("Arial", 5, FontStyle.Bold)
-                                PopupNotification.lblNotifTitle.Text = "Notification"
-                                PopupNotification.lblNotifContent.Text = .LastName + ", " + .FirstName + " at ward " + .Ward + "
-" + .Notification
+                                PopupNotification.lblNotifTitle.Font = New Font("Segoe UI", 11, FontStyle.Bold)
+                                PopupNotification.lblNotifContent.Font() = New Font("Segoe UI", 12, FontStyle.Regular)
+                                PopupNotification.lblNotifTitle.Text = "Patient " + patientID + ": " + .LastName + ", " + .FirstName
+                                PopupNotification.lblNotifContent.Text = .Notification
                                 PopupNotification.Show()
 
-
+                            Else
+                                PopupNotification.Hide()
                             End If
                         End With
                     End If

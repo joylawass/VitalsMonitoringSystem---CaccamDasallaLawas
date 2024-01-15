@@ -5,7 +5,7 @@ Imports System.Media
 
 Public Class PopupNotification
     Private Const AnimationDuration As Integer = 500 ' Animation duration in milliseconds
-    Private WithEvents AnimationTimer As New Timer With {.Interval = 20} ' Timer for animation
+    Private WithEvents AnimationTimer As New Timer With {.Interval = 1} ' Timer for animation
     Private Const Margin As Integer = 10 ' Adjust margin as needed
 
     Private Sub CloseButton_Click(sender As Object, e As EventArgs) Handles CloseButton.Click
