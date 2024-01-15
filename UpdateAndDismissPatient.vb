@@ -32,7 +32,7 @@ Public Class UpdateAndDismissPatient
             connection.Open()
 
             ' Modify this SQL query to retrieve patient data based on patientID
-            Dim query As String = "SELECT * FROM patient_info WHERE patientID = @patientID"
+            query = "SELECT * FROM patient_info WHERE patientID = @patientID"
 
             Using command As New MySqlCommand(query, connection)
                 command.Parameters.AddWithValue("@patientID", patientID)
@@ -66,6 +66,22 @@ Public Class UpdateAndDismissPatient
                 End Using
             End Using
         End Using
+        Connect()
+        query = "SELECT MAC FROM devicelist"
+        Try
+            command.Connection = connection
+            command.CommandText = query
+            reader = command.ExecuteReader()
+            While reader.Read()
+                Dim macAddress As String = reader.GetString("MAC")
+                cbxMac.Items.Add(macAddress)
+            End While
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            reader.Close()
+            connection.Close()
+        End Try
     End Sub
 
     Private Sub LoadSexComboBox(selectedSex As String)
@@ -90,6 +106,7 @@ Public Class UpdateAndDismissPatient
         lblNote.Hide()
         healthHistory.Multiline = True
         healthHistory.TextAlign = HorizontalAlignment.Left
+
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
@@ -118,8 +135,10 @@ Public Class UpdateAndDismissPatient
          cbxMac.SelectedItem Is Nothing Then
             MessageBox.Show("Please fill in all the required fields.", "Incomplete Information", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
+        Else
+            PatientRegister(txbxFamilyName.Text, txbxfirstname.Text, txbxmidname.Text, txbxExtensionName.Text, txbxCurrentAddress.Text, txbxNationality.Text, txbxBirthdate.Text, txbxPlaceOfBirth.Text, cbxSex.SelectedItem, cbxBloodType.SelectedItem, txbxbloodoxygen.Text, txbxtemperature.Text, txbxpulse.Text, txbxPhysician.Text, txbxward.Text, txbxemergencycontactname.Text, txbxRelationship.Text, txbxemergencyaddress.Text, txbxemergencynumber.Text, txtboxheight.Text, txtboxweight.Text, txtboxBmi.Text, cbxMac.SelectedItem.ToString(), healthHistory.Text)
         End If
-        PatientRegister(txbxFamilyName.Text, txbxfirstname.Text, txbxmidname.Text, txbxExtensionName.Text, txbxCurrentAddress.Text, txbxNationality.Text, txbxBirthdate.Text, txbxPlaceOfBirth.Text, cbxSex.SelectedItem, cbxBloodType.SelectedItem, txbxbloodoxygen.Text, txbxtemperature.Text, txbxpulse.Text, txbxPhysician.Text, txbxward.Text, txbxemergencycontactname.Text, txbxRelationship.Text, txbxemergencyaddress.Text, txbxemergencynumber.Text, txtboxheight.Text, txtboxweight.Text, txtboxBmi.Text, cbxMac.SelectedItem.ToString(), healthHistory.Text)
+
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click

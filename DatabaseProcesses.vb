@@ -147,7 +147,7 @@ Module DatabaseQueries
                     Dim result As DialogResult = MessageBox.Show("Record Already Exists. Overwrite data?", "caption", MessageBoxButtons.YesNo)
                     If result = DialogResult.Yes Then
                         Connect()
-                        query = "UPDATE patient_info SET lastname = @lastname, firstname = @firstname, middlename = @middlename, extname = @extname, current_address = @current_address, nationality = @nationality, birthdate = @birthdate, birthplace = @birthplace, sex = @sex, blood_type = @blood_type, blood_oxygen = @blood_oxygen, physician = @physician, ward = @ward, emergency_name = @emergency_name, emergency_relation = @emergency_relation, emergency_address = @emergency_address, emergency_contact = @emergency_contact, height = @height, weight = @weight, bmi = @bmi, health_history = @health_history, Dev_ID = @Dev_ID WHERE patientID = @patientID;"
+                        query = "UPDATE patient_info SET lastname = @lastname, firstname = @firstname, middlename = @middlename, extname = @extname, current_address = @current_address, nationality = @nationality, birthdate = @birthdate, birthplace = @birthplace, sex = @sex, blood_type = @blood_type, blood_oxygen = @blood_oxygen, physician = @physician, ward = @ward, emergency_name = @emergency_name, emergency_relation = @emergency_relation, emergency_address = @emergency_address, emergency_contact = @emergency_contact, height = @height, weight = @weight, bmi = @bmi, health_history = @health_history, Dev_ID = @Dev_ID, Status = 'Active' WHERE patientID = @patientID;"
                         Try
                             With command
                                 .Connection = connection
