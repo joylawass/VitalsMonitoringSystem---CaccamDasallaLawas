@@ -293,7 +293,7 @@ Module DatabaseQueries
 
     Public Sub CountDevices()
         Connect()
-        query = "SELECT COUNT(*) FROM devicelist"
+        query = "SELECT COUNT(*) FROM devicelist WHERE Status = 'Active'"
         Try
             With command
                 .Connection = connection
@@ -316,7 +316,7 @@ Module DatabaseQueries
                 .CommandText = query
                 Dim patientCount As Integer = CInt(.ExecuteScalar())
                 DashboardPage.Label7.Text = patientCount.ToString("D2")
-                Dim bedNumbers As Integer = 20 - DashboardPage.Label7.Text
+                Dim bedNumbers As Integer = 20 - DashboardPage.Label5.Text
                 DashboardPage.Label8.Text = bedNumbers.ToString("D2")
             End With
         Catch ex As Exception
