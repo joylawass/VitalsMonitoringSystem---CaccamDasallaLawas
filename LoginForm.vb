@@ -18,23 +18,6 @@
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         LogInQuery(txtbxUsername.Text, txtbxPassword.Text)
-        MainForm.ActivateButton(MainForm.DashboardButton, Color.White)
-        MainForm.switchPanel(DashboardPage)
-        'Dim loginSuccessful As Boolean = True ' You should replace this with your actual login logic
-
-        'If loginSuccessful Then
-
-        '    ' Call the ActivateButton method for the Dashboard button
-        '    MainForm.ActivateButton(MainForm.DashboardButton, Color.White)
-
-        '    ' Switch to the MainForm
-        '    MainForm.switchPanel(DashboardPage)
-
-        '    ' Close the LoginForm
-        '    Me.Hide()
-        'Else
-        '    LogInQuery(txtbxUsername.Text, txtbxPassword.Text)
-        'End If
     End Sub
 
     Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load

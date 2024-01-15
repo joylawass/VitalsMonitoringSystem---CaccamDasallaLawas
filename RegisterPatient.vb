@@ -190,4 +190,6 @@ Public Class RegisterPatient
         cbxMac.Items.Clear()
         healthHistory.Clear()
     End Sub
+
+
 End Class

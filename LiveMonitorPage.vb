@@ -328,6 +328,22 @@ Public Class LiveMonitorPage
                             .Add("@patientID", MySqlDbType.VarChar).Value = selectedPatientID
                         End With
                         .ExecuteNonQuery()
+                    End With
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+
+                Connect()
+                query = "UPDATE devicelist SET Status = 'Inactive' WHERE MAC = @MAC;"
+                Try
+                    With command
+                        .Connection = connection
+                        .CommandText = query
+                        With .Parameters
+                            .Clear()
+                            .Add("@MAC", MySqlDbType.VarChar).Value = selectedPatientID
+                        End With
+                        .ExecuteNonQuery()
                         AdminLogs("Updated patient Status with id = " + selectedPatientID + " using credential : " & LoggedInUser)
                         MessageBox.Show("Patient dismissed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     End With
